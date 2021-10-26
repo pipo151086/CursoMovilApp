@@ -1,0 +1,146 @@
+<div data-options="dxView : { name: 'SaldoTarjeta', title: 'Consulta De Saldo', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:50px">
+        
+        
+        
+        <div class="col-lg-12 texts ;text-align:justify">
+                 
+            <!--<ul>-->
+              <!--<li>-->
+                <p>
+                  El Saldo Real de la tarjeta de crédito se calcula sumando el Saldo Al Corte más Compras y Débitos, y restando los Pagos y Créditos.
+                </p>
+              <!--</li>-->
+
+            <!--</ul>-->
+          
+        </div>
+
+
+        <div id="seleccionCredito" class="row" style="padding:10px">
+          <div class="col-lg-12 texts">
+            <label class="tags">SELECCIONE </label>
+            <div style="float:right;">
+              <div id="lkpTarjetas" data-bind="dxLookup: lkpTarjetas"></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:10px">
+          <div class="box-controls">
+            <span data-bind="text: 'Saldos'"></span>
+
+
+            <div class="row">
+              <div class="col-lg-6 texts" >
+                <label style="display:block">Saldo Al Corte</label>
+              </div>
+              <div class="col-lg-6 texts" style=" float:left; text-align:left">
+                <span id="spnSaldoAlCorte" class="color" style="display:block; font-size:14px"></span>
+              </div>
+            </div>
+            <hr/>
+
+            <div class="row">
+              <div class="col-lg-6 texts" style="">
+                <label style="display:block">(+) Compras y Débitos</label>
+              </div>
+              <div class="col-lg-6 texts" style="float:left; text-align:left">
+                <span id="spnComprasDebito" class="color" style="display:block; font-size:14px"></span>
+              </div>
+            </div>
+            <hr/>
+
+            <div class="row">
+              <div class="col-lg-6 texts" style="">
+                <label style="display:block">(-) Pagos y Créditos</label>
+              </div>
+              <div class="col-lg-6 texts" style=" float:left; text-align:left">
+                <span id="spnPagosCredito" class="color" style="display:block; font-size:14px"></span>
+              </div>
+            </div>
+
+            <hr/>
+
+            <div class="row">
+              <div class="col-lg-6 texts" >
+                <label style="display:block">(=) Saldo Real</label>
+              </div>
+              <div class="col-lg-6 texts" style=" float:left; text-align:left">
+                <span id="spnSaldoReal" class="color" style="display:block; font-size:14px"></span>
+              </div>
+            </div>
+
+
+            
+
+
+          </div>
+        </div>
+
+        <div class="col-lg-12 texts">
+          <hr />
+          <div style="text-align:justify">
+            <!--<ul>-->
+              <!--<li>-->
+                <p>
+                  <b>Nota:</b> El monto total de saldo real no contempla los montos flotantes,
+                  tasa cero, extrafinanciamiento.
+                </p>
+              <!--</li>-->
+
+            <!--</ul>-->
+          </div>
+          
+          
+          
+          
+          <div style="text-align:justify">
+            <!--<ul>-->
+            <!--<li>-->
+            <p>
+              Consulta de saldo actualizado en 48 horas.
+            </p>
+            <!--</li>-->
+
+            <!--</ul>-->
+          </div>
+          
+          <hr />
+        </div>
+
+        
+        <div class="box-controls">
+
+          <div class="row">
+            <div class="col-lg-6 texts" >
+              <label style="display:block">Pago de Hoy</label>
+            </div>
+            <div class="col-lg-6 texts" style="float:left; text-align:left">
+              <span id="spnPagoHoy" class="color" style="display:block; font-size:14px"></span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-12 texts">
+          <hr />
+          <div style="text-align:justify">
+            <!--<ul>-->
+              <!--<li>-->
+                <p>
+                  <b>Nota:</b> Los pagos de hoy no se reflejaran al día siguiente en el Saldo Real.
+                </p>
+              <!--</li>-->
+            <!--</ul>-->
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+

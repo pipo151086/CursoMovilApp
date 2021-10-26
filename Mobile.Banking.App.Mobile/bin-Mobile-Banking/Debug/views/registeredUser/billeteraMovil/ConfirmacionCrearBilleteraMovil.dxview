@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'ConfirmacionCrearBilleteraMovil', title: 'Confirmación',disableCache:true } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div style="margin-bottom:50px">
+        <div class="row">
+            <div class="col-lg-12">
+                <div style="text-align:justify; padding:10px">
+                    <p>
+                        AVISO: Por favor verifica todos los datos a continuación para la creación
+                        de la billetera móvil
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="box-controls">
+            <span>Crear Billetera Móvil</span>
+            <div class="row">
+                <div class="col-lg-12 texts">
+                    <label style="display:block">Teléfono Celular: </label>
+                    <span class="color" style="float:right; font-size:20px; font-weight:bold" data-bind="text: PhoneNumber"></span>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-lg-12 texts">
+                    <label style="display:inline-block">Cuenta: </label>
+                    <span class="color" style="float:right; font-size:20px; font-weight:bold" data-bind="text: Account"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

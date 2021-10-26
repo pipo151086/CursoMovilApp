@@ -1,0 +1,60 @@
+<div data-options="dxView : { name: 'ExitosoCargaSaldoAkisi', title:  'Billetera Akisi', disableCache: true  } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <div data-bind="dxScrollView: { }">
+
+      <div class="box-controls">
+        <span>Carga de Saldo Exitosa</span>
+
+        <div class="row">
+          <div class="col-lg-12 texts">
+            <label style="float:left; margin-top:5px">Secuencial</label>
+            <span class="color" style="float:right; font-size:20px" data-bind="text: numeroSecuencial"></span>
+          </div>
+        </div>
+        <hr />
+        
+        <div class="row">
+          <div class="col-lg-12 texts">
+            <label style="float:left; margin-top:5px">Número de Autorización</label>
+            <span class="color" style="float:right; font-size:20px" data-bind="text: numeroAutorizacion"></span>
+          </div>
+        </div>
+        <hr />
+        
+        <div class="row">
+          <div class="col-lg-12 texts">
+            <label style="float:left; margin-top:5px">Número Teléfono</label>
+            <span class="color" style="float:right; font-size:20px" data-bind="text: numeroTelefono"></span>
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col-lg-12 texts">
+            <label style="float:left; margin-top:5px">Titular</label>
+            <span class="color" style="float:right; font-size:20px" data-bind="text: titular"></span>
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col-lg-12 texts">
+            <label style="float:left; margin-top:5px">Monto</label>
+            <span class="color" style="float:right; font-size:20px" data-bind="text: montoMostrar"></span>
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col-lg-12 texts">
+            <label style="float:left; margin-top:5px">Cuenta</label>
+            <span class="color" style="float:right; font-size:20px" data-bind="text: ctaMostrar"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

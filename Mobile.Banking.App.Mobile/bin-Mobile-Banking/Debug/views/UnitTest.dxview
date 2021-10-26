@@ -1,0 +1,74 @@
+<div data-options="dxView : { name: 'UnitTest', title: 'UnitTest' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+        <div class="dx-fieldset">
+
+            <div class="dx-field">
+                <div class="dx-field-label">Insert Op</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxButton: koButtonInsert"></div>
+                </div>
+            </div>
+
+            <div class="dx-field">
+                <div class="dx-field-label">GetAllAndVersions</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxButton: koButtonGetAllAndVersions"></div>
+                </div>
+            </div>
+
+            <div class="dx-field">
+                <div class="dx-field-label">GetByCatAndEnt</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxButton: koButtonGetByCatAndEnt"></div>
+                </div>
+            </div>
+
+            <div class="dx-field">
+                <div class="dx-field-label">DeleteOp</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxButton: koButtonDeleteOp"></div>
+                </div>
+            </div>
+
+
+            <div class="dx-field">
+                <div class="dx-field-label">UpdateOp</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxButton: koButtonUpdateOp"></div>
+                </div>
+            </div>
+
+            <div class="dx-field">
+                <div class="dx-field-label">GetAllEnterprisesAndCategories</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxButton: koGetAllEnterprisesAndCategories"></div>
+                </div>
+            </div>
+
+            <div class="dx-field">
+                <div class="dx-field-label">GetOperationByOperationID</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxButton: koGetOperationByOperationID"></div>
+                </div>
+            </div>
+
+
+            <div class="dx-field">
+                <div class="dx-field-label">Sinc Operations</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxButton: koSincOps"></div>
+                </div>
+            </div>
+
+
+            <div class="dx-field">
+                <div class="dx-field-label">FB_Ops</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxButton: koFB_Ops"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

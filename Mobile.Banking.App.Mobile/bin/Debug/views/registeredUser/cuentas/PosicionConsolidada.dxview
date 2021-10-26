@@ -1,0 +1,34 @@
+<div data-options="dxView : { name: 'PosicionConsolidada', title: 'Resumen de Cuentas', pane: 'master', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+        <div data-bind="dxScrollView: { }" >
+          
+            <div id="divContainerPosicionConsolidada" style="margin-bottom:150px">
+                <div class="last-access">
+                    <span data-bind="text: 'Último Ingreso: ' + SesionMovil.FechaHoraUltimoAccesoMostrar.toString(ConstantsBehaivor.PATTERN_LONGDATE)"></span>
+                </div>
+                <div id="acdProductosCliente" style="margin-left:5px; margin-right:5px" data-bind="dxAccordion: acdProductosCliente"></div>
+                
+              <div id="CuentasCliente">
+                    <div id="lstCuentas" data-bind="dxList: lstCuentas"></div>
+                </div>
+              
+                <div id="BilleteraMovil">
+                    <div id="lstBilleteraMovil" data-bind="dxList: lstBilleteraMovil"></div>
+                </div>
+                <div id="TarjetasCliente">
+                    <div id="lstTarjetas" data-bind="dxList: lstTarjetas"></div>
+                </div>
+                <div id="CreditosCliente">
+                    <div id="lstCreditos" data-bind="dxList: lstCreditos"></div>
+                </div>
+                <div id="InversionesCliente">
+                    <div id="lstInversiones" data-bind="dxList: lstInversiones"></div>
+                </div>
+                <div id="TarjetasVisaCliente">
+                    <div id="lstTarjetasVisa" data-bind="dxList: lstTarjetasVisa"></div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</div>

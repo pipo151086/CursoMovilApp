@@ -1,0 +1,2025 @@
+﻿html,
+body,
+.dx-viewport {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.delete-button {
+    text-align: center;
+}
+
+    .delete-button div {
+        width: 98%;
+    }
+
+.msg {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.dx-theme-ios .msg-button-left {
+    width: 44%;
+    margin: 0 4% 0 0;
+    float: left;
+}
+
+.dx-theme-ios .msg-button-right {
+    width: 44%;
+    margin: 0 0 0 4%;
+    float: left;
+}
+
+.dx-theme-ios #deleteConfirmation {
+    height: 135px !important;
+}
+
+.dx-theme-android .msg-button-left {
+    width: 42%;
+    margin: 0 3% 0 0;
+    float: left;
+}
+
+.dx-theme-android .msg-button-right {
+    width: 42%;
+    margin: 0 0 0 3%;
+    float: left;
+}
+
+.dx-theme-android #deleteConfirmation {
+    height: 150px !important;
+}
+
+/**********************************************************************************************************************/
+/********************************************ESTILOS DE LA APLICACIÓN**************************************************/
+/**********************************************************************************************************************/
+
+/*-------------------------------------------------------------------------------------*/
+/*--------------------------------ACCORDION DEVEXTREME---------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+.dx-accordion-item-opened.dx-accordion-item {
+    border-color: #d52133 !important;
+}
+
+.dx-accordion-item-closed {
+    border: 1px solid #d52133;
+    border-radius: 10px;
+}
+
+.dx-accordion-item-title {
+    color: #d52133 !important;
+}
+
+    .dx-accordion-item-title:before {
+        color: #d52133 !important;
+    }
+
+
+.dx-accordion-item-opened {
+    border: 1px solid #d52133;
+    border-radius: 10px;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*----------------------------------LISTBOX DEVEXTREME--------------------------------*/
+/*------------------------------------------------------------------------------------*/
+.dx-list-item-content {
+    padding: 0px, 1px !important;
+}
+
+.dx-list-item-content, .dx-list .dx-empty-message {
+    padding: 0px 0px !important;
+}
+
+.dx-list-group-header {
+    padding: 1em 0px !important;
+}
+
+.dx-list-item-content .div-main {
+    width: 100%;
+}
+
+.dx-list-item-content .div-second {
+    display: inline-block;
+}
+
+.dx-list-item-content .div-main .next {
+    position: absolute;
+    right: 0px;
+    top: 18px;
+    margin-left: 10px;
+    color: #d52133;
+}
+
+.dx-list-item-content .div-second > img {
+    position: relative;
+    top: 9px;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dx-list-item-content .div-second > .text-main-list {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.dx-list-item-content .div-second > .text-second-list {
+    display: block;
+    font-size: 12px;
+    margin-left: 40px;
+}
+
+.dx-list-item-content .div-values {
+    display: inline-block;
+    float: right;
+    color: #d52133;
+    text-align: right;
+}
+
+    .dx-list-item-content .div-values > span {
+        font-size: 12px;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    .dx-list-item-content .div-values > .values {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        margin-right: 0px;
+    }
+
+.dx-list-item-content .column-1 {
+    position: relative;
+    font-size: 12px;
+    width: 20%;
+    display: inline-block;
+}
+
+.dx-list-item-content .column-1-small {
+    position: relative;
+    font-size: 11px;
+    width: 20%;
+    display: inline-block;
+}
+
+.dx-list-item-content .column-2 {
+    position: relative;
+    font-size: 12px;
+    width: 50%;
+    display: inline-block;
+    margin-left: 10px;
+    word-break: break-word;
+}
+
+.dx-list-item-content .column-2-small {
+    position: relative;
+    font-size: 10px;
+    width: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.dx-list-item-content .column-3 {
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    right: 10px;
+    text-align: right;
+}
+
+.dx-list-item-content .row-list {
+    color: #515156;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    /*border: 1px solid #ededed;
+    border-left: none;
+    border-right: none;
+    border-top: none;*/
+}
+
+.dx-list-item-content .column-3-bottom {
+    float: right;
+    font-size: 11px;
+    display: block;
+}
+
+@media (min-width:350px) {
+    .dx-list-item-content .div-values > .values {
+        font-size: 18px;
+    }
+
+    .dx-list-item-content .div-second > .text-main-list {
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    .last-access {
+        font-size: 14px;
+    }
+
+    .dx-list-item-content .column-1-small {
+        font-size: 12px;
+    }
+
+    .dx-list-item-content .column-2-small {
+        font-size: 12px;
+    }
+
+    .dx-list-item-content .column-3-bottom {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:500px) {
+    .dx-list-item-content .div-values > .values {
+        font-size: 20px;
+    }
+
+    .dx-list-item-content .div-second > .text-main-list {
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .last-access {
+        font-size: 16px;
+    }
+
+    .dx-list-item-content, .dx-list .dx-empty-message {
+        /*padding: 12px 12px !important;*/
+    }
+
+        .dx-list-item-content .column-1 {
+            font-size: 16px;
+        }
+
+        .dx-list-item-content .column-1-small {
+            font-size: 16px;
+        }
+
+        .dx-list-item-content .column-2 {
+            font-size: 16px;
+        }
+
+        .dx-list-item-content .column-2-small {
+            font-size: 16px;
+        }
+
+        .dx-list-item-content .column-3-bottom {
+            font-size: 14px;
+        }
+
+        .dx-list-item-content .row-list {
+            margin-bottom: 20px;
+        }
+}
+
+.dx-list-item-content .div-values > .values-second {
+    display: block;
+    font-size: 9px;
+    font-weight: normal;
+    margin-right: 0px;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------------TEXTEDIT DEVEXTREME--------------------------------*/
+/*------------------------------------------------------------------------------------*/
+.dx-placeholder {
+    color: #f7a8a8 !important;
+    font-family: 'Gotham-Book';
+}
+
+.dx-texteditor-input {
+    color: #515156 !important;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*-----------------------------OTHER CONTROLS DEVEXTREME------------------------------*/
+/*------------------------------------------------------------------------------------*/
+.dx-dialog-message {
+    text-align: justify;
+    color: gray;
+}
+
+.dx-toast-info {
+    background-color: #d52133 !important;
+}
+
+.dx-toast-warning {
+    background-color: #ffb277 !important;
+}
+
+.dx-toast-success {
+    background-color: #6ec881 !important;
+}
+
+.dx-toast-error {
+    background-color: #f77 !important;
+}
+
+.dx-toast-message {
+    text-align: justify;
+}
+
+.dx-toolbar-label > div {
+    text-transform: uppercase;
+}
+
+.dx-button {
+    min-height: 0px;
+    min-width: 0px;
+    box-shadow: none;
+    color: #d52133;
+    border-color: #d52133;
+}
+
+    .dx-button .dx-icon {
+        font-size: 18px !important;
+        /*margin: 0px !important;*/
+    }
+
+
+.dx-button-success {
+    color: #00e367 !important;
+    background-color: transparent !important;
+}
+
+.dx-button-danger {
+    color: #fd472b !important;
+    background-color: transparent !important;
+}
+
+.dx-popup-normal .dx-popup-title .dx-toolbar-label {
+    font-size: 15px;
+    color: #808080;
+}
+
+.dx-radiobutton-checked .dx-radiobutton-icon:before {
+    background: #d52133 !important;
+}
+
+.dx-state-active.dx-radiobutton .dx-radiobutton-icon:before {
+    background-color: #d52133 !important;
+}
+
+.dx-radiobutton {
+    color: gray;
+}
+
+.dx-overlay-content .dx-button.dx-button-default {
+    color: #d52133 !important;
+}
+
+.dx-checkbox.dx-state-active .dx-checkbox-icon {
+    background-color: #d52133;
+}
+
+.dx-checkbox-icon {
+    border: 1px solid #d52133;
+}
+
+.dx-checkbox-indeterminate .dx-checkbox-icon, .dx-checkbox-checked .dx-checkbox-icon {
+    background-color: #d52133;
+}
+
+.dx-tabs-nav-button {
+    border: 1px solid #d52133;
+}
+
+.dx-tab {
+    border: 1px solid #d52133;
+}
+
+    .dx-tab .dx-icon {
+        color: #d52133;
+    }
+
+    .dx-tab:last-child {
+        border-right: 1px solid #d52133;
+    }
+
+.dx-tab-selected {
+    background: #d52133;
+}
+
+    .dx-tab-selected .dx-tabs-item-badge {
+        color: #d52133;
+    }
+
+.dx-tab-text {
+    color: #d52133;
+}
+
+.dx-rtl .dx-tab:first-child {
+    border-right: 1px solid #d52133;
+}
+
+.dx-navbar .dx-nav-item.dx-tab-selected .dx-icon, .dx-navbar .dx-rtl .dx-nav-item.dx-tab-selected .dx-icon {
+    color: #d52133;
+}
+
+.dx-navbar .dx-nav-item.dx-tab-selected .dx-tab-text, .dx-navbar .dx-rtl .dx-nav-item.dx-tab-selected .dx-tab-text {
+    color: #d52133;
+}
+
+.dx-navbar .dx-nav-item.dx-state-active.dx-tab-selected .dx-icon, .dx-navbar .dx-rtl .dx-nav-item.dx-state-active.dx-tab-selected .dx-icon {
+    color: #d52133;
+}
+
+.dx-navbar .dx-nav-item.dx-state-active.dx-tab-selected .dx-tab-text, .dx-navbar .dx-rtl .dx-nav-item.dx-state-active.dx-tab-selected .dx-tab-text {
+    color: #d52133;
+}
+
+.dx-tag-content {
+    background-color: #d52133;
+}
+
+.dx-datagrid-filter-range-overlay .dx-overlay-content .dx-texteditor.dx-state-focused:after {
+    border: 2px solid #d52133;
+}
+
+.dx-datagrid-focus-overlay {
+    border: 2px solid #d52133;
+}
+
+.dx-datagrid-filter-row .dx-menu-item.dx-state-focused:after {
+    border: 2px solid #d52133;
+}
+
+.dx-datagrid-rowsview .dx-row.dx-group-row {
+    color: #d52133;
+}
+
+.dx-tabpanel .dx-tab {
+    color: #d52133;
+}
+
+.dx-popup-wrapper.dx-overlay-shader .dx-overlay-content {
+    border: 1px solid gray;
+}
+
+
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------ESTILOS PARA IPHONE 4------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 350px) and (max-height:500px) { /*IPHONE 4*/
+    .area-btn-over {
+        top: 47%;
+    }
+
+    .icon-login {
+        width: 33%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+
+    .tags {
+        color: #d52133;
+        font-size: 10px;
+        position: relative;
+        top: 8px;
+    }
+
+    .title-cards {
+        width: 107% !important;
+    }
+
+        .title-cards i {
+            right: 5px !important;
+        }
+
+    .cards-button {
+        width: 36px !important;
+        height: 36px !important;
+        top: -40px !important;
+    }
+
+        .cards-button i {
+            font-size: 18px !important;
+        }
+
+    .gallery {
+        height: 92px !important;
+    }
+
+    .map-google {
+        height: 500px;
+    }
+
+    .label {
+        position: relative;
+        top: 3px;
+    }
+
+    .btn-teclado {
+        padding: 6px 12px !important;
+        margin: 0px 5px !important;
+    }
+
+        .btn-teclado .dx-button-content .dx-button-text {
+            font-size: 18px !important;
+        }
+
+    .row-btn-teclado {
+        margin-bottom: 5px !important;
+    }
+
+    .area-btn-teclado {
+        margin-bottom: 30px !important;
+        margin-top: 80px !important;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------ESTILOS PARA IPHONE 5------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 500px) and (max-height:600px) { /*IPHONE 5*/
+    .area-btn-over {
+        top: 40%;
+    }
+
+    .icon-login {
+        width: 33%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+
+    .tags {
+        color: #d52133;
+        font-size: 12px;
+        position: relative;
+        top: 8px;
+    }
+
+    .title-cards {
+        width: 107% !important;
+    }
+
+        .title-cards i {
+            right: 5px !important;
+        }
+
+    .cards-button {
+        width: 36px !important;
+        height: 36px !important;
+        top: -40px !important;
+    }
+
+        .cards-button i {
+            font-size: 18px !important;
+        }
+
+    .gallery {
+        height: 92px !important;
+    }
+
+    .map-google {
+        height: 600px;
+    }
+
+    .label {
+        position: relative;
+        top: 3px;
+    }
+
+    .btn-teclado {
+        padding: 6px 12px !important;
+        margin: 0px 5px !important;
+    }
+
+        .btn-teclado .dx-button-content .dx-button-text {
+            font-size: 24px !important;
+        }
+
+    .row-btn-teclado {
+        margin-bottom: 10px !important;
+    }
+
+    .area-btn-teclado {
+        margin-bottom: 40px !important;
+        margin-top: 70px !important;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------ESTILOS PARA IPHONE 6------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 650px) and (max-height:750px) { /*IPHONE 6*/
+    .area-btn-over {
+        top: 33%;
+    }
+
+    .icon-login {
+        width: 33%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+
+    .tags {
+        color: #d52133;
+        font-size: 15px;
+        position: relative;
+        top: 8px;
+    }
+
+    .title-cards {
+        width: 106% !important;
+    }
+
+    .cards-button {
+        width: 50px !important;
+        height: 50px !important;
+        top: -50px !important;
+    }
+
+        .cards-button i {
+            font-size: 24px !important;
+        }
+
+    .gallery {
+        height: 109px !important;
+    }
+
+    .map-google {
+        height: 500px;
+    }
+
+    .label {
+        position: relative;
+        top: 3px;
+    }
+
+    .btn-teclado {
+        padding: 6px 12px !important;
+        margin: 0px 5px !important;
+    }
+
+        .btn-teclado .dx-button-content .dx-button-text {
+            font-size: 24px !important;
+        }
+
+    .row-btn-teclado {
+        margin-bottom: 10px !important;
+    }
+
+    .area-btn-teclado {
+        margin-bottom: 50px !important;
+        margin-top: 100px !important;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------ESTILOS PARA IPHONE 6 PLUS-------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 900px) and (max-height:1000px) { /*IPHONE 6 PLUS*/
+    .area-btn-over {
+        top: 29%;
+    }
+
+    .tile {
+        height: 200px !important;
+    }
+
+    .img-tile {
+        height: 130px !important;
+    }
+
+    .icon-login {
+        width: 50%;
+        height: 200px;
+        margin: 20px 0px;
+    }
+
+    .tags {
+        color: #d52133;
+        font-size: 14px;
+        position: relative;
+        top: 8px;
+    }
+
+    .gallery {
+        height: 155px !important;
+    }
+
+    .map-google {
+        height: 1000px;
+    }
+
+    .label {
+        position: relative;
+        top: 3px;
+    }
+
+    .btn-teclado {
+        padding: 8px 16px !important;
+        margin: 0px 15px !important;
+    }
+
+        .btn-teclado .dx-button-content .dx-button-text {
+            font-size: 26px !important;
+        }
+
+    .row-btn-teclado {
+        margin-bottom: 20px !important;
+    }
+
+    .area-btn-teclado {
+        margin-bottom: 60px !important;
+        margin-top: 120px !important;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*------------------------ESTILOS PARA IPAD / IPAD MINI-------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 1000px) { /*IPAD, IPAD MINI*/
+    .area-btn-over {
+        top: 32%;
+    }
+
+    .tile {
+        height: 250px !important;
+    }
+
+    .img-tile {
+        height: 180px !important;
+    }
+
+    .icon-login {
+        width: 33%;
+        height: 200px;
+        margin: 20px 0px;
+    }
+
+    .tags {
+        color: #d52133;
+        font-size: 16px;
+        position: relative;
+        top: 8px;
+    }
+
+    .title-cards {
+        width: 103% !important;
+    }
+
+        .title-cards i {
+            right: 5px !important;
+        }
+
+    .gallery {
+        height: 220px !important;
+        width: 102% !important;
+    }
+
+    .map-google {
+        height: 1000px;
+    }
+
+    .label {
+        position: relative;
+        top: 3px;
+    }
+
+    .btn-teclado {
+        padding: 8px 16px !important;
+        margin: 0px 15px !important;
+    }
+
+        .btn-teclado .dx-button-content .dx-button-text {
+            font-size: 26px !important;
+        }
+
+    .row-btn-teclado {
+        margin-bottom: 20px !important;
+    }
+
+    .area-btn-teclado {
+        margin-bottom: 60px !important;
+        margin-top: 120px !important;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*------------------------------ESTILOS PARA ANDROID----------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 600px) and (max-height:650px) { /*ANDROID*/
+    .area-btn-over {
+        top: 36%;
+    }
+
+    .icon-login {
+        width: 30%;
+        height: 90px;
+        margin: 10px 0px;
+    }
+
+    .tags {
+        color: #d52133;
+        font-size: 13px;
+        position: relative;
+        top: 8px;
+    }
+
+    .title-cards {
+        width: 106% !important;
+    }
+
+    .cards-button {
+        width: 50px !important;
+        height: 50px !important;
+        top: -50px !important;
+    }
+
+        .cards-button i {
+            font-size: 24px !important;
+        }
+
+    .gallery {
+        height: 103px !important;
+    }
+
+    .map-google {
+        height: 650px;
+    }
+
+    .label {
+        position: relative;
+        top: 13px;
+    }
+
+    .mask-input-file {
+        top: -56px !important;
+    }
+
+    .item-list-img-group span {
+        top: 10px !important;
+    }
+
+    .btn-teclado {
+        padding: 6px 10px !important;
+        margin: 0px 5px !important;
+    }
+
+        .btn-teclado .dx-button-content .dx-button-text {
+            font-size: 24px !important;
+        }
+
+    .row-btn-teclado {
+        margin-bottom: 10px !important;
+    }
+
+    .area-btn-teclado {
+        margin-bottom: 20px !important;
+        margin-top: 90px !important;
+    }
+
+    .btn-teclado .dx-button-content .dx-icon {
+        width: 28px !important;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------ESTILOS PARA ANDROID TAB---------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 750px) and (max-height:900px) { /*ANDROID TAB*/
+    .area-btn-over {
+        top: 34%;
+    }
+
+    .tile {
+        height: 200px !important;
+    }
+
+    .img-tile {
+        height: 130px !important;
+    }
+
+    .icon-login {
+        width: 43%;
+        height: 200px;
+        margin: 20px 0px;
+    }
+
+    .tags {
+        color: #d52133;
+        font-size: 16px;
+        position: relative;
+        top: 8px;
+    }
+
+    .gallery {
+        height: 165px !important;
+    }
+
+    .map-google {
+        height: 900px;
+    }
+
+    .label {
+        position: relative;
+        top: 13px;
+    }
+
+    .mask-input-file {
+        top: -56px !important;
+    }
+
+    .item-list-img-group span {
+        top: 10px !important;
+    }
+
+    .btn-teclado .dx-button-content .dx-icon {
+        width: 30px !important;
+    }
+}
+
+
+/*------------------------------------------------------------------------------------*/
+/*----------------------------------ESTILOS COMUNES-----------------------------------*/
+/*------------------------------------------------------------------------------------*/
+span, label {
+    font-family: Gotham-Book;
+    /*text-transform: uppercase;*/
+    text-transform: capitalize;
+}
+
+p, input, label {
+    color: gray;
+}
+
+
+.label {
+    color: #808080;
+    font-size: 14px;
+    text-transform: none !important;
+}
+
+.last-access {
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 3px;
+    color: #515156;
+}
+
+.texts {
+    color: #515156;
+    font-family: Gotham-Book;
+    font-size: 14px;
+}
+
+hr {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.button {
+    border: 1px solid #d52133;
+    border-radius: 5px;
+    color: white;
+}
+
+.color {
+    color: #d52133;
+}
+
+
+.photo-contact {
+    width: 100%;
+}
+
+#txtMonto .dx-texteditor-container .dx-texteditor-input {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d52133;
+}
+
+#txtValorTransferir .dx-texteditor-container .dx-texteditor-input {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d52133;
+}
+
+.btn-teclado {
+    padding: 6px 12px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: all ease-in 0.2s;
+}
+
+    .btn-teclado:hover {
+        background-color: #d52133 !important;
+        box-shadow: 5px 3px 4px #808080;
+    }
+
+        .btn-teclado:hover .dx-button-content .dx-button-text {
+            color: white;
+        }
+
+        .btn-teclado:hover .dx-button-content .dx-icon {
+            color: white;
+        }
+
+    .btn-teclado .dx-button-content .dx-button-text {
+        font-size: 24px;
+    }
+
+.row-btn-teclado {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.area-btn-teclado {
+    width: 100%;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 80px;
+}
+
+.btn-teclado .dx-button-content .dx-icon {
+    width: auto;
+    height: auto;
+    margin: 0px;
+}
+
+.img-menu {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*------------------------------------BOX CONTROLS------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+.box-controls {
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2px solid #d52133;
+    border-radius: 5px;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
+
+    .box-controls > span {
+        margin-top: -21px;
+        padding-bottom: 7px;
+        background-color: #d52133;
+        color: white;
+        padding-left: 10px;
+        padding-top: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+        font-family: Gotham-Book;
+        margin-bottom: 10px;
+    }
+
+
+    .box-controls > div {
+        margin-top: 20px;
+    }
+
+    .box-controls > .row {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+        .box-controls > .row:first-child {
+            margin-top: 5px !important;
+        }
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------------------TITLES---------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+.title-1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: block;
+    border: 1px solid #d52133;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    padding-left: 10px;
+    background-color: transparent;
+    color: #d52133;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+    .title-1 > [class^=col] {
+        margin-top: 15px;
+    }
+
+    .title-1 > i {
+        font-weight: bold;
+    }
+
+    .title-1 > span {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .title-1 > label {
+        font-weight: normal;
+        text-transform: none;
+        font-style: italic;
+    }
+
+
+/*------------------------------------------------------------------------------------*/
+/*-----------------------------------FLOAT BUTTONS------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+.area-btn-movil {
+    position: fixed !important;
+    right: 10px;
+    bottom: 0px;
+    z-index: 2;
+    width: 18%;
+}
+
+.btn-movil {
+    box-shadow: 2px 2px 6px #808080 !important;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-radius: 100%;
+    width: 56px;
+    height: 56px;
+    -moz-transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    margin-left: auto;
+    margin-right: auto;
+    /*bottom: -45px;*/
+}
+
+
+.btn-movil-small {
+    box-shadow: 2px 2px 6px #808080 !important;
+    display: block;
+    /*position: fixed;*/
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    -moz-transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-default {
+    background-color: #d52133 !important;
+}
+
+
+    .btn-default:hover {
+        background-color: #6b0000 !important;
+        -moz-transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+        -o-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in;
+    }
+
+.btn-movil.btn-default .dx-button-content i {
+    color: white !important;
+    font-size: 18px !important;
+}
+
+.btn-movil-small.btn-default .dx-button-content i {
+    color: white !important;
+    font-size: 14px !important;
+}
+
+.btn-default-1 {
+    background-color: #d52133 !important;
+}
+
+
+    .btn-default-1:hover {
+        background-color: #6b0000 !important;
+        -moz-transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+        -o-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in;
+    }
+
+.btn-movil.btn-default-1 .dx-button-content i {
+    color: white !important;
+    font-size: 18px !important;
+}
+
+.btn-movil-small.btn-default-1 .dx-button-content i {
+    color: white !important;
+    font-size: 14px !important;
+}
+
+
+.btn-transition {
+    display: none;
+    /*opacity: 0;
+    transition: opacity 0.4s linear;*/
+}
+
+.btn-transition-show {
+    display: block;
+    /* opacity: 1 !important;*/
+}
+
+.btn-delete {
+    background-color: #ba2737 !important;
+}
+
+    .btn-delete:hover {
+        background-color: #e67e8a !important;
+        -moz-transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+        -o-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in;
+    }
+
+.btn-cancel {
+    background-color: #ff0084 !important;
+}
+
+    .btn-cancel:hover {
+        background-color: #910a52 !important;
+        -moz-transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+        -o-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in;
+    }
+
+.btn-white {
+    background-color: white !important;
+}
+
+    .btn-white:hover {
+        background-color: #dbdbdb !important;
+        -moz-transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+        -o-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in;
+    }
+
+.btn-movil.btn-white .dx-button-content i {
+    color: #515156;
+    !important;
+    font-size: 18px !important;
+}
+
+.btn-movil-small.btn-white .dx-button-content i {
+    color: #515156;
+    !important;
+    font-size: 14px !important;
+}
+
+.btn-success {
+    background-color: #71e003 !important;
+}
+
+    .btn-success:hover {
+        background-color: #498a08 !important;
+        -moz-transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+        -o-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in;
+    }
+
+.area-btn-movil-bottom {
+    position: fixed !important;
+    bottom: 0%;
+    width: 100%;
+    background: #ededed;
+    position: relative;
+    border: 1px solid #dedede;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    height: 16px;
+}
+
+.btn-movil-bottom {
+    box-shadow: 0px 3px 4px #dbdbdb !important;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    -moz-transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    float: right;
+    margin-right: 20px;
+    top: -32px;
+}
+
+    .btn-movil-bottom .dx-button-content i {
+        color: white !important;
+        font-size: 18px !important;
+    }
+
+.area-btn-over {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+.btn-over {
+    height: 80px;
+    width: 80px;
+    border: 2px solid white;
+    border-radius: 100%;
+    text-decoration: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 4px 10px black;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+    .btn-over span {
+        font-size: 14px;
+        color: white;
+        top: 27px;
+        position: relative;
+        font-weight: bold;
+    }
+
+
+/*------------------------------------------------------------------------------------*/
+/*-----------------------------------------CARDS--------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+.title-cards {
+    padding: 7px;
+    font-weight: bold;
+    background-color: #d52133;
+    font-size: 14px;
+    display: block;
+    position: relative;
+    left: -10px;
+    top: -10px;
+    cursor: pointer;
+    color: white;
+    width: 106%;
+    margin-bottom: 5px;
+    transition: all 0.2s ease-in;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+    .title-cards i {
+        margin-top: 2px;
+        margin-right: 10px;
+        position: absolute;
+        right: 10px;
+    }
+
+    .title-cards:hover {
+        background-color: #007f8a;
+        color: white;
+    }
+
+.tag-data-cards {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.info-data-cards {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #515156;
+}
+
+.cards {
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px grey;
+    width: auto;
+    height: auto;
+    display: block;
+    background: rgba(255,255,255,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+}
+
+.cards-expand {
+    max-height: 800px;
+    height: auto;
+    transition: max-height 0.5s;
+}
+
+.cards-collapse {
+    max-height: 9px;
+    transition: max-height 0.5s;
+}
+
+.cards-button {
+    background-color: #d52133;
+    color: white;
+    padding: 4px;
+    text-align: center;
+    border-radius: 100%;
+    transition: all 0.5s ease-in;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -50px;
+    float: right;
+    box-shadow: 2px 2px 6px #808080;
+}
+
+    .cards-button i {
+        font-size: 25px;
+        margin-top: 7px;
+    }
+
+    .cards-button:hover {
+        background-color: #007f8a;
+    }
+
+    .cards-button a {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+        .cards-button a:hover {
+            text-decoration: none;
+        }
+
+.cards-image {
+    height: 205px;
+    width: 106%;
+    margin-bottom: 10px;
+    position: relative;
+    left: -10px;
+    top: -15px;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*-------------------------------------PLANTILLA--------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+#content {
+    overflow: hidden;
+}
+
+.dx-lookup.dx-state-disabled {
+    opacity: 0.25 !important;
+}
+
+.dx-popup-wrapper.dx-overlay-shader .dx-overlay-content {
+    margin-top: 20px !important;
+}
+
+.btn-teclado.dx-button.dx-widget.dx-rtl.dx-button-has-icon > .dx-button-content {
+    padding-right: 13px !important;
+    padding-left: 13px !important;
+}
+
+.dx-lookup-popup-wrapper .dx-popup-title + .dx-popup-content {
+    top: 7px !important;
+}
+
+
+@font-face {
+    font-family: "Gotham-Book";
+    src: url("css/fonts/Gotham-Book.otf");
+}
+
+@font-face {
+    font-family: "Gotham-Black";
+    src: url("css/fonts/Gotham-Black-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Gotham-Bold";
+    src: url("css/fonts/Gotham-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Swenson";
+    src: url("css/fonts/SWENSON.TTF");
+}
+
+.dx-dropdowneditor-icon:before {
+    color: #515156;
+}
+
+/*.bulletMenu{
+    content:url("./images/iconos/bullet-pasivo.png");
+        width: 18px;
+}*/
+
+.submenu-item img:first-child {
+    position: absolute;
+    font-size: 16px; /*ojo + 5*/
+    top: 30%;
+    margin-top: -9px;
+    margin-left: 60px;
+    /*content: url("./images/iconos/bullet-pasivo.png");*/
+    width: 15px;
+}
+
+.linea {
+    display: inline;
+    position: absolute;
+    content: url(./images/iconos/linea-punteada.png);
+    margin-left: 64.2px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+.ticketPagoServicioBasico {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+
+
+
+/*-------------------------------------------------------------NUEVO CSS-----------------------------------------------------*/
+
+#lkpCreditos { /*LookUp*/
+    color: #d52133 !important;
+    background-color: transparent !important;
+}
+
+    #lkpCreditos .dx-button-text {
+        font-size: 16px !important;
+    }
+
+
+#btnCambiarCredito {
+    color: #d52133 !important;
+    background-color: transparent !important;
+}
+
+    #btnCambiarCredito .dx-button-text {
+        font-size: 16px !important;
+    }
+
+#rdbCreditos .dx-item-content {
+    font-size: 20px !important;
+}
+
+
+#btnCambiarTarjeta {
+    color: #d52133 !important;
+    background-color: transparent !important;
+}
+
+    #btnCambiarTarjeta .dx-button-text {
+        font-size: 14px !important;
+    }
+
+#rdbTarjetas .dx-item-content {
+    font-size: 20px !important;
+}
+
+#btnCambiarCuenta {
+    color: #d52133 !important;
+    background-color: transparent !important;
+    direction: initial !important;
+}
+
+    #btnCambiarCuenta .dx-button-text {
+        font-size: 14px !important;
+        direction: initial !important;
+    }
+
+#rdbCuentas .dx-item-content {
+    font-size: 20px !important;
+}
+
+.dx-toolbar-label .dx-toolbar-item-content > div {
+    font-family: Gotham-Book !important;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dx-state-disabled .dx-texteditor-input {
+    color: black;
+}
+
+.dx-state-disabled.dx-widget, .dx-state-disabled .dx-widget {
+    opacity: .6;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    zoom: 1;
+    cursor: default;
+}
+
+.dx-state-readonly .dx-texteditor-input {
+    color: gray;
+}
+
+/*.dx-toolbar {
+    background : #d52133 TURQUESA;
+    color: #fff;
+}
+
+.dx-toolbar-label {
+    color: #fff;
+}*/
+
+/*#0277bd;    AZUL */
+
+
+
+#menuInicialMovil .dx-scrollable-container .dx-scrollable-content .dx-scrollview-content {
+    margin-bottom: 35px;
+}
+
+
+#btnEnviarMensaje > div > span {
+    margin: 12px;
+}
+
+
+#btnCambiarCuenta > .dx-button-content > .dx-icon {
+    float: right;
+    margin-top: -1px;
+    direction: initial !important;
+    /* color:aqua*/
+}
+
+#btnCambiarCuentaOrigen > .dx-button-content > .dx-icon {
+    float: right;
+    margin-top: -1px;
+    /*color:green;*/
+    direction: initial !important;
+}
+
+.creaUsrSpnLbl {
+    font-family: Gotham-Book;
+    text-transform: capitalize;
+}
+/************************************************APERTURA CUENTA DIGITAL*******************************************/
+
+.contPaginatorCtaDigital {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+    .contPaginatorCtaDigital p, .container p a {
+        text-decoration: none;
+        font-family: sans-serif;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 18px;
+        margin: 4px 0 0 0;
+    }
+
+    .contPaginatorCtaDigital .dot {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border-radius: 100px;
+        background: #EC7F86;
+        margin: 0px 2px 0 2px;
+        cursor: pointer;
+        transition: 0.25s cubic-bezier(0.85, 0.18, 0.19, 0.83);
+    }
+
+        .contPaginatorCtaDigital .dot.active {
+            /*width: 50px;*/
+            background: #D9000D;
+        }
+
+    .contPaginatorCtaDigital .pagnatorTlt {
+        color: #D9000D;
+    }
+
+
+
+#contBtnCtaDig {
+    width: 245px;
+    border-radius: 20px;
+    margin: 25px 0px;
+    box-shadow: 3px 3px 6px #b2b2b2;
+    overflow: hidden;
+    background-color: white;
+    line-height: normal;
+}
+
+#BtnCtaDig {
+    display: grid;
+    font-family: 'Gotham-Book';
+    font-weight: bolder;
+    line-height: normal;
+    text-align: center;
+}
+
+#txt1BtnCtaDig {
+    color: gray;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+#txt2BtnCtaDig {
+    color: #CC0000;
+    font-size: 18px;
+    font-family: Gotham-Black;
+}
+
+#txt34ContBtnCtaDig {
+}
+
+#txt3BtnCtaDig {
+    color: #CC0000;
+    font-size: 20px;
+    font-family: Gotham-Black;
+}
+
+#txt4BtnCtaDig {
+    color: #CC0000;
+    font-family: Swenson !important;
+    text-transform: none;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.btnActiveCtaDigital {
+    margin-top: 10px;
+    color: white;
+    background-color: #d52133 !important;
+    font-weight: bolder;
+    border-radius: 10px;
+    width: 125px;
+    box-shadow: 3px 3px 6px #b2b2b2;
+    margin: 10px 0px;
+    height: 35px;
+}
+
+
+.btnInactiveCtaDigital {
+    margin-top: 10px;
+    color: white;
+    background-color: lightgray !important;
+    font-weight: bolder;
+    border-radius: 10px;
+    width: 125px;
+    box-shadow: 3px 3px 6px #b2b2b2;
+    margin: 10px 0px;
+    height: 35px;
+}
+
+.contMsgUsrCtaDigital {
+    text-align: center;
+}
+
+.imgMsgUsrCtaDigital {
+    width: 80%;
+    margin: 20px 0px;
+}
+
+.tltMsgUsrCtaDigital {
+    font-family: Gotham-Black;
+    color: #D9000D;
+    font-weight: bolder;
+    font-size: 26px;
+    margin: 20px 0px 40px 0px;
+}
+
+
+.scrollFormSolCtaDig {
+    text-align: center;
+    background-color: white;
+    padding: 0px 10px
+}
+
+.titleFormSolCtaDigCont {
+    text-align: left;
+    margin: 15px 0px;
+}
+
+.titleFormSolCtaDig {
+    font-weight: bolder;
+    color: #D9000D;
+    font-size: 18px
+}
+
+.subtitleFormSolCtaDigCont {
+    text-align: left;
+    margin: 15px 0px;
+}
+
+.subtitleFormSolCtaDig {
+    font-weight: bolder;
+    color: gray
+}
+
+
+
+/*---------------------*/
+
+#contBtnCtaDigMenu {
+    width: 245px;
+    /*border: solid 2px #e5e5e5;*/
+    border-radius: 20px;
+    margin: 15px 0px 15px 0px;
+    box-shadow: 3px 3px 6px #b2b2b2;
+    overflow: hidden;
+    background-color: white;
+    line-height: normal;
+}
+
+    #contBtnCtaDigMenu :after {
+        content: "";
+        background: #b2b2b2;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px !important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s
+    }
+
+    #contBtnCtaDigMenu :active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+    }
+
+    #contBtnCtaDigMenu:active {
+        border: 0.5px outset rgba(0,0,0,0.1);
+        /*background-color: rgb(0, 0, 0, 0.2);*/
+    }
+
+
+
+
+
+
+
+
+
+.botonNoClienteMenu :active {
+    color: #333 !important;
+}
+
+.containerBotonNoClienteMenu > img {
+    width: 60px;
+    height: 60px;
+}
+
+    .containerBotonNoClienteMenu > img:hover {
+        width: 55px;
+        height: 55px;
+    }
+
+
+
+#contBtnCtaDig :after {
+    content: "";
+    background: #b2b2b2;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+.expSubtittleCont {
+    flex: 1;
+    font-family: Gotham-Book;
+    color: gray;
+    text-align: left;
+}
+
+.expSubtittleText {
+    position: absolute;
+    font-size: 12px;
+    line-height: initial;
+}
+
+.formSolCtaDig {
+    margin-top: 50px;
+    margin-top: 50px;
+    margin-bottom: 350px;
+    text-align: left;
+    font-family: 'Gotham-Book';
+    font-size: 12px;
+    color: #4c4c4c;
+}
+
+.formSolCtaDigFieldCont {
+    background-color: #e5e5e5;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+.formSolCtaDigFieldValue {
+    padding: 0px 20px;
+}
+
+.formRadioGroupComp {
+    display: flex;
+    justify-content: center;
+}
+
+.formCtaDigCameraBtnContainer {
+    width: 100%;
+    justify-content: center;
+    text-align: center
+}
+
+.formCtaDigCameraBtnText {
+    color: gray;
+    font-family: Gotham-Black;
+    font-size: 18px
+}
+
+.formCtaDigCameraBtnInner {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #D9000D;
+    border: solid 3px white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.formCtaDigCameraBtnOuter {
+    width: 60px;
+    border-radius: 50%;
+    background-color: #D9000D !important;
+    height: 60px;
+}
+
+.formCtaDigCameraBtnInnerText {
+    color: white;
+    font-family: 'Gotham-Book';
+    font-size: 18px;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.formCtaDigCameraBtnOutterText {
+    color: gray;
+    font-family: 'Gotham-Book';
+    font-size: 18px;
+    font-weight: 900;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateX(-50%);
+}

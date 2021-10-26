@@ -1,0 +1,82 @@
+<div data-options="dxView : { name: 'SolCtaScanDoc1', title: 'SolCtaScanDoc1', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+    <style>
+      .defaultLivenessImg {
+      height: 150px;
+      margin: 25px 0px;
+      display: initial !important;
+      }
+
+      .capuredImg{
+      border-radius: 10px;
+      filter: drop-shadow(5px 5px 5px lightgray);
+      width: 100%;
+      }
+    </style>
+
+    <div data-bind="dxScrollView: {showScrollbar:'never' }" class="scrollFormSolCtaDig">
+      <div class="titleFormSolCtaDigCont">
+        <span class="titleFormSolCtaDig">Solicitud de Cuenta de Ahorro</span>
+      </div>
+
+      <div class="contPaginatorCtaDigital">
+        <span class="pagnatorTlt">Paso 1 / 4</span>
+        <div>
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+
+      <div class="subtitleFormSolCtaDigCont" style="">
+        <span class="subtitleFormSolCtaDig">Autenticación</span>
+        <div class="expSubtittleCont" >
+          <span class="expSubtittleText">Sube una imagen de tu DPI y una selfie para validar tu identidad.</span>
+        </div>
+      </div>
+
+
+      <div style="width:100%; justify-content:center;text-align:center;display: flex;margin: 50px 0px 25px 0px;">
+        <div style="width:90%;">
+          <img src="images/scan-doc-front-icon.png" id="idFrontSide" class="defaultLivenessImg" style="display: initial !important;"></img>
+        </div>
+      </div>
+
+
+      <div class="formCtaDigCameraBtnContainer" style="display: flex;">
+
+        <div>
+          <div class="formCtaDigCameraBtnOuter" id="btnCamera" style="margin: 0px 15px;" data-bind="dxButton: btnCamera">
+            <div class="formCtaDigCameraBtnInner">
+              <div class="formCtaDigCameraBtnInnerText">1</div>
+            </div>
+          </div>
+          <div class="formCtaDigCameraBtnOutterText">Frente</div>
+        </div>
+
+        <div>
+          <div class="formCtaDigCameraBtnOuter" id="btnCameraBack" style="margin: 0px 15px;" data-bind="dxButton: btnCameraBack">
+            <div class="formCtaDigCameraBtnInner ">
+              <div class="formCtaDigCameraBtnInnerText">2</div>
+            </div>
+          </div>
+          <div class="formCtaDigCameraBtnOutterText">Dorso</div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+</div>

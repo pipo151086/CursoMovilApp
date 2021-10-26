@@ -1,0 +1,116 @@
+<div data-options="dxView : { name: 'SolCtaForm3', title: 'SolCtaForm3', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+      #montoIngreso > div{
+      margin:0px !important;
+      }
+
+      #ingMonto > div{
+      margin:0px !important;
+      }
+
+      #egreMonto > div{
+      margin:0px !important;
+      }
+
+      .itemSeparator{
+      margin-top:5px;
+      margin-bottom:5px;
+      }
+    </style>
+
+    <div data-bind="dxScrollView: {showScrollbar:'never' }" class="scrollFormSolCtaDig">
+      <div class="titleFormSolCtaDigCont">
+        <span class="titleFormSolCtaDig">Solicitud de Cuenta de Ahorro</span>
+      </div>
+
+      <div class="contPaginatorCtaDigital">
+        <span class="pagnatorTlt" id="pagnatorTlt"></span>
+        <div id="paginatorDots"></div>
+      </div>
+
+      <div class="subtitleFormSolCtaDigCont" style="">
+        <span class="subtitleFormSolCtaDig">Formulario de solicitud</span>
+
+        <span class="subtitleFormSolCtaDig" style="float: right;">Página 3 de 4</span>
+
+        <div class="expSubtittleCont" >
+          <span class="expSubtittleText">Por favor responde las siguientes preguntas para solicitar tu cuenta.</span>
+        </div>
+      </div>
+
+      <div class="formSolCtaDig" >
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">21. Ingresos:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="display: inline-flex;width: 100%;">
+              <span style="font-size: 20px; margin-right: 5px;">Q. </span>
+              <div class="formSolCtaDigFieldValueComp" style="flex:1;bottom: 1px;" id="montoIngreso"  data-bind="dxNumberBox: montoIngreso, dxValidator:validateRequired(CtaDigDPIPasF3, 'Ingresos')"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">22. Actividad Económica Actual:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formSolCtaDigFieldValueComp"  id="actEconActual"  data-bind="dxSelectBox: actEconActual, dxValidator:validateRequired(CtaDigDPIPasF3, 'Actividad Económica Actual')"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">23. Datos del Patrono / Negocio Propio:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="" id="patNomComer" data-bind="dxTextBox: patNomComer, dxValidator: validateRequired(CtaDigDPIPasF3, 'Nombre Comercial del Patrono / Negocio Propio')"></div>
+            <div class="formSolCtaDigFieldValueComp itemSeparator"  id="patNit"  data-bind="dxTextBox: patNit"></div>
+            <div class="formSolCtaDigFieldValueComp itemSeparator"  id="patActividadEcono"  data-bind="dxSelectBox: patActividadEcono, dxValidator:validateRequired(CtaDigDPIPasF3, 'Principal Actividad Económica')"></div>
+            <div class="formSolCtaDigFieldValueComp itemSeparator"  id="patPuesto"  data-bind="dxTextBox: patPuesto, dxValidator:validateRequired(CtaDigDPIPasF3, 'Puesto')"></div>
+            <div class="formSolCtaDigFieldValueComp itemSeparator"  id="patSector"  data-bind="dxSelectBox: patSector, dxValidator:validateRequired(CtaDigDPIPasF3, 'Sector')"></div>
+            <div class="formSolCtaDigFieldValueComp itemSeparator"  id="patDirCallePrin"  data-bind="dxTextBox: patDirCallePrin, dxValidator:validateRequired(CtaDigDPIPasF3, 'Calle Principal')"></div>
+            <div class="formSolCtaDigFieldValueComp itemSeparator" style="width:50%"  id="patDirNumero"  data-bind="dxTextBox: patDirNumero"></div>
+            <div class="formSolCtaDigFieldValueComp itemSeparator"  id="patDirCalleTran"  data-bind="dxTextBox: patDirCalleTran"></div>
+            <div style="" id="patNumeroTelef" data-bind="dxTextBox: patNumeroTelef, dxValidator: validateHibridPhone(true, CtaDigDPIPasF3, 'Número de teléfono')"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">24. Ingresos:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="display: inline-flex;width: 100%;">
+              <div class="formSolCtaDigFieldValueComp" style="width:50px; margin-right:10px" id="ingTipoMoneda"  data-bind="dxSelectBox: ingTipoMoneda, dxValidator:validateRequired(CtaDigDPIPasF3, 'Moneda')"></div>
+              <div class="formSolCtaDigFieldValueComp" style="flex:1;bottom: 1px" id="ingMonto"  data-bind="dxNumberBox: ingMonto, dxValidator:validateRequired(CtaDigDPIPasF3, 'Ingresos')"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">25. Egresos:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="display: inline-flex;width: 100%;">
+              <div class="formSolCtaDigFieldValueComp" style="width:50px; margin-right:10px" id="egreTipoMoneda"  data-bind="dxSelectBox: egreTipoMoneda, dxValidator:validateRequired(CtaDigDPIPasF3, 'Moneda')"></div>
+              <div class="formSolCtaDigFieldValueComp" style="flex:1;bottom: 1px;" id="egreMonto"  data-bind="dxNumberBox: egreMonto, dxValidator:validateRequired(CtaDigDPIPasF3, 'Ingresos')"></div>
+            </div>
+          </div>
+        </div>
+
+
+        
+        
+        
+
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnActiveCtaDigital" id="btnValidar" style="" data-bind="dxButton: btnValidar"></div>
+        </div>
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnInactiveCtaDigital" id="btnRegresar" style="" data-bind="dxButton: btnRegresar"></div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>

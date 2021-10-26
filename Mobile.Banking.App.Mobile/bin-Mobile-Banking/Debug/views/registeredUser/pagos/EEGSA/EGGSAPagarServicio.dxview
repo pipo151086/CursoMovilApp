@@ -1,0 +1,162 @@
+<div data-options="dxView : { name: 'EGGSAPagarServicio', title: 'Pago de Servicio', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <div data-bind="dxScrollView: {  }">
+      <div style="margin-bottom:80px">
+
+
+        <div id="datosPagar" style="">
+          <div class="box-controls">
+            <span data-bind="text: 'EEGSA'"></span>
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <!--<label style="display:block" data-bind="text: txtTipoBusqueda"></label>-->
+
+                <label id="tipoDoc" style="display:block"></label>
+                <span id="txtNumeroTelefono" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNumeroTelefono"></span>
+              </div>
+            </div>
+            <hr />
+
+
+
+            <div class="row esPostPago">
+              <div class="col-lg-12 texts">
+                <label style="display:block">No. Factura</label>
+
+                <span id="txtFactura" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtFactura"></span>
+              </div>
+            </div>
+            <hr  class="esPostPago"/>
+
+            <!--01-->
+
+
+            <!--numero de contador o numero de correlativo segundo doc--> 
+            <div class="row esFactura">
+              <div class="col-lg-12 texts">
+                <label id="tipoDoc2" style="display:block"></label>
+                <span id="txtDoc2" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtDoc2"></span>
+              </div>
+            </div>
+            <hr  class="esFactura"/>
+
+
+
+            <div class="row esFactura">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Fecha Factura</label>
+                <span id="txtFechaFactura" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtFechaFactura"></span>
+              </div>
+            </div>
+            <hr  class="esFactura"/>
+
+
+
+
+            <div class="row esFactura">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Nombre</label>
+                <span id="txtNombre" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNombre"></span>
+              </div>
+            </div>
+            <hr  class="esFactura"/>
+
+            <div class="row esFactura">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Dirección</label>
+                <span id="txtDireccion" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtDireccion"></span>
+              </div>
+            </div>
+            <hr  class="esFactura"/>
+
+
+            <div class="row esFactura">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Saldo Anterior</label>
+                <span id="txtSaldo" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtSaldo"></span>
+              </div>
+            </div>
+            <hr  class="esFactura"/>
+
+
+            <div class="row esFactura">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Cargos del mes</label>
+                <span id="txtCargos" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtCargos"></span>
+              </div>
+            </div>
+            <hr  class="esFactura"/>
+
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Monto total a pagar</label>
+                <span id="txtMontoPagar" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtMontoPagar"></span>
+              </div>
+            </div>
+            <hr  class=""/>
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Correo Comprobante</label>
+                <span id="txtCorreoFactura" class="color" style="float:left; display: inline-flex;font-size: 15px;" data-bind="dxTextBox: txtCorreoFactura, dxValidator: ({
+                validationGroup:groupValidation,
+                validationRules:[
+                     validateRequired(groupValidation, '').validationRules[0],
+                     validateEmail(false, groupValidation, 'Mail Factura').validationRules[0],
+                       ]}) "></span>
+              </div>
+            </div>
+            <hr/>
+
+
+
+
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Correo Comprobante</label>
+                <span id="txtCorreoFactura" class="color" style="float:left; display: inline-flex;font-size: 15px;" data-bind="dxTextBox: txtCorreoFactura, dxValidator: ({
+                validationGroup:groupValidation,
+                validationRules:[
+                     validateRequired(groupValidation, '').validationRules[0],
+                     validateEmail(false, groupValidation, 'Mail Factura').validationRules[0],
+                       ]}) "></span>
+              </div>
+            </div>
+            <hr/>
+
+            
+            <div class="row">
+              <div class="col-lg-6 texts" style="display:inline-block">
+                <label style="display:block;padding-top: 8px;">Cuenta</label>
+              </div>
+              <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;padding-right:0px !important">
+                <div id="btnCambiarCuenta" style="display:inline-block" data-bind="dxButton: btnCambiarCuenta"></div>
+              </div>
+            </div>
+            <hr/>
+
+            <div id="popupSeleccionCuenta" data-bind="dxPopup: popupSeleccionCuenta">
+              <div data-options="dxTemplate: {name: 'content'}">
+                <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                  <div class="row">
+                    <div class="col-lg-12" style="text-align:center">
+                      <div id="rdbCuentas" style="font-size:20px" data-bind="dxRadioGroup: rdbCuentas"></div>
+                      <div id="btnCancelarCuenta" style="margin-top:10px" data-bind="dxButton: btnCancelarCuenta"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

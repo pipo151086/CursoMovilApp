@@ -1,0 +1,81 @@
+<div data-options="dxView : { name: 'InsertPin', title: 'InsertPin', disableCache: true  } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <style>
+            .btn {
+                border-radius: 100% !important;
+            }
+        </style>
+        <div id="contentRequestPin" style="width:100%; text-align:center;align-self:center;background: white;">
+            <div class="img-pin" data-bind="click: clickView">
+                <img id="imgCandado" style="height:80px; width:80px; margin-top:20px" src="images/icono-candado.png"></img>
+                <span class="span-pin" id="spanSeleccionAcceso">Ingresa tu PIN de seguridad</span>
+
+            </div>
+
+
+            <div id="ContainerCode">
+                <div style="width:100%">
+                    <input style="background: transparent; color: transparent; width: 1px;margin-left: -50px;" id="txtNumberPIN" pattern="[0-9]*"></input>
+                </div>
+                <div style="text-align:center; width:100%; display:block; margin-top:5px">
+                    <div class="img-char-pin">
+                        <div id="charVacio1" class="img-char-pin-vacio"></div>
+                    </div>
+                    <div class="img-char-pin">
+                        <div id="charVacio2" class="img-char-pin-vacio"></div>
+                    </div>
+                    <div class="img-char-pin">
+                        <div id="charVacio3" class="img-char-pin-vacio"></div>
+                    </div>
+                    <div class="img-char-pin">
+                        <div id="charVacio4" class="img-char-pin-vacio"></div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top:20px; width:100%; margin-bottom:10px">
+                <div id="btnOlvidoPIN" style="" class="btn3" data-bind="dxButton: { text: '¿Olvidó su PIN?', onClick: clickOlvidoPIN }"></div>
+                <div id="btnCancelar" class="btn3" style="display:block;">
+                    <a style="display:inline-block; text-decoration:none !important; color:#d52133" id="linkCancelar" data-bind="click: clickCancelar">
+                        <span style="text-transform:none !important; font-family: Gotham-Book !important; font-size:15px; ">Cancelar</span>
+                    </a>
+                </div>
+            </div>
+            <div class="area-teclado" id="containerDisclaimer" style="" data-bind="click: clickView">
+                <br />
+                <br />
+            </div>
+            <div style="width:100%; position:fixed; height:10px; background-color: #d52133; bottom:0px"></div>
+
+            <div data-bind="dxPopup: {
+                        height: 'auto',
+                        title: 'Olvido de PIN',
+                        visible: visible,
+                        animation: animationConfig,
+                     closeOnOutsideClick :true
+                    }">
+                <div style="text-align:center;width:100%" data-options="dxTemplate: { name: 'content' }">
+                    <div style="text-align:justify;width:100%">
+                        <p>Si has olvidado tu PIN de acceso deberás realizar el proceso de registro nuevamente y establecer un nuevo PIN.</p>
+                        <p style="text-align:center; font-weight:bold; margin-bottom:20px">¿Estás de acuerdo con esto?</p>
+                        <div style="text-align:center">
+                            <div id="btnAceptarOP" style="bottom:0px;right:0px; color:#d52133;" data-bind="dxButton: { text: 'Aceptar', onClick: clickAceptarOlvidoPIN }"></div>
+                            <div id="btnCancelarOP" style="bottom:0px;left:0px; color:#d52133;" data-bind="dxButton: { text: 'Cancelar', onClick: togglePopup }"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>

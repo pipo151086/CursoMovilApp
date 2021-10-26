@@ -1,0 +1,46 @@
+<div data-options="dxView : { name: 'Ubiquenos', title: 'Ubiquenos' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxScrollView: { }">
+            <div style="margin-bottom:50px">
+                <style>
+                    #btnCambiarProvincia {
+                        color: #d52133 !important;
+                        background-color: transparent !important;
+                    }
+
+                        #btnCambiarProvincia .dx-button-text {
+                            font-size: 16px !important;
+                        }
+
+                    #rdbProvincias .dx-item-content {
+                        font-size: 20px !important;
+                    }
+                </style>
+                <div class="row" style="padding:10px">
+                    <div class="col-lg-12 texts">
+                        <label style="color:#d52133;float:left; margin-top:8px">PROVINCIA</label>
+                        <div style="float:right;">
+                            <div id="btnCambiarProvincia" style="display:inline-block;" data-bind="dxButton: btnCambiarProvincia"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align:center; padding: 5px 10px;border: 3px groove #00c5d0;border-right: none;border-left: none;margin: 7px 7px;">
+                    <span style="color:gray" id="spnInformacion"></span>
+                </div>
+                <div id="crdAgencias"></div>
+                <div id="popupSeleccionProvincia" data-bind="dxPopup: popupSeleccionProvincia">
+                    <div data-options="dxTemplate: {name: 'content'}">
+                        <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                            <div class="row">
+                                <div class="col-lg-12" style="text-align:center">
+                                    <div id="rdbProvincias" style="font-size:20px" data-bind="dxRadioGroup: rdbProvincias"></div>
+                                    <div id="btnCancelar" style="margin-top:10px" data-bind="dxButton: btnCancelar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

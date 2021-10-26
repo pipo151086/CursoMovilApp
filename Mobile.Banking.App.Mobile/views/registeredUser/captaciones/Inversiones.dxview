@@ -1,0 +1,99 @@
+<div data-options="dxView : { name: 'Inversiones', title: 'Depósitos a Plazo Fijo' } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:50px">
+        <style>
+          #btnCambiarInversion {
+          color: #d52133 !important;
+          background-color: transparent !important;
+          }
+
+          #btnCambiarInversion .dx-button-text {
+          font-size: 16px !important;
+          }
+
+          #rdbInversiones .dx-item-content {
+          font-size: 20px !important;
+          }
+        </style>
+        <div id="seleccionInversion" class="row" style="padding:10px">
+          <div class="col-lg-12 texts">
+            <label class="tags">SELECCIONE INVERSIÓN</label>
+            <div style="float:right;">
+              <!--<div id="btnCambiarInversion" style="display:inline-block" data-bind="dxButton: btnCambiarInversion"></div>-->
+              <div id="lkpInversiones" data-bind="dxLookup: lkpInversiones"></div>
+            </div>
+          </div>
+        </div>
+        <div class="box-controls" id="datosInversion" style="display:none">
+          <span data-bind="text: CORE_TAG('DataInvestment')"></span>
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label data-bind="text: 'Modalidad de pago de intereses'"></label>
+
+            </div>
+            <div class="col-lg-12 texts">
+              <span class="color" style="font-size:16px" id="spnDescripcion" data-bind="text: descripcion"></span>
+            </div>
+          </div>
+
+
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label data-bind="text: CORE_TAG('Capital')"></label>
+              <span class="color" style="float:right; font-size:16px" id="spnCapital" data-bind="text: capital"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label data-bind="text: CORE_TAG('Term')"></label>
+              <span class="color" style="float:right; font-size:16px" id="spnPlazo" data-bind="text: plazo"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label data-bind="text:'Tasa'"></label>
+              <span class="color" style="float:right; font-size:16px" id="spnTasa" data-bind="text: tasa + '%'"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label data-bind="text: 'Apertura'"></label>
+              <span class="color" style="float:right;font-size:16px" id="spnFechaCreacion" data-bind="text: Date.parse(fechaCreacion).toString(ConstantsBehaivor.PATTERN_SHORTDATE)"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label data-bind="text: CORE_TAG('DateLastExpiration')"></label>
+              <span class="color" style="float:right;font-size:16px" id="spnFechaUltimoVencimiento" data-bind="text: Date.parse(fechaUltimoVencimiento).toString(ConstantsBehaivor.PATTERN_SHORTDATE)"></span>
+            </div>
+          </div>
+        </div>
+        <div class="box-controls" id="beneficiariosInversion" style="display:none">
+          <span data-bind="text: CORE_TAG('Beneficiaries')"></span>
+          <div class="row">
+            <div style="width:100%;font-size:12px;text-transform:uppercase" class="color">
+              <div style="width:70%;font-weight:bold; display:inline-block;text-align:center">
+                <span>Nombre</span>
+              </div>
+              <div style="width:20%;font-weight:bold; display:inline-block; float:right;text-align:right;margin-right:10px">
+                <span>Teléfono</span>
+              </div>
+            </div>
+            <hr />
+            <div id="lstBeneficiarios" data-bind="dxList: lstBeneficiarios"></div>
+          </div>
+        </div>
+
+        
+    
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,154 @@
+<div data-options="dxView : { name: 'TransferenciasInternas', title: 'Transferencias Internas', disableCache: true } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+
+    <div data-bind="dxScrollView: { }">
+      <style>
+        #btnCambiarCuentaOrigen, #btnCambiarCuentaPropia, #btnCambiarCuentaTercero {
+        color: #d52133 !important;
+        background-color: transparent !important;
+        }
+
+        #btnCambiarCuentaOrigen .dx-button-text {
+        font-size: 14px !important;
+        }
+
+        #btnCambiarCuentaPropia .dx-button-text {
+        font-size: 14px !important;
+        }
+
+        #btnCambiarCuentaTercero .dx-button-text {
+        font-size: 14px !important;
+        }
+
+        #rdbCuentasOrigen .dx-item-content {
+        font-size: 18px !important;
+        }
+
+        #rdbCuentasPropia .dx-item-content {
+        font-size: 20px !important;
+        }
+
+        #rdbCuentasTercero .dx-item-content {
+        font-size: 14px !important;
+        }
+
+        .dx-popup-content, .dx-popup-content.dx-dialog-content {
+        padding: 10px;
+        }
+      </style>
+      <div style="margin-bottom:200px">
+        <div class="box-controls">
+          <span data-bind="text: 'Datos de Transferencia'"></span>
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left; margin-top:10px">Monto</label>
+              <div style="text-align:right">
+                <b style="display:inline-block; font-size:20px; color:#d52133; position:relative;" id="simboloMoneda"></b>
+                <div style="display:inline-block;color:#d52133 !important;" id="txtMonto" data-bind="dxNumberBox:txtMonto, dxValidator:validateRequired(groupValidation,'Monto')"></div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left; margin-top:10px">Origen</label>
+              <div style="float:right;">
+                <div id="btnCambiarCuentaOrigen" style="display:inline-block" data-bind="dxButton: btnCambiarCuentaOrigen"></div>
+                <!--<div id="lkpCuentasOrigen" data-bind="dxLookup: lkpCuentasOrigen"></div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-controls">
+          <span data-bind="text: 'Cuenta Destino'"></span>
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <div style="color: gray;" id="chkCuentaPropia" data-bind="dxCheckBox: chkCuentaPropia"></div>
+              <div style="float:right;">
+                <div id="btnCambiarCuentaPropia" style="display:inline-block" data-bind="dxButton: btnCambiarCuentaPropia"></div>
+                <!--<div id="lkpCuentasPropias" data-bind="dxLookup: lkpCuentasPropias"></div>-->
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <div style="color: gray;" id="chkCuentaTerceros" data-bind="dxCheckBox: chkCuentaTerceros"></div>
+              <div style="float:right;">
+                <div id="btnCambiarCuentaTercero" style="display:inline-block" data-bind="dxButton: btnCambiarCuentaTercero"></div>
+                <!--<div id="lkpCuentasTerceros" data-bind="dxLookup: lkpCuentasTerceros"></div>-->
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label>Concepto</label>
+              <div id="txtConcepto" data-bind="dxTextArea: txtConcepto"></div>
+              <div style="margin-top: 5px;" id="charactersCount" data-bind="text: charactersCount"></div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <div style="display:block">
+                <label>E-Mail Terceros: </label>
+                <div id="txtMailTerceros" data-bind="dxTextBox:txtMailTerceros, dxValidator: validateEmail(false, groupValidation, 'Mail Tercero')" style="width:100%"></div>
+              </div>
+            </div>
+            <div class="col-lg-12 texts">
+              <p style="display:block;">
+                <div style="text-align:center">
+                  <span style="color: #d52133; font-size:13px; font-weight:bold">Notificación de Transferencia por e-mail</span>
+                </div>
+              </p>
+              <p style="word-break:break-word; word-wrap:break-word; text-align:justify; font-size:12px">
+                Puedes enviar una notificación por correo electrónico al beneficiario
+                de la transferencia a realizar, ingresa la cuenta de correo a la que
+                deseas enviar la notificación. No es obligatorio para realizar la
+                transferencia.
+              </p>
+            </div>
+          </div>
+          <div id="popupSeleccionCuentaOrigen" data-bind="dxPopup: popupSeleccionCuentaOrigen">
+            <div data-options="dxTemplate: {name: 'content'}">
+              <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                <div class="row">
+                  <div class="col-lg-12" style="text-align:center">
+                    <div id="rdbCuentasOrigen" style="font-size:20px" data-bind="dxRadioGroup: rdbCuentasOrigen"></div>
+                    <div id="btnCancelarOrigen" style="margin-top:10px" data-bind="dxButton: btnCancelarOrigen"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="popupSeleccionCuentaPropia" data-bind="dxPopup: popupSeleccionCuentaPropia">
+            <div data-options="dxTemplate: {name: 'content'}">
+              <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                <div class="row">
+                  <div class="col-lg-12" style="text-align:center">
+                    <div id="rdbCuentasPropia" style="font-size:20px" data-bind="dxRadioGroup: rdbCuentasPropia"></div>
+                    <div id="btnCancelarPropia" style="margin-top:10px" data-bind="dxButton: btnCancelarPropia"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="popupSeleccionCuentaTercero" data-bind="dxPopup: popupSeleccionCuentaTercero">
+            <div data-options="dxTemplate: {name: 'content'}">
+              <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                <div class="row">
+                  <div class="col-lg-12" style="text-align:center">
+                    <div id="rdbCuentasTercero" style="font-size:20px" data-bind="dxRadioGroup: rdbCuentasTercero"></div>
+                    <div id="btnCancelarTercero" style="margin-top:10px" data-bind="dxButton: btnCancelarTercero"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

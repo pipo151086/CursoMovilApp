@@ -1,0 +1,42 @@
+<div data-options="dxView : { name: 'FormUnreg2NITSorry', title: 'FormUnreg2NITSorry', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+
+
+    <div data-bind="dxScrollView: { }" style="">
+      <div style="padding: 0% 5%;margin-bottom:150px">
+
+        <div class="contMsgUsrCtaDigital" >
+          <img class="imgMsgUsrCtaDigital" src="images/BDA.png"></img>
+          <p class="tltMsgUsrCtaDigital">¡En este momento únicamente podemos atenderte en la apertura de tu cuenta como persona individual!</p>
+        </div>
+
+        <p style="line-height: inherit;    font-size: 16px;display: inline-block; text-align:justify !important;">
+
+          Próximamente tendremos disponible para ti la apertura de cuentas empresariales, en medios digitales.
+          <br/>
+          <br/>
+          <b>¿Deseas aperturar tu cuenta como persona individual?</b>
+          <br/>
+          <br/>
+          De lo contrario, puedes visitar nuestra agencia más cercana para la apertura de cuentas empresariales.
+          <br/>
+          <br/>
+          Agradecemos tu comprensión.
+        </p>
+
+        <div style="width:100%;text-align:center;margin: 0px 0px;">
+          <div class="btnActiveCtaDigital" id="btnAbrirCtaPersonal" style="width:230px" data-bind="dxButton: btnAbrirCtaPersonal"></div>
+        </div>
+        <div style="width:100%;text-align:center;margin: 0px 0px;">
+          <div class="btnInactiveCtaDigital" id="btnAgenciaCercana" style="width:230px" data-bind="dxButton: btnAgenciaCercana"></div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

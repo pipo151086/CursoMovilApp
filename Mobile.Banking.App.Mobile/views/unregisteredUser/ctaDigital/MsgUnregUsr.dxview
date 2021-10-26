@@ -1,0 +1,38 @@
+<div data-options="dxView : { name: 'MsgUnregUsr', title: 'MsgUnregUsr', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <div data-bind="dxScrollView: { }" style="">
+      <div style="padding: 0% 5%;margin-bottom: 55px;">
+
+        <div class="contMsgUsrCtaDigital" >
+          <img class="imgMsgUsrCtaDigital" src="images/BDA.png"></img>
+          <p class="tltMsgUsrCtaDigital">¡Bienvenido a tu cuenta de ahorro 100% Digital!</p>
+        </div>
+
+        <p style="line-height: inherit;    font-size: 16px;display: inline-block; text-align:justify !important;">
+          Durante este proceso abrirás una cuenta bancaria con nosotros. Es importante que tengas a mano:
+          <br/>
+          <br/>
+          <b>Tu identificación personal (DPI o Pasaporte).</b>
+          <br/>
+          <br/>
+          A lo largo del proceso enviaremos información importante a tu correo electrónico. Por Favor, no la compartas con nadie.
+          <br/>
+          <br/>
+          <b>Además, deberás autorizar a APP Bantigua para acceder a tomar fotografías.</b>
+          <br/>
+        </p>
+        
+        <div style="width:100%;text-align:center;">
+          <div class="btnActiveCtaDigital" id="btnEmpezar" style="" data-bind="dxButton: btnEmpezar"></div>
+        </div>
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnInactiveCtaDigital" id="btnVolver" style="" data-bind="dxButton: btnVolver"></div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>

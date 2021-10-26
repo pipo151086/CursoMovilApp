@@ -1,0 +1,89 @@
+<div data-options="dxView : { name: 'TIGOSTARPagarServicio', title: 'Pago de Servicio', disableCache: true} " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+      <div data-bind="dxScrollView: {  }">
+        <div style="margin-bottom:80px">
+
+          <style>
+
+          </style>
+
+          <div class="box-controls">
+            <span>TIGOSTAR</span>
+
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Código Cliente </label>
+                <span id="txtCodigoCliente" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtCodigoCliente"></span>
+              </div>
+            </div>
+            <hr />
+
+            <div class="row esPostPago">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Titular</label>
+                <span id="txtTitular" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtTitular"></span>
+              </div>
+            </div>
+            <hr  class="esPostPago"/>
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Monto a Pagar</label>
+                <span id="txtMontoPagar" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtMontoPagar"></span>
+              </div>
+            </div>
+            <hr/>
+
+
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Correo Comprobante</label>
+                <span id="txtCorreoFactura" class="color" style="float:left; display: inline-flex;font-size: 15px;" data-bind="dxTextBox: txtCorreoFactura, dxValidator: ({
+                validationGroup:groupValidation,
+                validationRules:[
+                     validateRequired(groupValidation, '').validationRules[0],
+                     validateEmail(false, groupValidation, 'Mail Factura').validationRules[0],
+                       ]}) "></span>
+              </div>
+            </div>
+            <hr/>
+
+
+            <div class="row">
+              <div class="col-lg-6 texts" style="display:inline-block">
+                <label style="display:block;padding-top: 8px;">Cuenta</label>
+              </div>
+              <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;padding-right:0px !important">
+                <div id="btnCambiarCuenta" style="display:inline-block" data-bind="dxButton: btnCambiarCuenta"></div>
+              </div>
+            </div>
+            <hr/>
+
+
+          </div>
+
+
+          <div id="popupSeleccionCuenta" data-bind="dxPopup: popupSeleccionCuenta">
+            <div data-options="dxTemplate: {name: 'content'}">
+              <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                <div class="row">
+                  <div class="col-lg-12" style="text-align:center">
+                    <div id="rdbCuentas" style="font-size:20px" data-bind="dxRadioGroup: rdbCuentas"></div>
+                    <div id="btnCancelarCuenta" style="margin-top:10px" data-bind="dxButton: btnCancelarCuenta"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+</div>

@@ -1,0 +1,112 @@
+<div data-options="dxView : { name: 'TUENTIInfo', title: 'Pago de Servicio', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+      hr {
+      margin-top: 10px !important;
+      margin-bottom: 5px !important;
+      }
+    </style>
+
+
+    <div id="datosPagar" style="">
+      <div class="box-controls">
+        <span data-bind="text: 'TUENTI'"></span>
+
+        <div class="row" id="divNumeroTelefono">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Núm. Telef.</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="txtNumeroTelefono" data-bind="dxTextBox:txtNumeroTelefono, dxValidator: validateRequired(groupValidation, '')"></div>
+          </div>
+          <hr />
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Tipo Servicio</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="slTipoBusqueda"  data-bind="dxSelectBox: slTipoBusqueda"></div>
+          </div>
+          <hr />
+        </div>
+
+
+
+        <div class="row containerRecarga" id="divMontoRecarga">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Monto</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="slMontoRecarga"  data-bind="dxSelectBox: slMontoRecarga"></div>
+          </div>
+          <hr />
+        </div>
+
+
+        <div class="row containerPaquete" id="divMontoRecarga">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Monto</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="slMontoPaquete"  data-bind="dxSelectBox: slMontoPaquete"></div>
+          </div>
+          <hr />
+        </div>
+
+        <div class="row" id="divNombre">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Nombre</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="txtNombre" data-bind="dxTextBox:txtNombre, dxValidator: validateRequired(groupValidation, '')"></div>
+          </div>
+          <hr />
+        </div>
+
+
+        <div class="row" id="divNit">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Nit</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="txtNit" data-bind="dxTextBox:txtNit, dxValidator: validateRequired(groupValidation, '')"></div>
+          </div>
+          <hr />
+        </div>
+
+        <div class="row" id="divCorreo">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Correo</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="txtCorreo" data-bind="dxTextBox:txtCorreo, dxValidator: validateRequired(groupValidation, '')"></div>
+          </div>
+          <hr />
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

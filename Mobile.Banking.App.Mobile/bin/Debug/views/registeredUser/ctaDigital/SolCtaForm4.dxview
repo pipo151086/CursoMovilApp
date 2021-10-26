@@ -1,0 +1,81 @@
+<div data-options="dxView : { name: 'SolCtaForm4', title: 'SolCtaForm4', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+      .numPorcentCls > div{
+      margin:0px !important;
+      }
+
+      .itemSeparator{
+      margin-top:5px;
+      margin-bottom:5px;
+      }
+      .containerNuevoBene{
+      margin-top:8px;
+      margin-bottom:8px;
+      }
+
+      .deleteButton{
+      color: white !important;
+      background-color: red!important;
+      border-radius: 10px;
+      margin-left:10px;
+      height: 28px;
+      width: 28px;
+      font-weight: bolder;
+      }
+
+      .btnBorrarElemento > div {
+      padding:0px !important
+      }
+
+      .btnBorrarElemento > div > span{
+      top: 7px;
+      display: block;
+      }
+
+    </style>
+
+    <div data-bind="dxScrollView: {showScrollbar:'never' }" class="scrollFormSolCtaDig">
+      <div class="titleFormSolCtaDigCont">
+        <span class="titleFormSolCtaDig">Solicitud de Cuenta de Ahorro</span>
+      </div>
+
+      <div class="contPaginatorCtaDigital">
+        <span class="pagnatorTlt" id="pagnatorTlt"></span>
+        <div id="paginatorDots"></div>
+      </div>
+
+      <div class="subtitleFormSolCtaDigCont" style="">
+        <span class="subtitleFormSolCtaDig">Formulario de solicitud</span>
+
+        <span class="subtitleFormSolCtaDig" style="float: right;">Página 4 de 4</span>
+
+        <div class="expSubtittleCont" >
+          <span class="expSubtittleText">Por favor responde las siguientes preguntas para solicitar tu cuenta.</span>
+        </div>
+      </div>
+
+      <div class="formSolCtaDig" >
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" style="margin-bottom: -8px;">26. Beneficiarios:</div>
+          <div class="formSolCtaDigFieldValue" id="solCtaContBeneficiarios"></div>
+          <div style="width:100%;text-align:center;">
+            <div class="btnInactiveCtaDigital" id="btnNuevoBeneficiario" style="background-color: darkgray !important;width: 75%;" data-bind="dxButton: btnNuevoBeneficiario"></div>
+          </div>
+        </div>
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnActiveCtaDigital" id="btnValidar" style="" data-bind="dxButton: btnValidar"></div>
+        </div>
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnInactiveCtaDigital" id="btnRegresar" style="" data-bind="dxButton: btnRegresar"></div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

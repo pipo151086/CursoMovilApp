@@ -1,0 +1,68 @@
+<div data-options="dxView : { name: 'TipoCambio', title: 'TipoCambio', disableCache: true } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <style>
+      .btn-default:hover > div {
+      color: white
+      }
+
+      .btn-default:hover > i {
+      color: white
+      }
+
+      .customButtonSol {
+      background-color: #eee !important;
+      }
+
+      .containerValue {
+      color: #333;
+      width: 50%;
+      font-family: Gotham-Book;
+      font-size: 16px
+      }
+
+      .value {
+      background-color: #eee;
+      color: #333;
+      font-size: 28px;
+      border-radius: 10px;
+      padding: 7px 25px;
+      font-weight: bolder;
+      }
+      
+      .dx-tooltip-wrapper .dx-overlay-content{
+      background-color:white
+      }
+    </style>
+
+    <div class="containerSlide">
+      <div class="noClientButtonBack" data-bind="click:clickBack">
+        <i class="dx-icon fa fa-chevron-left"></i>
+      </div>
+      <img id="slideLogo" class="SlideLogo" src="images/BDA-blanco.png"></img>
+    </div>
+
+    <div style="text-align:center;display: inline-flex;width: 100%;padding: 20% 15%;">
+      <!--<h4 class="botonesTitulo">Elige el producto que deseas solicitar</h4>-->
+
+      <div id="tooltip" data-bind="dxTooltip:tooltip"></div>
+      <i style="color: white;font-size: 20px;padding: 7px 11px;background-color: #d52133;position: absolute;
+    border-radius: 20px;z-index: 1;right: 10%;top: 25%;" class="dx-icon fa fa-question" id="quetionToolTip"></i>
+
+      <div class="containerValue">
+        Compra
+        <div style="margin-top:6px">
+          <span class="value" data-bind="text:compraVal"></span>
+        </div>
+      </div>
+
+      <div class="containerValue">
+        Venta
+        <div style="margin-top:6px">
+          <span class="value" data-bind="text:ventaVal"></span>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

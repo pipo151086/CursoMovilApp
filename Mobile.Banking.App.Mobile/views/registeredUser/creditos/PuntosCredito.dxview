@@ -1,0 +1,49 @@
+<div data-options="dxView : { name: 'PuntosCredito', title: 'Puntos de Crédito', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxScrollView: {  }">
+
+            <div id="seleccionCredito" class="row" style="padding:10px;display:none">
+                <div class="col-lg-12 texts">
+                    <label class="tags">SELECCIONE CRÉDITO</label>
+                    <div style="float:right;">
+                        <div class="color" id="lkpCreditos" data-bind="dxLookup: lkpCreditos"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-controls">
+                <span style="text-align:center" data-bind="text: 'Plan de Puntos'"></span>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label>Saldo de puntos anterior</label>
+                        <span id="spnSaldoPuntosAnterior" class="color" style="float:right" data-bind="text: saldoPuntosAnterior"></span>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label>Puntos ganados</label>
+                        <span id="spnPuntosGanados" class="color" style="float:right" data-bind="text: puntosGanados"></span>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label>Puntos canjeados</label>
+                        <span id="spnPuntosCanjeados" class="color" style="float:right" data-bind="text: puntosCanjeados"></span>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label>Total puntos acumulados</label>
+                        <span id="spnTotalPuntosAcumulados" class="color" style="float:right" data-bind="text: totalPuntosAcumulados"></span>
+                    </div>
+                </div>
+                <hr />
+            </div>
+
+        </div>
+    </div>
+</div>

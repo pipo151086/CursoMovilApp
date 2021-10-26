@@ -1,0 +1,924 @@
+﻿.btn {
+    border: none;
+    text-decoration: none;
+    height: 70px;
+    width: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+    .btn:hover {
+        color: green;
+    }
+
+.img-btn {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    margin-left: 20px;
+}
+
+
+.btn .dx-button-content {
+    padding: 0px;
+}
+
+    .btn .dx-button-content .dx-button-text {
+        font-size: 50px !important;
+        font-weight: bold;
+    }
+
+.btn2 {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100px;
+    font-size: 5px;
+    padding: 5px 10px 5px 10px;
+    border: solid #7E7E7E 1px;
+    color: #7e7e7e !important;
+}
+
+.btn3 {
+    border: solid #d52133 0px;
+    margin-top: 5px;
+    background-color: transparent !important;
+    text-transform: none !important;
+    transition: all 0.5s ease-in;
+    font-size: 20px;
+    width: auto;
+}
+
+    .btn3:hover {
+        color: green !important;
+        transition: all 0.5s ease-in;
+    }
+
+.row-btn {
+    vertical-align: top;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.img-char-pin {
+    width: 28px;
+    height: 28px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 3px solid #d52133;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.img-char-pin-vacio {
+    width: 20px;
+    background-color: transparent;
+    height: 20px;
+    border-radius: 100%;
+    margin-left: 13px;
+}
+
+.img-char-pin-lleno {
+    width: 20px;
+    background-color: #d52133;
+    height: 20px;
+    border-radius: 100%;
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
+.img-register-user {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/registerUser.png');
+    background-repeat: no-repeat;
+}
+
+.area-register {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+@media (min-width:200px) {
+    /*.btn .dx-button-content .dx-button-text {
+        font-size: 40px !important;
+        font-weight: bold;
+    }
+
+    .tg2 td {
+        padding: 5px 5px;
+    }*/
+}
+
+
+@media (min-width:350px) {
+
+    /*.btn .dx-button-content .dx-button-text {
+        font-size: 50px !important;
+        font-weight: bold;
+    }
+
+    .tg2 td {
+        padding: 10px 5px;
+    }
+
+    .row-btn {
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }*/
+}
+
+@media (min-width:500px) {
+
+    /*.btn .dx-button-content .dx-button-text {
+        font-size: 50px !important;
+        font-weight: bold;
+    }
+
+    .tg2 td {
+        padding: 10px 5px;
+    }
+
+    .row-btn {
+        margin-top: 40px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }*/
+}
+
+.btn:hover {
+    color: #d52133 !important;
+    border-color: #d52133 !important;
+}
+
+.imgLogin {
+    width: 220px;
+}
+
+#btnLogin {
+    margin-top: 30px;
+}
+
+.btn .dx-button-content .dx-button-text {
+    font-family: "Swenson";
+    font-weight: bold;
+}
+
+.btn3 .dx-button-content .dx-button-text, .btn-cancelar {
+    text-transform: none !important;
+    font-family: Gotham-Book;
+}
+
+.img-pin {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #d52133;
+}
+
+.span-pin {
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    display: block;
+    text-transform: none;
+    font-family: Gotham-Book;
+}
+
+#btnOlvideClave .dx-button-content .dx-button-text {
+    text-transform: none !important;
+    color: #d52133 !important;
+    font-size: 14px;
+}
+
+#btnOlvideUsuario .dx-button-content .dx-button-text {
+    text-transform: none !important;
+    color: #d52133 !important;
+    font-size: 14px;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------ESTILOS PARA MÁS PEQUEÑOS--------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 50px) and (max-height:399px) { /*DISPOSITIVOS MÁS PEQUEÑOS*/
+
+    #btnOlvideClave .dx-button-content .dx-button-text {
+        font-size: 12px !important;
+    }
+
+    #btnOlvideUsuario .dx-button-content .dx-button-text {
+        font-size: 12px !important;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------ESTILOS PARA IPHONE 4------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 400px) and (max-height:500px) { /*IPHONE 4*/
+
+    #btnOlvideClave .dx-button-content .dx-button-text {
+        font-size: 14px !important;
+    }
+
+    #btnOlvideUsuario .dx-button-content .dx-button-text {
+        font-size: 14px !important;
+    }
+
+    .btn {
+        height: 50px !important;
+        width: 50px !important;
+    }
+
+    .img-pin {
+        height: 150px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .img-btn {
+        height: 50px !important;
+        width: 50px !important;
+        margin-left: 10px !important;
+    }
+
+    .row-btn {
+        margin-top: 1px !important;
+    }
+
+    .btn3 .dx-button-content .dx-button-text {
+        font-size: 14px !important;
+    }
+
+    .btn .dx-button-content .dx-button-text {
+        font-size: 36px !important;
+    }
+
+    .btn-cancelar {
+        font-size: 16px !important;
+    }
+
+    .img-char-pin {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .img-char-pin-lleno {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .img-register-user {
+        background-size: 100% 100% !important;
+        background-image: url('../images/registerUser.png') !important;
+    }
+
+    .area-register {
+        top: 100px;
+    }
+
+    #tblPIN tr {
+        height: 55px !important;
+    }
+
+    #areaTeclado .btn-pin .dx-button-content {
+        padding: 5px 0px;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------ESTILOS PARA IPHONE 5------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 500px) and (max-height:568px) { /*IPHONE 5*/
+    .img-pin {
+        height: 155px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .img-btn {
+        height: 65px !important;
+        width: 65px !important;
+        margin-left: 10px !important;
+    }
+
+    .row-btn {
+        margin-top: 10px !important;
+    }
+
+    .btn3 .dx-button-content .dx-button-text {
+        font-size: 15px !important;
+    }
+
+    .btn-cancelar {
+        font-size: 16px !important;
+    }
+
+    .img-char-pin {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .img-char-pin-lleno {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .btn .dx-button-content .dx-button-text {
+        font-size: 35px !important;
+    }
+
+    .img-register-user {
+        background-size: 100% 100% !important;
+        background-image: url('../images/registerUser.png') !important;
+    }
+
+    .area-register {
+        top: 120px;
+    }
+
+    .btn-registro {
+        bottom: 70px !important;
+    }
+
+    .btn-enviar {
+        margin-right: 0px !important;
+    }
+
+    #tblPIN tr {
+        height: 85px !important;
+    }
+
+    #areaTeclado .btn-pin .dx-button-content {
+        padding: 5px 0px;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------ESTILOS PARA IPHONE 6------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 650px) and (max-height:750px) { /*IPHONE 6*/
+    .img-pin {
+        height: 180px !important; /*130*/
+        margin-bottom: 10px !important;
+    }
+
+    .span-pin {
+        margin-top: 30px !important;
+    }
+
+    .img-btn {
+        height: 75px !important;
+        width: 75px !important;
+        margin-left: 6px !important;
+    }
+
+    .row-btn {
+        margin-top: 15px !important;
+    }
+
+    .btn3 .dx-button-content .dx-button-text {
+        font-size: 18px !important;
+    }
+
+    .btn-cancelar {
+        font-size: 18px !important;
+    }
+
+    .img-char-pin {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .img-char-pin-lleno {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .btn .dx-button-content .dx-button-text {
+        font-size: 50px !important;
+    }
+
+    .img-register-user {
+        background-size: 100% 100% !important;
+        background-image: url('../images/registerUser.png') !important;
+    }
+
+    .area-register {
+        top: 150px;
+    }
+
+    .btn-registro {
+        bottom: 70px !important;
+        text-align: center !important;
+        left: 0px !important;
+    }
+
+    #tblPIN tr {
+        height: 95px !important;
+    }
+
+    #areaTeclado .btn-pin .dx-button-content {
+        padding: 5px 0px;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------ESTILOS PARA IPHONE 6 PLUS-------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 900px) and (max-height:1000px) { /*IPHONE 6 PLUS*/
+
+    .btn {
+        height: 100px !important;
+        width: 100px !important;
+    }
+
+    .img-pin {
+        height: 180px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .span-pin {
+        margin-top: 30px !important;
+    }
+
+    .img-btn {
+        height: 100px !important;
+        width: 100px !important;
+        margin-left: 6px !important;
+    }
+
+    .row-btn {
+        margin-top: 15px !important;
+    }
+
+    .btn3 .dx-button-content .dx-button-text {
+        font-size: 20px !important;
+    }
+
+    .btn-cancelar {
+        font-size: 24px !important;
+    }
+
+    .img-char-pin {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .img-char-pin-lleno {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .btn .dx-button-content .dx-button-text {
+        font-size: 60px !important;
+    }
+
+    .dx-button {
+        background-color: transparent !important;
+    }
+
+    .img-register-user {
+        background-size: 100% 100% !important;
+        background-image: url('../images/registerUser.png') !important;
+    }
+
+    .area-register {
+        top: 225px;
+    }
+
+    .btn-registro {
+        bottom: 120px !important;
+        text-align: center !important;
+        left: 0px !important;
+    }
+
+    #tblPIN tr {
+        height: 120px !important;
+    }
+
+    #areaTeclado .btn-pin .dx-button-content {
+        padding: 5px 0px;
+    }
+
+    #btnOlvideClave .dx-button-content .dx-button-text {
+        font-size: 14px !important;
+    }
+
+    #btnOlvideUsuario .dx-button-content .dx-button-text {
+        font-size: 14px !important;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*------------------------ESTILOS PARA IPAD / IPAD MINI-------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 1000px) { /*IPAD, IPAD MINI*/
+    .img-pin {
+        height: 280px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #imgCandado {
+        height: 160px !important;
+        width: 160px !important;
+    }
+
+    .span-pin {
+        margin-top: 30px !important;
+        font-size: 38px;
+    }
+
+    .img-btn {
+        height: 110px !important;
+        width: 110px !important;
+        margin-left: 17px !important;
+    }
+
+    .row-btn {
+        margin-top: 15px !important;
+    }
+
+    .btn3 .dx-button-content .dx-button-text {
+        font-size: 20px !important;
+    }
+
+    .btn-cancelar {
+        font-size: 24px !important;
+    }
+
+    .img-char-pin {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .img-char-pin-lleno {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .btn .dx-button-content .dx-button-text {
+        font-size: 70px !important;
+        font-weight: bolder !important;
+    }
+
+    .btn {
+        height: 120px !important;
+        margin-left: 38px !important;
+        margin-right: 80px !important;
+    }
+
+    .img-char-pin-lleno {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .img-char-pin {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .img-register-user {
+        background-size: 100% 100% !important;
+        background-image: url('../images/registerUser.png') !important;
+    }
+
+    .area-register {
+        top: 230px;
+    }
+
+    .btn-registro {
+        bottom: 120px !important;
+        text-align: center !important;
+        left: 0px !important;
+    }
+
+    #tblPIN tr {
+        height: 130px !important;
+    }
+
+    #areaTeclado .btn-pin .dx-button-content {
+        padding: 5px 0px;
+    }
+
+    #btnOlvideClave .dx-button-content .dx-button-text {
+        font-size: 14px !important;
+    }
+
+    #btnOlvideUsuario .dx-button-content .dx-button-text {
+        font-size: 14px !important;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*------------------------------ESTILOS PARA ANDROID----------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 568px) and (max-height:650px) { /*ANDROID*/
+
+    .img-pin {
+        height: 140px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .span-pin {
+        margin-top: 0px !important;
+        font-size: 15px !important;
+    }
+
+    .img-btn {
+        height: 60px !important;
+        width: 60px !important;
+        margin-left: 10px !important;
+    }
+
+    .btn {
+        height: 60px !important;
+        width: 60px !important;
+    }
+
+    .row-btn {
+        margin-top: 15px !important;
+    }
+
+    .btn3 .dx-button-content .dx-button-text {
+        font-size: 18px !important;
+    }
+
+    .btn-cancelar {
+        font-size: 20px !important;
+    }
+
+    .img-char-pin {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .img-char-pin-lleno {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .btn .dx-button-content .dx-button-text {
+        font-size: 40px !important;
+    }
+
+    .dx-button {
+        background-color: transparent !important;
+    }
+
+    .img-register-user {
+        background-size: 100% 100% !important;
+        background-image: url('../images/registerUser.png') !important;
+    }
+
+    .area-register {
+        top: 120px;
+    }
+
+    .btn-registro {
+        bottom: 70px !important;
+        text-align: center !important;
+        left: 0px !important;
+    }
+
+    .btn-enviar {
+        margin-right: 0px !important;
+    }
+
+    #tblPIN tr {
+        height: 80px !important;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------ESTILOS PARA ANDROID TAB---------------------------------*/
+/*------------------------------------------------------------------------------------*/
+@media (min-height: 750px) and (max-height:900px) { /*ANDROID TAB*/
+    .img-pin {
+        height: 180px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .span-pin {
+        margin-top: 30px !important;
+    }
+
+    .img-btn {
+        height: 75px !important;
+        width: 75px !important;
+        margin-left: 30px !important;
+    }
+
+    .row-btn {
+        margin-top: 15px !important;
+    }
+
+    .btn3 .dx-button-content .dx-button-text {
+        font-size: 24px !important;
+    }
+
+    .btn-cancelar {
+        font-size: 24px !important;
+    }
+
+    .img-char-pin {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .img-char-pin-lleno {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .btn .dx-button-content .dx-button-text {
+        font-size: 50px !important;
+    }
+
+    .dx-button {
+        background-color: transparent !important;
+    }
+
+    .img-register-user {
+        background-size: 100% 100% !important;
+        background-image: url('../images/registerUser.png') !important;
+    }
+
+    .area-register {
+        top: 175px; /*275px;*/
+    }
+
+    .btn-registro {
+        bottom: 90px !important;
+        text-align: center !important;
+        left: 0px !important;
+    }
+
+    #tblPIN tr {
+        height: 95px !important;
+    }
+
+    #btnOlvideClave .dx-button-content .dx-button-text {
+        font-size: 14px !important;
+    }
+
+    #btnOlvideUsuario .dx-button-content .dx-button-text {
+        font-size: 14px !important;
+    }
+}
+
+
+@font-face {
+    font-family: "Swenson";
+    src: url("../fonts/SWENSON.TTF") format("truetype");
+}
+
+#txtUsuario .dx-texteditor-container {
+    border-bottom: none;
+    overflow: visible;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+#txtClave .dx-texteditor-container {
+    border-bottom: none;
+    overflow: visible;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.text-number-pin {
+    width: 120%;
+    font-size: 20px;
+    opacity: 0;
+    margin-left: -50px;
+    -webkit-user-select: none;
+}
+
+
+.area-teclado {
+    width: 100%;
+    height: 100%;
+    background-color: #d52133;
+    box-shadow: 0px -1px 1px #808080;
+    border-color: #202020;
+    position: fixed;
+}
+
+
+#btnOlvideClave .dx-button-content {
+    padding: 11px 0px 11px 0px !important;
+}
+
+#btnOlvideUsuario .dx-button-content {
+    padding: 11px 0px 11px 0px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Menu No Cliente*/
+.containerSlide {
+    background-color: #d52133;
+    height: 65px;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    z-index: 10
+}
+
+.SlideLogo {
+    height: 50px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.botonesTitulo {
+    color: #333;
+    font-family: Gotham-Book;
+    /*margin-top: 15px;*/
+    font-weight: bolder;
+}
+
+.btn-default:hover > div {
+    color: white
+}
+
+.btn-default:hover > i {
+    color: white
+}
+
+.customButtonSol {
+    display: inline-flex;
+    background-color: #eee !important;
+    padding: 12px 10px;
+    border-radius: 5px;
+    margin: 0px 0px 5px 0px;
+    width: 270px;
+}
+
+
+    .customButtonSol > i {
+        color: #d52133;
+        align-self: center;
+        font-size: 20px;
+        right: 10px;
+        position: absolute;
+    }
+
+    .customButtonSol > div {
+        align-self: center;
+        color: #333;
+        font-family: Gotham-Book;
+        font-size: 20px
+    }
+
+.noClientButtonBack {
+    background-color: transparent !important;
+    position: fixed;
+    height: 65px;
+    width: 65px;
+}
+
+    .noClientButtonBack > i {
+        color: white;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    .noClientButtonBack:hover {
+        background-color: rgb(0,0,0,0.5) !important
+    }
+
+
+.tituloWizardCrearUsuario {
+    font-size: 16px;
+    margin-top: 70px; /*10*/
+    z-index: 1;
+    height: 35px;
+    font-weight: 900;
+    text-align: -webkit-center;
+    background-image: linear-gradient(rgb(255,255,255), rgb(255,255,255,0.5));
+}
+
+.createUserForm {
+    margin-bottom: 400px;
+}
+
+
+/*FIN Menu No Cliente*/

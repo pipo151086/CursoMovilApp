@@ -1,0 +1,149 @@
+<div data-options="dxView : { name: 'Movimientos', title: 'Movimientos de Cuenta por Fecha', disableCache: true } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+    <style>
+      #sendBtn:hover {
+
+      background-color: rgb(0,0,0,0.5) !important
+
+      }
+    </style>
+
+    <div id="scrollView" data-bind="dxScrollView: { }">
+      <div style="margin-bottom:50px">
+        <div id="seleccionCuenta" class="row" style="padding:10px">
+          <div class="col-lg-12 texts">
+            <label class="tags">SELECCIONE CUENTA</label>
+            <div style="float:right; position:relative;">
+              <div id="lkpCuentas" data-bind="dxLookup: lkpCuentas"></div>
+            </div>
+          </div>
+        </div>
+        <div id="datosCuenta" style="display:none">
+          <div class="box-controls">
+            <span>Datos Cuenta</span>
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label>Tipo de Cuenta</label>
+                <span id="spnTipoCuenta" class="color" style="float:right" data-bind="text: TipoCuenta"></span>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label>Cuenta</label>
+                <label id="spnNumeroCuenta" class="color" style="float:right" data-bind="text: NumeroCuenta"></label>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label>Saldo Disponible</label>
+                <span id="spnSaldoDisponible" class="color" style="float:right;font-size:16px; font-weight:bold" data-bind="text: SaldoDisponible"></span>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label>Saldo Contable</label>
+                <span id="spnSaldoContable" class="color" style="float:right;font-size:16px;" data-bind="text: SaldoContable"></span>
+              </div>
+            </div>
+          </div>
+          <div class="box-controls" id="movimientosCuenta" style="display:none">
+            <span>Últimos Movimientos</span>
+
+            <div class="row" style="display:block;text-align:center;">
+              <div class="texts" id="fechaDesde" style="display:inline-block; width:39%">
+                <label class="texts">Año</label>
+                <!-- <div id="dtFechaDesde" data-bind="dxDateBox: dtFechaDesde"></div>-->
+                <div id="btnCambiarAA" style="display:block" data-bind="dxButton: btnCambiarAA"></div>
+
+              </div>
+              <div class="texts" style="display:inline-block; width:39%">
+                <label class="texts">Mes</label>
+                <!--<div id="dtFechaHasta" data-bind="dxDateBox: dtFechaHasta"></div>-->
+
+                <div id="btnCambiarMM" style="display:block" data-bind="dxButton: btnCambiarMM"></div>
+
+              </div>
+              <div class="texts" style="display:inline-block; width:18%;    text-align: -webkit-center;">
+                <div id="sendBtn" data-bind="click:btnMail" style="background-color: #d52133;height: 45px;width: 45px;display: table;top: -5px;color: white;border-radius: 5px;">
+                  <i class="fa fa-envelope-o" aria-hidden="true" style="margin-top: 12.5px;left: auto;right: auto;font-size: 22px;"></i>
+                </div>
+              </div>
+            </div>
+
+
+            <hr />
+            <div class="row">
+              <div style="width:100%;text-transform:uppercase" class="color">
+                <span style="width:20%;font-weight:bold; display:inline-block;margin-left:10px">Fecha</span>
+                <div style="width:50%;font-weight:bold; display:inline-block;text-align:center">
+                  <span>Movimiento</span>
+                </div>
+                <div style="width:20%;font-weight:bold; display:inline-block; float:right;text-align:right;margin-right:10px">
+                  <span>Monto</span>
+                </div>
+              </div>
+              <hr />
+              <div id="lstMovimientos" data-bind="dxList: lstMovimientos"></div>
+            </div>
+            <hr />
+            <div class="row" style="text-align: center;">
+              <div id="chartMovimientosCuenta" data-bind="dxChart: crtMovimientosCuenta"></div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="popupSeleccionMM" data-bind="dxPopup: popupSeleccionMM">
+          <div data-options="dxTemplate: {name: 'content'}">
+            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+              <div class="row">
+                <div class="col-lg-12" style="text-align:center">
+                  <div id="rdbMM" style="font-size:20px" data-bind="dxRadioGroup: rdbMM"></div>
+                  <div id="btnCancelarMM" style="margin-top:10px" data-bind="dxButton: btnCancelarMM"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="popupSeleccionAA" data-bind="dxPopup: popupSeleccionAA">
+          <div data-options="dxTemplate: {name: 'content'}">
+            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+              
+              <div class="row">
+                <div class="col-lg-12" style="text-align:center">
+                  <div id="rdbAA" style="font-size:20px" data-bind="dxRadioGroup: rdbAA"></div>
+                  <div id="btnCancelarAA" style="margin-top:10px" data-bind="dxButton: btnCancelarAA"></div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

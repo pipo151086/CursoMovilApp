@@ -1,0 +1,19 @@
+<div data-options="dxView : { name: 'infoACH', title: 'Información ACH' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+      <div data-bind="dxScrollView: { }">
+        <div style="margin-bottom:50px">
+
+          <img class='infoAch' style='width: 100%;' src='./images/ach-info-600x720.jpg'></img>
+
+          <!--<div class="box-controls">
+            <span data-bind="text: CORE_TAG('InfoACH')"></span>
+
+            
+            
+          </div>-->
+        </div>
+      </div>
+    </div>
+</div>
+
+

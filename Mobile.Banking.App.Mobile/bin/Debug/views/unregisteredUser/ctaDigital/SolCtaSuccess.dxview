@@ -1,0 +1,95 @@
+<div data-options="dxView : { name: 'SolCtaSuccess', title: 'SolCtaSuccess', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <style>
+      .botonNoCliente {
+      width: 60px;
+      color: white !important;
+      height: 60px;
+      border-radius: 60px;
+      }
+
+      .botonNoCliente :active {
+      color: #333 !important;
+      }
+
+      .iconBotonNoCliente {
+      padding: 12px 8px 12px 8px;
+      font-size: 38px;
+      }
+
+      .textBotonNoCliente {
+      font-size: 13px;
+      height: 34px;
+      display: inline-flex;
+      line-height: normal;
+      }
+
+      .containerBotonNoCliente {
+      color: white !important;
+      text-align: -webkit-center;
+      z-index: 1502;
+      width: 140px;
+      display: inline-block;
+      margin: 10px 0px 0px 0px;
+      }
+
+
+      .containerBotonNoCliente > img {
+      width: 60px;
+      height: 60px;
+      }
+
+      .containerBotonNoCliente > img:hover{
+      width: 55px;
+      height: 55px;
+      }
+
+    </style>
+
+    <div style="width:100%;padding:20px;text-align:center; background-color:white">
+
+      <div style="line-height:normal">
+        <span id="txt2BtnCtaDig" style="font-weight:bolder; font-size:25px; font-family:Gotham-Black">Cuenta de Ahorro</span>
+        <div id="txt34ContBtnCtaDig" style="top: -10px;">
+          <span id="txt3BtnCtaDig" style="font-weight:bolder;font-size:25px; font-family:Gotham-Black">100%&nbsp&nbsp</span>
+          <span id="txt4BtnCtaDig" style="font-size:40px;">digital</span>
+        </div>
+      </div>
+
+      <p style="line-height:normal; font-weight:bolder;font-family:Gotham-Book">
+        Inicia tu ahorro realizando transferencias desde otros bancos.
+      </p>
+
+      <div style="width:100%; text-align:center;margin-bottom:15px">
+        <img style="width:40%" src="images/achs-logos.png"></img>
+      </div>
+
+      <div style="display:flex">
+        <div style="width:110px">
+          <img style="width:110px" src="images/bda-house.png"></img>
+        </div>
+        <div style="flex:1">
+          <p style="line-height:normal; top: 1em;font-family:Gotham-Book; text-align: left">
+            Si no puedes realizar transferencias, haz tu primer deposito en tu agencia más cercana.
+          </p>
+        </div>
+      </div>
+
+      <div style="width:100%;text-align:center;margin: 25px 0px;">
+        <div class="btnActiveCtaDigital" id="btnAgenciaCercana" style="width:230px" data-bind="dxButton: btnAgenciaCercana"></div>
+      </div>
+
+      <div style="margin-top:25px; width:100%; text-align:center;font-family:Gotham-Black;font-weight:bolder; color:gray;font-size:22px;line-height: normal;">
+        ¡Seguimos lográndolo&nbsp<div style="font-family:Swenson;color:#D9000D;font-size:45px;">juntos!</div>
+      </div>
+
+
+      <div id="LandingFloater" class="botonNoCliente btn-default " style="position:fixed;right:15px;bottom:15px;box-shadow: 2px 2px 6px #808080 !important;" data-bind="click:floaterSuccess">
+        <i style="padding: 15px 0px 0px 3px; font-size: 30px;" class="dx-icon iconBotonNoCliente fa fa-home"></i>
+        <!--<div class="text-floater-inner" style="padding: 19px 0px 0px 16px;    font-size: 49px;">+</div>-->
+      </div>
+
+    </div>
+
+  </div>
+</div>

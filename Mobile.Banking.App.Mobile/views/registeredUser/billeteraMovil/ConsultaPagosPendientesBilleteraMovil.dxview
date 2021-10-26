@@ -1,0 +1,22 @@
+<div data-options="dxView : { name: 'ConsultaPagosPendientesBilleteraMovil', title: 'Pagos pendientes' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background"> 
+        <div data-bind="dxScrollView: { }">
+            <div class="box-controls" id="movimientosCuenta">
+                <span>Datos de pagos</span>
+                <div class="row">
+                    <div class="col-lg-12 texts">
+                        <label style="float:left; margin-top:10px">Billetera Móvil:</label>
+                        <div style="float:right;">
+                            <div id="lkpBilleteraMovil" data-bind="dxLookup: lkpBilleteraMovil"></div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <hr />
+                    <div id="lstPagosPendientes" data-bind="dxList: lstPagosPendientes"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+</div>

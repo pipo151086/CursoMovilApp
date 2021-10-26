@@ -1,0 +1,194 @@
+<div data-options="dxView : { name: '_1_TermCond', title: '1_TermCond', disableCache: true } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+      .wrapper-progressBar {
+      width: 100%;
+      position: fixed;
+      }
+
+      .progressBar {
+      padding: 0px !important
+      }
+
+      .progressBar li {
+      list-style-type: none;
+      float: left;
+      width: 33%;
+      position: relative;
+      text-align: center;
+      /*TODO  height: 50px; */
+      margin-top: 10px;
+      /*margin-bottom: 10px;*/
+      height: 45px;
+      }
+
+      .progressBar li:before {
+      content: " ";
+      line-height: 30px;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      border: 14px solid #ddd;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px;
+      background-color: #ddd
+      }
+
+      .progressBar li:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px !important;
+      background-color: #ddd;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+      }
+
+      .progressBar li:first-child:after {
+      content: none;
+      }
+
+      .progressBar li.active {
+      color: #d52133;
+      }
+
+      .progressBar li.active:before {
+      border-color: #d52133;
+      background-color: #d52133
+      }
+
+      .progressBar .active:after {
+      background-color: #d52133;
+      }
+
+      .stepperNumberLabelContainer {
+      font-family: Gotham-Book;
+      font-size: 14px;
+      top: -36px;
+      position: relative;
+      color: black !important;
+      font-weight: bold;
+      }
+
+      .stepperLabel {
+      margin-top: 5px;
+      font-size: 13px;
+      }
+      
+      .normalIndicator{
+      color:white
+      }
+    </style>
+
+    <div class="containerSlide">
+      <div class="noClientButtonBack" data-bind="click:clickBack">
+        <i class="dx-icon fa fa-chevron-left"></i>
+      </div>
+      <img id="slideLogo" class="SlideLogo" src="images/BDA-blanco.png"></img>
+    </div>
+
+
+
+    <div class="wrapper-progressBar">
+      <ul class="progressBar">
+        <li id="stepper1" class="active">
+          <div class="stepperNumberLabelContainer">
+            <div class="normalIndicator">1</div>
+            <div class="stepperLabel">Térm. y Cond.</div>
+          </div>
+        </li>
+        <li id="stepper2">
+          <div class="stepperNumberLabelContainer"  style="color: lightgray !important;">
+            <div class="normalIndicator">2</div>
+            <div class="stepperLabel">Información</div>
+          </div>
+        </li>
+        <li id="stepper3">
+          <div class="stepperNumberLabelContainer"  style="color: lightgray !important;">
+            <div class="normalIndicator">3</div>
+            <div class="stepperLabel">Contacto</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="botonesTitulo tituloWizardCrearUsuario">
+      Términos y Condiciones
+    </div>
+
+    <div data-bind="dxScrollView: { }" style="margin-top:-10px">
+      <div>
+        <p style="text-align:justify;padding:10px;margin-bottom:300px;font-family: Gotham-Book;line-height: normal;">
+          <b>PRIMERA: AUTORIZACIÓN AL CLIENTE</b>
+          Por medio del presente contrato BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA autoriza al cliente el uso de la banca en línea, por medio de la cual podrá realizar todas las gestiones o servicios que el BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA tenga a su disponibilidad, como presentes y futuros.
+          <br /><br />
+          <b>SEGUNDA: CONDICIONES DEL CONTRATO:</b>
+          Dentro del presente contrato se determina que el  plazo es indefinido, el cual se dará por terminado cuando el cliente no tenga ninguna cuenta activa dentro de BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA. Por lo que se entenderá que el BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA se reserva el derecho de rescindir el contrato en cualquier momento así como también bloquear al cliente cuando este determine que su actuar va en contra de las políticas del BANCO DE ANTIGUA, SOCIEDAD ANONIMA o cualquier otro motivo.
+          <br /><br />
+          <b>TERCERO: RESPONSABILIDAD DEL CLIENTE EN EL MANEJO DE SUS CUENTAS.</b>
+          El Cliente acepta toda responsabilidad del uso de la cuenta activa y todas las transacciones de la plataforma que se realicen. Reportar inmediatamente por cualquier medio de comunicación que tenga con el BANCO DE ANTIGUA, SOCIEDAD ANONIMA sobre cualquier extravío, robo o hurto de las claves de acceso. Las claves de acceso son de uso confidencial, intransferible, inalienable y de uso personal del cliente. Todo manejo de la cuenta activa a través del acceso se presumirá que el cliente las realizó.
+          <br /><br />
+          <b>CUARTA: NO RESPONSABILIDAD</b>
+          El cliente desliga de toda responsabilidad civil y judicial al BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA sobre el manejo de la cuenta activa que posea. El BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA se reserva el derecho de toda reforma, variación, modificación, extinción o renuncia de cualquiera de los términos o condiciones de este Contrato para modificar las funciones o servicios que ofrece el Servicio en Línea. Surtirá efecto al momento de ser comunicado por cualquier medio de comunicación que estime apropiado al titular de la cuenta activa.
+          <br /><br />
+          <b>QUINTA: HORARIOS DEL SERVICIO.</b>
+          Los servicios que tengan en disponibilidad el BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA están sujetos a horarios de prestación del Servicio en Línea y podrán ser modificados a criterio del mismo.
+          <br /><br />
+          <b>SEXTA: GASTOS QUE INCURRA.El BANCO DE ANTIGUA, SOCIEDAD ANONIMA</b>
+          Se reserva el derecho de cobrar cualquier gasto y mantenimiento de la cuenta que incurra el cliente en el manejo del servicio en línea, en cualquier momento y modo.
+          <br /><br />
+          <b>SÉPTIMA: SE REGIRÁ POR LAS CLÁUSULAS QUE SE ESTABLEZCA.</b>
+          En cualquier cláusula del presente contrato que no pueda hacerse valer o la imposibilidad de poner en ejecución, no implica que las demás cláusulas no puedan hacerse valer legal o judicialmente.
+          <br /><br />
+          <b>OCTAVA: NO A CESIÓN POR PARTE DEL CLIENTE</b>
+          Este Contrato no podrá ser traspasado, cedido, enajenado o delegado total o parcialmente por parte del cliente, a otra persona física o jurídica distinta, sin el consentimiento previo y por escrito del BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA. La violación a la presente disposición dará derecho a la rescisión unilateral del presente Contrato sin responsabilidad del BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA.
+          <br /><br />
+          <b>NOVENA; ACEPTA AL BANCO DE ANTIGUA, SOCIEDAD ANONIMA ACTUAR POR TODOS LOS MEDIOS DE COMUNICACIÓN DEL BANCO.</b>
+          El CLIENTE de la cuenta activa acepta queEl BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA, por los medios que estime apropiados, comunicará cualquier cambio en las tasas de interés; cualquiera de estos medios utilizados constituye una notificación, constituyendo la referencia de la variación de la tasa de interés corriente pactada en el presente contrato.
+          <br /><br />
+          <b>DÉCIMA: AUTORIZACIÓN DE DÉBITOS</b>
+          El CLIENTE acepta que bajo cualquier circunstancia, El BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA podrá realizar todos los débitos sobre las cuentas activas; Los débitos podrán cubrir los montos de un crédito vigente o tarjeta de crédito, antes o después de su vencimiento, de cualquier cuenta y/o inversión en el BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA para garantizar el cumplimiento del mismo.
+          <br /><br />
+          <b>DÉCIMA PRIMERA: USO DE DATOS WEB RECOPILATORIOS (U OTROS MEDIOS TECNOLÓGICOS).</b>
+          En la plataforma y/o el servicio en línea, se podrán utilizar datos web recopilatorios y otros medios tecnológicos que permiten a BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA, entre otros:
+          1. Identificar al CLIENTE así como sus otras áreas de interés; 2. El uso de la Plataforma y/o el servicio en línea; 3. Saber o determinar si el CLIENTE ha sido registrado con anterioridad o si ha utilizado en ocasiones anteriores, 4 Conservar y resguardarla información. 5. La información captada por parte de Banco de Antigua, Sociedad Anónima es para su uso exclusivo del mismo y se manejara la debida protección y resguardo de la misma. Con el simple uso de la Plataforma y/o el servicio en línea, el CLIENTE acepta el uso de datos web recopilatorios (u otros medios tecnológicos). El no aceptar el uso de las datos web recopilatorios (u otros medios tecnológicos) podría impedir o afectar el acceso y/o uso correcto de las Plataforma y/o el Servicio en Línea que tenga el banco a su disposición, por lo que el CLIENTE  desde ya libera a BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA de cualquier responsabilidad proveniente de la falta de acceso y/o no funcionamiento de las Plataforma y/o el Servicio en Línea por la no aceptación por parte del CLIENTE de la utilización de datos web recopilatorios (u otros medios tecnológicos).
+          <br /><br />
+          <b>DÉCIMA SEGUNDA: CONFIDENCIALIDAD</b>
+          La información que Cliente reciba en virtud del presente contrato y por la utilización del Servicio en Línea se considerará de carácter confidencial El BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA se reserva el derecho de revelar información confidencial del usuario a órganos competentes por requerimientos legales o judiciales de estos.
+          <br /><br />
+          <b>DÉCIMA TERCERA: ACEPTACIÓN</b>
+          El CLIENTE y BANCO DE ANTIGUA, SOCIEDAD ANÓNIMA aceptan el contenido del presente contrato así como todas las obligaciones, derechos y renuncias pactados dentro del mismo, así como todas las modificaciones. Se suscribe el contrato en el lugar y fecha arriba indicados. Aceptando todos los términos y condiciones.
+        </p>
+      </div>
+
+    </div>
+
+    <div style="position:fixed;bottom:0px;width:100%;">
+      <div style="height:20px; background-image: linear-gradient(rgb(255,255,255,0.5), rgb(255,255,255));-webkit-box-pack: center;"></div>
+
+      <div style="display: -webkit-inline-box; background-color:white;height:35px;width:100%;-webkit-box-pack: center; ">
+        <div style="color: gray;" id="chkTerminos" data-bind="dxCheckBox: chkTerminos"></div>
+      </div>
+
+      <div style="display: -webkit-inline-box; background-color:white;height:40px;width:100%;-webkit-box-pack: center">
+        <div style="color:white !important;border-radius:5px" class="btn-default" data-bind="dxButton: continuar"></div>
+      </div>
+    </div>
+  </div>
+</div>

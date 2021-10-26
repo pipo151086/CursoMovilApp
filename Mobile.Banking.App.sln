@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{1B19158F-E398-40A6-8E3B-350508E125F1}") = "Mobile.Banking.App.Shared", "Mobile.Banking.App.Shared\Mobile.Banking.App.Shared.dxjsproj", "{4A2C4378-297C-4D4D-A1B6-7CCEA11EC82A}"
+EndProject
+Project("{1B19158F-E398-40A6-8E3B-350508E125F1}") = "Mobile.Banking.App.Mobile", "Mobile.Banking.App.Mobile\Mobile.Banking.App.Mobile.dxjsproj", "{AABC0AC3-CC30-4F93-A66E-B4F64F1C2937}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A2C4378-297C-4D4D-A1B6-7CCEA11EC82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2C4378-297C-4D4D-A1B6-7CCEA11EC82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2C4378-297C-4D4D-A1B6-7CCEA11EC82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2C4378-297C-4D4D-A1B6-7CCEA11EC82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AABC0AC3-CC30-4F93-A66E-B4F64F1C2937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AABC0AC3-CC30-4F93-A66E-B4F64F1C2937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AABC0AC3-CC30-4F93-A66E-B4F64F1C2937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AABC0AC3-CC30-4F93-A66E-B4F64F1C2937}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {223517AE-50C1-4963-8A23-DAA70B8C10E2}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://por-tfs2015:8080/tfs/net%20core
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Mobile.Banking.App.Shared\\Mobile.Banking.App.Shared.dxjsproj
+		SccProjectName1 = Mobile.Banking.App.Shared
+		SccLocalPath1 = Mobile.Banking.App.Shared
+		SccProjectUniqueName2 = Mobile.Banking.App.Mobile\\Mobile.Banking.App.Mobile.dxjsproj
+		SccProjectName2 = Mobile.Banking.App.Mobile
+		SccLocalPath2 = Mobile.Banking.App.Mobile
+	EndGlobalSection
+EndGlobal

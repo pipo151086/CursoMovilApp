@@ -1,0 +1,112 @@
+<div data-options="dxView : { name: 'EstadoCuentaTarjeta', title: 'Estado de Cuenta de Tarjeta',disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:50px">
+        <style>
+          #btnCambiarTarjeta {
+          color: #d52133 !important;
+          background-color: transparent !important;
+          }
+
+          #btnCambiarTarjeta .dx-button-text {
+          font-size: 14px !important;
+          }
+
+          #rdbTarjetas .dx-item-content {
+          font-size: 20px !important;
+          }
+        </style>
+
+        <div id="seleccionTarjeta" style="padding-top:2px">
+          <div class="col-lg-12 texts">
+            <label class="tags">Seleccione </label>
+            <div style="float:right;">
+              <div id="lkpTarjetas" data-bind="dxLookup: lkpTarjetas"></div>
+            </div>
+          </div>
+        </div>
+
+        <div  style="padding: 0px 15px 0px 15px; display:flex;width: 100%;">
+
+          <label class="tags">Tipo</label>
+          <div style="float:right;text-align:right;margin-top: 9px;width: 100%;    color: gray;">
+            <div id="tipoTrjMostrar"></div>
+          </div>
+
+        </div>
+
+        <div  style="padding-top:0px">
+          <div class="col-lg-12 texts">
+            <label class="tags" >Fecha Corte</label>
+            <div style=" float:right;text-align:right;width: 155px;">
+              <div id="slTFechasCorte"  data-bind="dxSelectBox: slTFechasCorte"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div style="margin-bottom:10px">
+          <div class="box-controls">
+            <span data-bind="text: 'Resumen Del Mes'"></span>
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:0px">Pago Mínimo</label>
+                <div style="text-align:right">
+                  <span class="color" style="display:block; font-size:14px" id="spnPagoMinimo"></span>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:0px">Pago Contado</label>
+                <div style="float:right;">
+                  <span class="color" style="display:block; font-size:14px" id="spnPagoContado"></span>
+                </div>
+              </div>
+            </div>
+            <hr />
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:0px">Fecha Límite</label>
+                <div style="float:right;">
+                  <span class="color" style="display:block; font-size:14px" id="spnFechaLimite"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-12 texts">
+          <div style="text-align:justify">
+            <p>Consulta los movimientos realizados durante el periodo seleccionado. </p>
+          </div>
+        </div>
+
+
+
+        <div class="box-controls" id="movimientosTarjeta" style="display:none">
+          <span>Detalle de los Movimientos</span>
+
+          <!--<div class="row" style="display:block;text-align:center;">
+              <div id="fechaDesde" class="col-md-6 texts" style="display:inline-block; width:49%">
+                <label class="texts">Filtro Por Mes </label>
+                <div id="dtFechaBusqueda" data-bind="dxDateBox: dtFechaBusqueda"></div>
+              </div>
+              <div class="col-md-6 texts" style="display:inline-block; width:49%">
+                <label class="texts">Fecha Corte</label>
+                <span class="color" style="display:block; font-size:14px" id="spnFechaCorte"></span>
+              </div>
+            </div>-->
+
+          <div class="row">
+            <div id="lstMovimientos" data-bind="dxList: lstMovimientos"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

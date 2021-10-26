@@ -1,0 +1,242 @@
+<div data-options="dxView : { name: 'TransferenciaExterna', title: 'Transferencia Externa', disableCache: true } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <div data-bind="dxScrollView: {  }">
+      <div style="margin-bottom:200px">
+
+        <style>
+          #btnCambiarCuenta, #btnCambiarBeneficiarios {
+          color: #d52133 !important;
+          background-color: transparent !important;
+          }
+
+          #btnCambiarCuenta .dx-button-text {
+          font-size: 14px !important;
+          text-transform: uppercase !important;
+          }
+
+          #btnCambiarBeneficiarios .dx-button-text {
+          font-size: 12px !important;
+          text-transform: uppercase !important;
+          }
+
+
+          #rdbCuentas .dx-item-content {
+          font-size: 18px !important;
+          }
+
+          #rdbBeneficiarios .dx-item-content {
+          font-size: 14px !important;
+          }
+
+          .dx-popup-content, .dx-popup-content.dx-dialog-content{
+          padding:10px;
+          }
+        </style>
+        <div style="margin-bottom:10px">
+          
+
+
+          <div class="box-controls">
+            <span data-bind="text: 'Información Origen'"></span>
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:10px">Monto</label>
+                <div style="text-align:right">
+                  <b id="currSymbol" style="display:inline-block; font-size:20px; color:#d52133; position:relative;"></b>
+                  <div style="display:inline-block;color:#d52133 !important;" id="txtValorTransferir" data-bind="dxNumberBox:txtValorTransferir, dxValidator:validateRequired('TRANSFERENCIASEXTERNAS','Monto')"></div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:10px">Cuenta</label>
+                <div style="float:right;">
+                  <div id="btnCambiarCuenta" style="display:inline-block" data-bind="dxButton: btnCambiarCuenta"></div>
+                  <!--<div id="lkpCuentasTransferencia" data-bind="dxLookup: lkpCuentasTransferencia"></div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="box-controls">
+            <span data-bind="text: 'Cuenta Destino'"></span>
+
+            <div  class="row">
+              <div class="col-lg-12 texts">
+                <label  style="float:left; margin-top:10px" >Aplicar Transferencia</label>
+                <div style=" float:right;text-align:right;width: 120px;">
+                  <div id="slAplicarTransfer"  data-bind="dxSelectBox: slAplicarTransfer"></div>
+                </div>
+
+              </div>
+            </div>
+            <hr />
+
+
+
+
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label  style="float:left; margin-top:10px">Cuenta Destino</label>
+                <div id="btnBringInfo" data-bind="dxButton: btnBringInfo"></div>
+                <div style="float:right;">
+                  <div id="btnCambiarBeneficiarios" style="display:inline-block" data-bind="dxButton: btnCambiarBeneficiarios"></div>
+                  <!--<div id="lkpCuentasDestino" data-bind="dxLookup: lkpCuentasDestino"></div>-->
+                </div>
+              </div>
+            </div>
+            <hr />
+            <!--<div class="row">
+                            <div class="col-lg-12 texts">
+                                <label style="float:left; margin-top:10px">CI/RUC/PAS</label>
+                                <div style="float:right; width:55%" id="txtTipoIdentificacion" data-bind="dxTextBox:txtTipoIdentificacion"></div>
+                            </div>
+                        </div>
+                        <hr />-->
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:10px">Entidad</label>
+                <div style="float:right; width:70%" id="txtEntidadFinancieraTercero" data-bind="dxTextBox:txtEntidadFinancieraTercero"></div>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:10px">Cuenta/Tarjeta</label>
+                <div style="float:right; width:50%" id="txtNumeroCuentaTercero" data-bind="dxTextBox:txtNumeroCuentaTercero"></div>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:10px">Tipo Cta</label>
+                <div style="float:right; width:70%" id="txtTipoCuentaTercero" data-bind="dxTextBox:txtTipoCuentaTercero"></div>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="float:left;">Motivo</label>
+                <span style="float:right; width:70%; text-transform:none" id="IdMotivo" ></span>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Observación</label>
+                <div style="display:block" id="txtObservacion" data-bind="dxTextArea:txtObservacion, dxValidator: ({
+                validationGroup:'TRANSFERENCIASEXTERNAS',
+                validationRules:[{
+                       type: 'pattern',
+                       pattern: '^[a-zA-ZñÑá-úÁ-Ú0-9 ][a-zA-ZñÑá-úÁ-Ú0-9 \s]*$',
+                       message: 'Ingresar solamente letras y números'
+                     }]})"></div>
+                <div  style="margin-top: 5px;" id="charactersCount" data-bind="text: charactersCount"></div>
+              </div>
+            </div>
+            <hr />
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <p>Puedes enviar una notificación por correo electrónico al beneficiario de la transferencia a realizar, dicho correo no es obligatorio colocarlo.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block; margin-top:10px">E-Mail de Beneficiario:</label>
+                <div style="display:block;" id="txtEmailTercero" data-bind="dxTextBox:txtEmailTercero, dxValidator: validateEmail(false, 'TRANSFERENCIASEXTERNAS', 'Mail Tercero')"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="padding:10px">
+            <div class="col-lg-12 texts" style="text-align:justify">
+              <p style="word-break:break-word">Ingresa los datos para efectuar la transferencia externa.</p>
+              <p style="word-break:break-word">Recuerda verificar los mismos antes de presionar el botón "Aceptar".</p>
+            </div>
+          </div>
+          <div class="row" style="padding-left:10px; padding-right:10px;">
+            <div class="col-lg-12 texts">
+              <div style="text-align:center">
+                <span style="color:#d52133; font-size:16px; font-weight:bold">Recuerde</span>
+              </div>
+              <hr />
+              <div style="text-align:justify">
+                <p style="text-align: justify;">
+                  Dependiendo de las políticas de cada banco del sistema, se puede transferir a cuentas de ahorro,
+                  monetarias, tarjetas de crédito y prestamos. El límite de monto acumulado mensual para transferencias ACH desde
+                  Banco de Antigua por cuenta en persona individual es de Q.60,000 y en persona jurídica es de Q.500,000.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div id="popupSeleccionCuenta" data-bind="dxPopup: popupSeleccionCuenta">
+            <div data-options="dxTemplate: {name: 'content'}">
+              <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                <div class="row">
+                  <div class="col-lg-12" style="text-align:center">
+                    <div id="rdbCuentas" style="font-size:20px" data-bind="dxRadioGroup: rdbCuentas"></div>
+                    <div id="btnCancelarCuenta" style="margin-top:10px" data-bind="dxButton: btnCancelarCuenta"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div id="popupSeleccionBeneficiario" data-bind="dxPopup: popupSeleccionBeneficiario">
+            <div data-options="dxTemplate: {name: 'content'}">
+              <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                <div class="row">
+                  <div class="col-lg-12" style="text-align:center">
+                    <div id="rdbBeneficiarios" data-bind="dxRadioGroup: rdbBeneficiarios"></div>
+                    <div id="btnCancelarBeneficiarios" data-bind="dxButton: btnCancelarBeneficiarios"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div id="popupInfo" data-bind="dxPopup: popupInfo">
+            <div data-options="dxTemplate: {name: 'content'}">
+              <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                <div class="row">
+                  <div class="col-lg-12" style="text-align:justify">
+
+
+                    <b>Si vas a transferir fondos por medio de ACH Inmediato:</b>
+                    <!--<label style="display:block; margin-top:10pxl ; font-weight:bold"> </label>-->
+                    <p>El horario del servicio disponible es de 08:00 horas a 20:00 hrs. de lunes a domingo y feriados autorizados por ente regulatorio.</p>
+                    <p>La transacción será aplicada en un máximo de 5 minutos y el monto máximo diario es de Q.10,000.00 o $1,250.00.</p>
+
+                    <b>Si vas a transferir por medio de ACH:</b>
+                    <p>Las transacciones realizadas en días hábiles entre 06:00 y 08:00 horas se acreditarán a las 11:00 horas, entre las 08:01 y 13:45 horas se acreditarán a las 17:00 horas y después de 13:45 horas se acreditarán al siguiente día hábil a más tardar a las 11:30 horas.</p>
+
+
+                    <b>En transacciones ACH realizadas en días no hábiles (sábado, domingo y asuetos del sistema bancario) se acreditarán al siguiente día hábil.</b>
+
+
+
+                  </div>
+                  <div class="col-lg-12" style="text-align:center">
+                    <div id="btnAceptarInfo" data-bind="dxButton: btnAceptarInfo"></div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

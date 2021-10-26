@@ -1,0 +1,64 @@
+<div data-options="dxView : { name: 'CanalesAtencion', title: 'CanalesAtencion', disableCache: true } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+      .customButtonSol {
+      background-color: #eee !important;
+      }
+
+
+    </style>
+
+    <div class="containerSlide">
+      <div class="noClientButtonBack" data-bind="click:clickBack">
+        <i class="dx-icon fa fa-chevron-left"></i>
+      </div>
+      <img id="slideLogo" class="SlideLogo" src="images/BDA-blanco.png"></img>
+    </div>
+
+    <div style="text-align:center">
+      <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true, showScrollbar: 'always' }">
+        <div style="margin-top:5px">
+          <div class="btn-default customButtonSol" data-bind="click:clkWa">
+            <img src="images/iconos/i-wa.png" style="height: 26px;margin-right: 7px;"></img>
+            <div>WhatsApp</div>
+            <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+          </div>
+          <div class="btn-default customButtonSol" data-bind="click:clkFb">
+            <img src="images/iconos/i-fb.png" style="height: 26px;margin-right: 7px;"></img>
+            <div>Facebook</div>
+            <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+          </div>
+          <div class="btn-default customButtonSol" data-bind="click:clkIg">
+            <img src="images/iconos/i-ig.png" style="height: 26px;margin-right: 7px;"></img>
+            <div>Instagram</div>
+            <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+          </div>
+          <div class="btn-default customButtonSol" data-bind="click:clkCc">
+            <img src="images/iconos/i-dial.png" style="height: 26px;margin-right: 7px;"></img>
+            <div>Call Center</div>
+            <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+          </div>
+          <div class="btn-default customButtonSol" data-bind="click:clkCe">
+            <img src="images/iconos/i-email.png" style="height: 26px;margin-right: 7px;"></img>
+            <div>Correo Electrónico</div>
+            <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+          </div>
+        </div>
+
+
+        <div id="contWhatsApp">
+
+
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

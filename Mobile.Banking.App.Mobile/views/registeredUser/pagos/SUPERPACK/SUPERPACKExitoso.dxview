@@ -1,0 +1,108 @@
+<div data-options="dxView : { name: 'SUPERPACKExitoso', title: 'Pago de Servicio Exitoso', disableCache: true  } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+      
+      
+        <div data-bind="dxScrollView: {  }">
+      <div style="margin-bottom:80px">
+        
+        <div class="row" style="padding: 10px">
+          <div class="col-lg-12 texts" style="text-align:center">
+            <span>
+              AVISO: El pago se realizó exitosamente.
+            </span>
+          </div>
+        </div>
+        
+        <div class="box-controls">
+          <span>SUPERPACK</span>
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Número Teléfono </label>
+              <span id="txtNumeroTelefono" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNumeroTelefono"></span>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Producto </label>
+              <span id="txtProducto" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtProducto"></span>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Monto a Pagar</label>
+              <span id="txtMontoPagar" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtMontoPagar"></span>
+            </div>
+          </div>
+          <hr/>
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Cuenta</label>
+              <span id="txtCuenta" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtCuenta"></span>
+            </div>
+          </div>
+          <hr/>
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Número Autorización</label>
+              <span id="txtCuenta" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNumAutorizacion"></span>
+            </div>
+          </div>
+          <hr/>
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">No. De Referencia</label>
+              <span id="txtCuenta" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNumReferencia"></span>
+            </div>
+          </div>
+          <hr/>
+
+          <div class="row ">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Nombre</label>
+              <span id="txtNombre" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNombre"></span>
+            </div>
+          </div>
+          <hr  class=""/>
+
+          <div class="row esPrePago">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Nit</label>
+              <span id="txtNit" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNit"></span>
+            </div>
+          </div>
+          <hr  class=""/>
+
+          <div class="row ">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Correo</label>
+              <span id="txtCorreo" class="color" style="float:left; display: inline-flex;font-size: 15px;" data-bind="text: txtCorreo"></span>
+            </div>
+          </div>
+          <hr  class=""/>
+
+
+
+        
+
+
+
+      
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+      
+    </div>
+</div>

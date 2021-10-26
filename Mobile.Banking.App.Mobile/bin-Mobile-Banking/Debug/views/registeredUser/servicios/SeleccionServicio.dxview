@@ -1,0 +1,29 @@
+<div data-options="dxView : { name: 'SeleccionServicio', title: 'Realiza Tus Pagos', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxScrollView: {  }">
+            <div style="padding-bottom:300px">
+                <div class="box-controls">
+                    <span data-bind="text: 'Selecciona la categoria y empresa'"></span>
+
+                    <div class="row">
+                        <label class="col-md-6">Categoria:</label>
+                        <div class="col-md-6" id="selectCategoria" data-bind="dxSelectBox: koCategoria, dxValidator: validateRequired(categoriaValidator, 'Categoría necesaria')"></div>
+                    </div>
+
+                    <div class="row">
+                        <label style="padding-top: 13px;" class="col-md-6">Empresa:</label>
+                        <div class="col-md-6" id="selectEmpresa" data-bind="dxSelectBox: koEmpresa, dxValidator: validateRequired(empresaValidator, 'Empresa necesaria')"></div>
+                    </div>
+                </div>
+
+                
+
+                <div class="box-controls">
+                    <span data-bind="text: 'O elige tus pagos frecuentes'"></span>
+                    <div style="margin-top:0px" id="listPagoFrecuente" data-bind="dxList: koListPagoFrecuente"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

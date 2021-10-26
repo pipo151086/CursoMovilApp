@@ -1,0 +1,140 @@
+<div data-options="dxView : { name: 'ConfirmacionTransferenciaExterna', title: 'Confirmación Transferencia', disableCache: true } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+    <div data-bind="dxScrollView: {  }">
+      <div style="margin-bottom:50px">
+
+
+        <div class="box-controls">
+          <span data-bind="text: 'Información Origen'"></span>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left">Valor a Transferir</label>
+              <span class="color" style="float:right; font-size:20px" data-bind="text: ValorTransferirMostrar"></span>
+            </div>
+          </div>
+          <hr />
+          <!--<div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Valor Uso Canal</label>
+                            <span class="color" style="float:right; font-size:20px;" data-bind="text: ValorUsoCanal"></span>
+                        </div>
+                    </div>
+                    <hr />-->
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left">Valor Total</label>
+              <span class="color" style="float:right; font-size:20px; font-weight:bold" data-bind="text:MontoMostrar"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left">Cuenta Debitar</label>
+              <span class="color" style="float:right; font-size:14px" data-bind="text: NumeroCuenta "></span>
+            </div>
+          </div>
+          <hr />
+
+         
+          
+        </div>
+        <div class="box-controls">
+          <span>Cuenta Destino</span>
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left">Aplicar Transferencia</label>
+              <span class="color" style="float:right; font-size:14px" data-bind="text: AplicarTransfer"></span>
+            </div>
+          </div>
+          <hr />
+          
+          
+          
+          
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Nombres/Apellidos</label>
+              <span class="color" data-bind="text: NombresApellidos"></span>
+            </div>
+          </div>
+          <hr />
+          <!--<div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">CI/RUC/PAS</label>
+                            <span class="color" style="float:right" data-bind="text: NumeroIdentificacion"></span>
+                        </div>
+                    </div>
+                    <hr />-->
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Entidad Financiera</label>
+              <span class="color" data-bind="text: EntidadFinancieraTercero"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left">Tipo Cuenta</label>
+              <span class="color" style="float:right" data-bind="text: DescripcionTipoCta"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left">Cuenta/Tarjeta</label>
+              <span class="color" style="float:right; font-size:16px" data-bind="text: NumeroCuentaTercero"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left">Motivo</label>
+              <span class="color" style="float:right; text-transform:none !important" data-bind="text: Motivo"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Observación</label>
+              <span class="color" data-bind="text: Observacion"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">E-mail de Beneficiario </label>
+              <span class="color" style="text-transform:none !important" data-bind="text: EmailTercero"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts" style="text-align:justify;">
+              <p style="font-size:10px; display:block">
+                Declaro que toda la información contenida en esta solicitud es correcta y por lo tanto eximo al Banco de Antigua S.A.
+                de todas aquellas responsabilidades que puedan surgir por la operación o a sus corresponsales de cualquier tipo de error,
+                omisión o códigos errados de datos.
+              </p>
+              <p style="font-size:10px;display:block">
+                Conocedor(a) de las penas del perjurio, declaro bajo juramento que los fondos entregados a Banco de Antigua S.A.
+                no provienen, ni serán destinados a la realización o financiamiento de ninguna activida ilícita y conforme a la ley
+                de lavado de dinero u otros activos.
+              </p>
+              <p style="font-size:10px;display:block">
+                De manera especial, declaro haber sido informado  y conocer plenamente sobre la tarifa del servicio solicitado.
+                Serán de mi cuenta activa los impuestos que cause la transferencia solicitada, los que no constituyen servicio financiero
+                ni costo adicional alguno a favor del Banco.
+              </p>
+              <p style="font-size:10px;display:block">
+                Autorizo a Banco de Antigua S.A. a debitar de mi(s) cuenta(s) activa(s)de ahorros o corriente(s) el valor correspondiente a la tarifa
+                e impuestos, así como los costos por devolución de fondos como resultados de información errada o incompleta, en caso de no tener fondos
+                acepto que esta transferencia no sea procesada por el Banco.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

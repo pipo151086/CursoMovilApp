@@ -1,0 +1,28 @@
+<div data-options="dxView : { name: 'InformacionCreditos', title: 'Información de tus Creditos', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxScrollView: { }" style="padding-bottom: 50px;">
+            <div id="acdProductosCliente" style="margin-top: 5px;margin-left:5px; margin-right:5px" data-bind="dxAccordion: acdProductosCliente"></div>
+
+            <style>
+                .dont-break-out {
+                    /* These are technically the same, but use both */
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                    -ms-word-break: break-all;
+                    /* This is the dangerous one in WebKit, as it breaks things wherever */
+                    word-break: break-all;
+                    /* Instead use this non-standard one: */
+                    word-break: break-word;
+                    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+                    -ms-hyphens: auto;
+                    -moz-hyphens: auto;
+                    -webkit-hyphens: auto;
+                    hyphens: auto;
+                }
+            </style>
+            <div id="CreditosCliente" style="padding-bottom: 50px;">
+                <div id="lstCreditos" data-bind="dxList: lstCreditos"></div>
+            </div>
+        </div>
+    </div>
+</div>

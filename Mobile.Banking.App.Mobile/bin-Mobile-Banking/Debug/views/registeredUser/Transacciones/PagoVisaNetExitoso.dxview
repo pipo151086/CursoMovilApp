@@ -1,0 +1,71 @@
+<div data-options="dxView : { name: 'PagoVisaNetExitoso', title: 'Pago con Tarjeta Exitoso', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+    <div data-bind="dxScrollView: {  }">
+      <div style="margin-bottom:50px">
+
+        <div class="box-controls">
+          <span>Información del Pago</span>
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Producto</label>
+              <span id="tipoProducto" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: tipoProducto"></span>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label id="lblProducto" style="display:block" data-bind="text: lblProducto"></label>
+              <span id="numProducto" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: numProducto"></span>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="box-controls">
+          <span>Información de Tarjeta</span>
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Número de Tarjeta</label>
+              <span id="numTarjeta" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: numTarjeta"></span>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Autorización</label>
+              <span id="numAutorizacion" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: numAutorizacion"></span>
+            </div>
+          </div>
+          <hr />
+
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Secuencial Pago</label>
+              <span id="numSecuencial" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: numSecuencial"></span>
+            </div>
+          </div>
+          <hr />
+
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Monto </label>
+              <span id="monto" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: monto"></span>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>

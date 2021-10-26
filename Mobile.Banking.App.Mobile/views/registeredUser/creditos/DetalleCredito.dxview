@@ -1,0 +1,84 @@
+<div data-options="dxView : { name: 'DetalleCredito', title: 'Detalle Crédito', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxScrollView: { }">
+            <div style="margin-bottom:50px;padding-bottom:50px;">
+                <div id="seleccionCredito" class="row" style="padding:10px">
+                    <div class="col-lg-12 texts">
+                        <label class="tags">SELECCIONE CRÉDITO</label>
+                        <div style="float:right;">
+                            <div id="lkpCreditos" data-bind="dxLookup: lkpCreditos"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-controls">
+                    <span id="spnTipoCredito" data-bind="text: 'Detalle de Crédito'"></span>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label>N. de Operación</label>
+                            <span id="spnNumeroCredito" class="color" style="float:right" data-bind="text: numeroCredito"></span>
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label>Estado</label>
+                            <span id="spnEstado" class="color" style="float:right" data-bind="text: estadoCredito"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label>Número de cuota</label>
+                            <span id="spnNumeroCuota" class="color" style="float:right" data-bind="text: numeroCuota"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label>Fecha próximo pago</label>
+                            <span id="spnFchProximoPago" class="color" style="float:right" data-bind="text: fchProximoPago"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label>Días de mora</label>
+                            <span id="spnDiasMora" class="color" style="float:right" data-bind="text: diasMora"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label>Valor próximo pago</label>
+                            <span id="spnValorProximoPago" class="color" style="float:right" data-bind="text: valorProximoPago"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label>Total a precancelar</label>
+                            <span id="spnTotalPrecancelar" class="color" style="float:right" data-bind="text: totalPrecancelar"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label>Doc. digitales</label>
+                            <span class="color" style="float:right;" data-bind="click:koClickDocDigital"><i class="dx-icon fa fa-envelope-o"></i> Enviar al mail</span>
+                           <!-- <div style="float:right" data-bind="dxButton: btnDocDigital"></div>-->
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label>T. de Amortización</label>
+                            <span class="color" style="float:right;" data-bind="click:koClickTAmortizacion"><i class="dx-icon fa fa-envelope-o"></i> Enviar al mail</span>
+                            <!--<div style="float:right" data-bind="dxButton: btnTablaAmortizacion"></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

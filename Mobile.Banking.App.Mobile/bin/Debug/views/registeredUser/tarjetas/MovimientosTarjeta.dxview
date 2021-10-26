@@ -1,0 +1,49 @@
+<div data-options="dxView : { name: 'MovimientosTarjeta', title: 'Movimientos Tarjeta', disableCache: true} ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:50px">
+        <style>
+          #btnCambiarTarjeta {
+          color: #d52133 !important;
+          background-color: transparent !important;
+          }
+
+          #btnCambiarTarjeta .dx-button-text {
+          font-size: 14px !important;
+          }
+
+          #rdbTarjetas .dx-item-content {
+          font-size: 20px !important;
+          }
+        </style>
+
+
+
+        <div id="seleccionTarjeta" class="row" style="padding:10px">
+          <div class="col-lg-12 texts">
+            <label class="tags">Seleccione </label>
+            <div style="float:right;">
+              <div id="lkpTarjetas" data-bind="dxLookup: lkpTarjetas"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-12 texts">
+          <div style="text-align:justify">
+            <p>Consulte todos los movimientos realizados después de la fecha de corte de su tarjeta de crédito.</p>
+          </div>
+        </div>
+
+
+        <div class="box-controls" id="movimientosTarjeta" style="display:none">
+          <span>Movimientos Recientes</span>
+          <div class="row">
+            <div id="lstMovimientos" data-bind="dxList: lstMovimientos"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

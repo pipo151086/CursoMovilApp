@@ -1,0 +1,42 @@
+<div data-options="dxView : { name: 'RegisterSecurePIN', title: 'Registro de PIN', disableCache: true  } ">
+    <div id="divContentRegisterSecurePin" data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background font-style-gray">
+        <div style="width:100%; text-align:center;align-self:center">
+            <div class="img-pin">
+                <img id="imgCandado" style="height:80px; width:80px; margin-top:20px" src="images/icono-candado.png" />
+                <span id="spnHelpPIN" class="span-pin">Ingresa tu <b>PIN de seguridad</b></span>
+            </div>
+
+            <div style="width:100%">
+                <input style="background: transparent; color: transparent; width: 1px;margin-left: -50px;" id="txtNumberRegisterPIN" pattern="[0-9]*" />
+            </div>
+
+            <div style="text-align:center; width:100%; display:block; margin-top:5px">
+                <div class="img-char-pin">
+                    <div id="charVacio1" class="img-char-pin-vacio"></div>
+                </div>
+                <div class="img-char-pin">
+                    <div id="charVacio2" class="img-char-pin-vacio"></div>
+                </div>
+                <div class="img-char-pin">
+                    <div id="charVacio3" class="img-char-pin-vacio"></div>
+                </div>
+                <div class="img-char-pin">
+                    <div id="charVacio4" class="img-char-pin-vacio"></div>
+                </div>
+            </div>
+
+            <div style="margin-top:20px; width:100%; margin-bottom:10px">
+                <div class="btn3" data-bind="dxButton: { text: 'Borrar',onClick: clickBorrar }"></div>
+                <div style="height: 29px;background-color: #d52133;display: inline-block;margin-left: 20px;margin-right: 20px;width: 3px;position: relative;top: 12px;border-radius: 20px;"></div>
+                <div class="btn3" style="top:6px; display:inline-block;">
+                    <a style="display:inline-block; text-decoration:none; color:#d52133 !important" id="linkCancelar" data-bind="click: clickCancelar">
+                        <span class="btn-cancelar">Cancelar</span>
+                    </a>
+                </div>
+            </div>
+            <div class="area-teclado"></div>
+            <div style="width:100%; position:fixed; height:10px; background-color: #d52133; bottom:0px"></div>
+        </div>
+    </div>
+</div>
+

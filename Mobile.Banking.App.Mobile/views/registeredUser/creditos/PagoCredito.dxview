@@ -1,0 +1,112 @@
+<div data-options="dxView : { name: 'PagoCredito', title: 'Pago de Crédito', disableCache: true, root: false } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:150px">
+
+        <style>
+
+          .dx-accordion-item-title {
+
+          padding-bottom: 7px;
+          background-color: #d52133;
+          color: white;
+          padding-left: 10px;
+          padding-top: 5px;
+          font-weight: bold;
+          text-transform: uppercase;
+          display: block;
+          font-family: Gotham-Book;
+          margin-bottom: 0px;
+          }
+
+          .dx-accordion-item {
+          margin-bottom: 0px;
+          }
+
+
+          .dx-accordion-item-title:before {
+          color: #FFFF !important;
+          }
+
+          .dx-accordion-item-closed {
+          border: 1px solid #d52133;
+          border-radius: 0px;
+          border-top-left-radius: 0px;
+
+          }
+
+          .dx-accordion-item-opened {
+          border: 1px solid #d52133;
+          border-radius: 0px;
+
+          }
+          .dx-list-item-content, .dx-list .dx-empty-message {
+          padding: 0px 5px!important;
+          }
+
+
+
+
+        </style>
+
+
+        <div id="seleccionCredito" class="row" style="padding:10px">
+          <div class="col-lg-12 texts">
+            <label class="tags">SELECCIONE CRÉDITO</label>
+            <div style="float:right;">
+              <div id="lkpCreditos" data-bind="dxLookup: lkpCreditos"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="acdPagoCred" style="margin-left:10px; margin-right:10px" data-bind="dxAccordion: acdPagoCred"> </div>
+
+        <div id="datosCredito" style="display:none">
+          <div class="box-controls">
+            <span  style='font-size:16px' data-bind="text: 'Método de pago'"></span>
+            <div class="row" >
+              <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:10px">Valor a pagar</label>
+                <div style="text-align:right">
+                  <b id="spnMoneda" style="display:inline-block; font-size:20px; color:#d52133; position:relative;"></b>
+                  <div style="display:inline-block;color:#d52133 !important;" id="valorTotalPagar" data-bind="dxNumberBox:valorTotalPagar, dxValidator:validateRequired('TRANSFERENCIASEXTERNAS','Monto')"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <div id="rdbTipoPago" style="font-size:20px" data-bind="dxRadioGroup: rdbTipoPago"></div>
+              </div>
+            </div>
+            <hr  class="pagoCta"/>
+            <div class="row pagoCta">
+              <div class="col-lg-6 texts" style="display:inline-block">
+                <label style="display:block;padding-top: 8px;">Cuenta</label>
+              </div>
+              <div class="texts" style="display:inline-block; float:right; text-align:right;padding-right:0px !important">
+                <div id="btnCambiarCuenta" style="display:inline-block" data-bind="dxButton: btnCambiarCuenta"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div id="popupSeleccionCuenta" data-bind="dxPopup: popupSeleccionCuenta">
+        <div data-options="dxTemplate: {name: 'content'}">
+          <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+            <div class="row">
+              <div class="col-lg-12" style="text-align:center">
+                <div id="rdbCuentas" style="font-size:20px" data-bind="dxRadioGroup: rdbCuentas"></div>
+                <div id="btnCancelarCuenta" style="margin-top:10px" data-bind="dxButton: btnCancelarCuenta"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

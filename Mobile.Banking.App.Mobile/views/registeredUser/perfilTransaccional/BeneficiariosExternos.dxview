@@ -1,0 +1,12 @@
+<div data-options="dxView : { name: 'BeneficiariosExternos', title: 'Cuentas de Terceros', disableCache: true  } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+        <div data-bind="dxScrollView: { }">
+            <div style="margin-bottom:50px">
+                <div class="box-controls">
+                    <span data-bind="text: CORE_TAG('ExternalBeneficiaries')"></span>
+                    <div id="listBox" data-bind="dxList:listBox"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

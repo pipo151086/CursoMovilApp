@@ -1,0 +1,49 @@
+<div data-options="dxView : { name: 'GuiaUsr', title: 'GuiaUsr', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <style>
+            .SlideIndicatorContainer {
+                text-align: center;
+                position: fixed;
+                bottom: 0px;
+                width: 100%;
+                height: 25px;
+                background-color: #d52133;
+            }
+
+            #SlideBox {
+                width: 100%;
+                height: 100%;
+            }
+
+            .myitem > img {
+                width: 100%;
+            }
+
+            .mygal {
+                height: 100%;
+                margin-top: -25px;
+                z-index: 0
+            }
+        </style>
+
+        <div class="containerSlide">
+            <div class="noClientButtonBack" data-bind="click:clickBack">
+                <i class="dx-icon fa fa-chevron-left"></i>
+            </div>
+            <img id="slideLogo" class="SlideLogo" src="images/BDA-blanco.png"></img>
+        </div>
+
+        <div id="SlideBox"></div>
+
+        <div class="SlideIndicatorContainer">
+            <div class="dx-gallery-indicator">
+                <div id="galIndicator0" class="dx-gallery-indicator-item dx-gallery-indicator-item-selected"></div>
+                <div id="galIndicator1" class="dx-gallery-indicator-item"></div>
+                <div id="galIndicator2" class="dx-gallery-indicator-item"></div>
+                <div id="galIndicator3" class="dx-gallery-indicator-item"></div>
+                <div id="galIndicator4" class="dx-gallery-indicator-item"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'CrearBilleteraMovil', title: 'Crear Billetera Móvil', disableCache:true } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div class="box-controls">
+            <span data-bind="text: 'Datos creación'"></span>
+            <label style="padding-left:15px" data-bind="text: koTxtWarningOne"></label>
+            <br />
+            <br />
+            <label style="padding-left:15px" data-bind="text: koTxtTiePhone"></label>
+            <hr />
+            <div class="row">
+                <div class="col-lg-12 texts">
+                    <label style="float:left; margin-top:10px">Celular: </label>
+                    <div style="float:right; width:60%; text-align:right">
+                        <div id="txtPhoneNumber" data-bind="dxTextBox:koTxtPhoneNumber,dxValidator:validateCellPhone(true,groupValidation,'Número de teléfono')"></div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+                <div class="row">
+                    <div class="col-lg-12 texts">
+                        <label style="float:left; margin-top:10px">Cuenta propia:</label>
+                        <div style="float:right;">
+                            <div id="lkpCuentaPropia" data-bind="dxLookup: lkpCuentaPropia, dxValidator:validateRequired(groupValidation,'Cuenta Propia')"></div>
+                        </div>
+                    </div>
+                </div>
+            <hr />
+            <br />
+            <label style="padding-left:15px" data-bind="text: koTxtWarningTwo"></label>
+        </div>
+    </div>
+</div>

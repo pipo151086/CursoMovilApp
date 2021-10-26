@@ -1,0 +1,67 @@
+<div data-options="dxView : { name: 'MapaAgencia', title: 'Ubicación de Agencia' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxScrollView: { }">
+            <div style="margin-bottom:50px">
+                <style>
+                    #btnCambiarProvincia, #btnCambiarAgencia {
+                        color: #d52133 !important;
+                        background-color: transparent !important;
+                    }
+
+                        #btnCambiarProvincia .dx-button-text, #btnCambiarAgencia .dx-button-text {
+                            font-size: 12px !important;
+                        }
+
+                    #rdbProvincias .dx-item-content, #rdbAgencias .dx-item-content {
+                        font-size: 16px !important;
+                    }
+                </style>
+
+                <div style="margin:5px">
+                    <div style="width:40%;display:inline-block;">
+                        <div style="text-align:center">
+                            <span style="color:#d52133;font-weight:bold">PROVINCIA</span>
+                            <div id="btnCambiarProvincia" style="display:block;" data-bind="dxButton: btnCambiarProvincia"></div>
+                        </div>
+                    </div>
+                    <div style="width:40%; float:right; display:inline-block">
+                        <div style="text-align:center">
+                            <span style="color:#d52133;font-weight:bold">AGENCIA</span>
+                            <div id="btnCambiarAgencia" style="display:block;" data-bind="dxButton: btnCambiarAgencia"></div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div style="border:1px solid black" id="mapAgencia" data-bind="dxMap: mapAgencia"></div>
+
+                <div id="popupSeleccionProvincia" data-bind="dxPopup: popupSeleccionProvincia">
+                    <div data-options="dxTemplate: {name: 'content'}">
+                        <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                            <div class="row">
+                                <div class="col-lg-12" style="text-align:center">
+                                    <div id="rdbProvincias" style="font-size:20px" data-bind="dxRadioGroup: rdbProvincias"></div>
+                                    <div id="btnCancelarP" style="margin-top:10px" data-bind="dxButton: btnCancelarP"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="popupSeleccionAgencia" data-bind="dxPopup: popupSeleccionAgencia">
+                    <div data-options="dxTemplate: {name: 'content'}">
+                        <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                            <div class="row">
+                                <div class="col-lg-12" style="text-align:center">
+                                    <div id="rdbAgencias" style="font-size:20px" data-bind="dxRadioGroup: rdbAgencias"></div>
+                                    <div id="btnCancelarA" style="margin-top:10px" data-bind="dxButton: btnCancelarA"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="area-btn-movil" style="left:2%; bottom: 50px">
+                <div class="btn-movil btn-default" data-bind="dxButton:btnRuta"></div>
+            </div>
+        </div>
+    </div>
+</div>

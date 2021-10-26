@@ -1,0 +1,45 @@
+<div data-options="dxView : { name: 'ConfirmacionPagoTarjeta', title: 'Confirmación' } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <div data-bind="dxScrollView: {  }">
+      <div style="margin-bottom:200px">
+
+        <div class="box-controls">
+          <span data-bind="text: 'Pago Tarjeta'"></span>
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left">No. Cuenta Origen:</label>
+              <span class="color" style="float:right; font-size:15px" data-bind="text: NumeroCuenta"></span>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left">No. Tarjeta:</label>
+              <span class="color" style="float:right; font-size:15px" data-bind="text: NumeroTarjetaMostrar"></span>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left">Valor A Pagar:</label>
+              <span class="color" style="float:right; font-size:15px" data-bind="text: MontoMostrar"></span>
+            </div>
+          </div>
+          <hr class="valorQuetzal"  />
+
+          <div class="row valorQuetzal" id="divValorQuetzales">
+            <div class="col-lg-12 texts">
+              <label style="float:left">Valor Quetzales:</label>
+              <span class="color" style="float:right; font-size:15px" data-bind="text: MontoQuetzal"></span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

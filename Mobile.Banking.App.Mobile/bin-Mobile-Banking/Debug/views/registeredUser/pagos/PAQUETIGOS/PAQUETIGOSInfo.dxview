@@ -1,0 +1,100 @@
+<div data-options="dxView : { name: 'PAQUETIGOSInfo', title: 'Pago de Servicio', disableCache: true  } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <style>
+      hr {
+      margin-top: 10px !important;
+      margin-bottom: 5px !important;
+      }
+
+    </style>
+
+    <div id="datosPagar" style="">
+      <div class="box-controls">
+        <span data-bind="text: 'PAQUETIGOS'"></span>
+
+        <div class="row" id="divNumeroTelefono">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Núm. Teléfono</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="txtNumeroTelefono" data-bind="dxTextBox:txtNumeroTelefono, dxValidator: validateRequired(groupValidation, '')"></div>
+          </div>
+          <hr />
+        </div>
+        
+        <div class="row">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Tipo Paquete</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="slTipoPaquete"  data-bind="dxSelectBox: slTipoPaquete, dxValidator: validateRequired(groupValidation, '')"></div>
+          </div>
+          <hr />
+        </div>
+        <div class="row containerPrePago" id="divMontoRecarga">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Monto</label>
+          </div>
+
+          <div class="col-lg-12 texts" style="display:block; float:right; text-align:right;width: 100%;">
+            <div id="slMontoRecarga"  data-bind="dxSelectBox: slMontoRecarga, dxValidator: validateRequired(groupValidation, '')"></div>
+          </div>
+          
+        </div>
+
+        <hr />
+        
+        <div class="row containerPrePago" id="divNombre">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Nombre</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="txtNombre" data-bind="dxTextBox:txtNombre, dxValidator: validateRequired(groupValidation, '')"></div>
+          </div>
+          <hr />
+        </div>
+
+
+        <div class="row containerPrePago" id="divNit">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Nit</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="txtNit" data-bind="dxTextBox:txtNit, dxValidator: ({
+                validationGroup:groupValidation,
+                validationRules:[
+                     validateRequired(groupValidation, '').validationRules[0],
+                     {
+                       type: 'pattern',
+                       pattern: '^[0-9]{6}[-]{1}[A-Za-z0-9-]{1}$|^[0-9]{7}[-]{1}[A-Za-z0-9-]{1}$|^[0-9]{8}[-]{1}[A-Za-z0-9-]{1}$|^[CF]{2}[0-9]{4}$',
+                       message: 'Nit no válido'
+                     }]}) "></div>
+          </div>
+          <hr />
+        </div>
+
+        <div class="row containerPrePago" id="divCorreo">
+
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Correo</label>
+          </div>
+
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="txtCorreo" data-bind="dxTextBox:txtCorreo, dxValidator: validateEmail(true, groupValidation, '')"></div>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

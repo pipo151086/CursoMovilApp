@@ -1,0 +1,72 @@
+<div data-options="dxView : { name: 'ConfirmarBeneficiarioExterno', title: 'Confirmación de Cuentas de Terceros' , disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:50px">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div style="text-align:justify; padding:10px">
+              <p>
+                AVISO: Por favor verifique todos los datos a continuación para registrar
+                el beneficiario al cual realizar la transferencia.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box-controls">
+
+          <span>Cuenta de Tercero</span>
+          
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:inline-block">Nombre/Alias de Cuenta: </label>
+              <span class="color" style="float:right" data-bind="text: Beneficiario"></span>
+            </div>
+          </div>
+          <hr />
+          
+          
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:inline-block">Banco: </label>
+              <span class="color" style="float:right" data-bind="text: Banco"></span>
+            </div>
+          </div>
+          <hr />
+
+
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:inline-block">Número Cuenta: </label>
+              <span class="color" style="float:right" data-bind="text: NumeroCuenta"></span>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:inline-block">Moneda: </label>
+              <span class="color" style="float:right" data-bind="text: Moneda"></span>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:inline-block">Tipo Cuenta: </label>
+              <span class="color" style="float:right" data-bind="text: CtaDesc"></span>
+            </div>
+          </div>
+          <hr />
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

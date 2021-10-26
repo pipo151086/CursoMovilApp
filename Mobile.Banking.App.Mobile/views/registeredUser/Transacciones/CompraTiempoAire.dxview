@@ -1,0 +1,126 @@
+<div data-options="dxView : { name: 'CompraTiempoAire', title: 'Compra Tiempo Aire', disableCache:true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxScrollView: {  }">
+            <div style="margin-bottom:50px">
+                <style>
+                    .dx-list-item-content {
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: #d52133;
+                    }
+
+                    #cmbMonto .dx-texteditor-input {
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                </style>
+                <div class="box-controls">
+                    <span data-bind="text: 'Compra de tiempo aire'"></span>
+
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left; margin-top:10px">Operadora: </label>
+                            <div style="float:right;" class="dx-field-value">
+                                <div id="rbOperadora" data-bind="dxRadioGroup:rbOperadora, dxValidator:validateRequired(groupValidation,'Operadora')" style="font-size:20px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left; margin-top:10px">Teléfono: </label>
+                            <div style="float:right; width:60%; text-align:right">
+                                <div id="txtNumberPhone" data-bind="dxTextBox:txtNumberPhone, dxValidator:validateRequired(groupValidation,'Número de teléfono')"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="margin-top:10px;">Monto: </label>
+                            <div style="float:right; width:40%;text-align: right;">
+                                <b id="bsigno" style="display:none; font-size:20px; color:grey;">$</b>
+                                <div style="display:inline-block;color:#d52133 !important; width:80%" id="txtMonto" data-bind="dxNumberBox:{ min: 3, max:50, visible: false }, dxValidator:validateRequired(groupValidation,'Monto')"></div>
+                                <div style="display:inline-block" id="cmbMonto" data-bind="dxSelectBox: cmbMonto"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left; margin-top:10px">Tarjeta: </label>
+                            <div style="float:right">
+                                <div id="btnCambiarTarjeta" style="display:inline-block" data-bind="dxButton: btnCambiarTarjeta"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left; margin-top:10px">CVV: </label>
+                            <div style="float:right">
+                                <div id="txtCodigoSeg" style="float:right" data-bind="dxNumberBox: { min: 100, max: 999, width: '100%' }, dxValidator:validateRequired(groupValidation,'Código Seguridad')"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <div class="title-1" style="text-align:center">
+                                <i class="fa fa-calendar"></i>
+                                <span> Caducidad Tarjeta</span>
+                            </div>
+                            <div style="display:block">
+                                <div style="display:inline-block; text-align:center; width: 50%">
+                                    <label>Mes</label>
+                                    <div id="btnCambiarMM" style="display:block" data-bind="dxButton: btnCambiarMM"></div>
+                                </div>
+                                <div style="display:inline-block; float:right; width: 45%; text-align:center">
+                                    <label>Año</label>
+                                    <div id="btnCambiarAA" style="display:block" data-bind="dxButton: btnCambiarAA"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="popupSeleccionTarjeta" data-bind="dxPopup: popupSeleccionTarjeta">
+                        <div data-options="dxTemplate: {name: 'content'}">
+                            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                                <div class="row">
+                                    <div class="col-lg-12" style="text-align:center">
+                                        <div id="rdbCuentas" style="font-size:20px" data-bind="dxRadioGroup: rdbTarjeta"></div>
+                                        <div id="btnCancelarCuenta" style="margin-top:10px" data-bind="dxButton: btnCancelarTarjeta"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popupSeleccionMM" data-bind="dxPopup: popupSeleccionMM">
+                        <div data-options="dxTemplate: {name: 'content'}">
+                            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                                <div class="row">
+                                    <div class="col-lg-12" style="text-align:center">
+                                        <div id="rdbMM" style="font-size:20px" data-bind="dxRadioGroup: rdbMM"></div>
+                                        <div id="btnCancelarMM" style="margin-top:10px" data-bind="dxButton: btnCancelarMM"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popupSeleccionAA" data-bind="dxPopup: popupSeleccionAA">
+                        <div data-options="dxTemplate: {name: 'content'}">
+                            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                                <div class="row">
+                                    <div class="col-lg-12" style="text-align:center">
+                                        <div id="rdbAA" style="font-size:20px" data-bind="dxRadioGroup: rdbAA"></div>
+                                        <div id="btnCancelarAA" style="margin-top:10px" data-bind="dxButton: btnCancelarAA"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

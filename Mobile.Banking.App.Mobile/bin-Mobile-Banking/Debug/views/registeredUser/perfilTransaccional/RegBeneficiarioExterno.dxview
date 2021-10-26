@@ -1,0 +1,205 @@
+<div data-options="dxView : { name: 'RegBeneficiarioExterno', title: 'Registrar Cuenta de terceros', disableCache: true  } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <style>
+
+        #btnCambiarTipoCuenta, #btnCambiarTipoDocumento, #btnCambiarInstitucion,#btnCambiarTipoMoneda {
+        color: #d52133 !important;
+        background-color: transparent !important;
+        }
+
+
+        #btnCambiarInstitucion {
+        width: 100%;
+        display: block;
+        }
+
+        #btnCambiarTipoCuenta .dx-button-text {
+        font-size: 14px !important;
+        padding-left: 5px;
+        }
+
+
+        #btnCambiarInstitucion .dx-button-text {
+        font-size: 14px !important;
+        padding-left: 5px;
+        WHITE-SPACE:BREAK-SPACES;
+        display: contents;
+        }
+
+        #btnCambiarInstitucion .dx-button-content {
+        padding-left: 0px !important;
+        text-align: left;
+        direction: ltr !important;
+        }
+
+        #btnCambiarInstitucion > div > i{
+        display: inline-flex;
+        float: right;
+        margin-top: -1px;
+        margin-right: -1px;
+        margin-left: 10px;
+        }
+
+        #rdbTiposCuenta .dx-item-content {
+        font-size: 18px !important;
+        }
+
+        #rdbTiposMoneda .dx-item-content {
+        font-size: 18px !important;
+        }
+
+        #rdbInstituciones .dx-item-content {
+        font-size: 12px !important;
+        }
+
+        #rdbInstituciones > div > div > div.dx-item-content{
+        /*line-height: initial;
+        justify-content: center;*/
+        }
+
+
+        #btnCambiarInstitucion > div > span
+        {
+        direction: initial !important;
+        display: inline-block;
+        }
+
+        #btnCambiarTipoCuenta > div > span
+        {
+        direction: initial !important;
+        display: inline-block;
+        }
+
+        #btnCambiarTipoMoneda > div > span
+        {
+        direction: initial !important;
+        display: inline-block;
+        }
+
+        .dx-tooltip-wrapper .dx-overlay-content{
+        background-color: #fff;
+        /*border-color: rgba(97,97,97,.9);*/
+        }
+      </style>
+      <div style="margin-bottom:400px">
+        <div class="box-controls">
+          <span data-bind="text: CORE_TAG('RegExternalBeneficiaries')"></span>
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left; margin-top:12px">Banco </label>
+              <!--label ahc inmediato-->
+              <label id="currSymbol" style="float:left; margin-top:12px;padding-left:5px"></label>
+              <div style="float:right; " >
+                <div id="btnCambiarInstitucion" data-bind="dxButton: btnCambiarInstitucion"></div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left; margin-top:12px">Tipo Cuenta</label>
+              <div style="float:right;">
+                <div id="btnCambiarTipoCuenta" data-bind="dxButton: btnCambiarTipoCuenta"></div>
+              </div>
+            </div>
+          </div>
+          <hr/>
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left; margin-top:12px">Tipo Moneda</label>
+              <div style="float:right;">
+                <div id="btnCambiarTipoMoneda" data-bind="dxButton: btnCambiarTipoMoneda"></div>
+              </div>
+            </div>
+          </div>
+          <hr/>
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left; margin-top:12px"># Cuenta/Tarjeta</label>
+
+              <i id="noValidIcon" style="color:red" class='fa fa-exclamation-circle' aria-hidden='true'></i>
+              <i id="validIcon" style="color:green; display:none" class='fa fa-check-circle' aria-hidden='true'></i>
+
+              <div style="float:right;width:35%" id="txtNumeroCta" data-bind="dxNumberBox:txtNumeroCta, dxValidator: validateRequired(groupValidation,'Número de Cuenta/Tarjeta')"></div>
+              <div style="width: 100%; text-align: end; float: right;">
+                <div id="alertCtaInvalida" style="color: red; line-height: normal; font-family: 'Gotham-Book'; 
+                   font-size: x-small;display: -webkit-inline-box;font-style: italic;"></div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label>Nombre/Alias de Cuenta</label>
+            </div>
+            <div class="col-lg-12 texts">
+              <div id="txtBeneficiario" data-bind="dxTextBox:txtBeneficiario, dxValidator: validateRequired(groupValidation, 'Nombre/Alias')"></div>
+            </div>
+          </div>
+
+          <div id="ttValidarCta" data-bind="dxTooltip:ttValidarCta"></div>
+
+        </div>
+
+
+        <div id="popupSeleccionTipoCuenta" data-bind="dxPopup: popupSeleccionTipoCuenta">
+          <div data-options="dxTemplate: {name: 'content'}">
+            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+              <div class="row">
+                <div class="col-lg-12" style="text-align:center">
+                  <div id="rdbTiposCuenta" style="font-size:20px" data-bind="dxRadioGroup: rdbTiposCuenta"></div>
+                  <div id="btnCancelarTipoCuenta" style="margin-top:10px" data-bind="dxButton: btnCancelarTipoCuenta"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="popupSeleccionTipoMoneda" data-bind="dxPopup: popupSeleccionTipoMoneda">
+          <div data-options="dxTemplate: {name: 'content'}">
+            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+              <div class="row">
+                <div class="col-lg-12" style="text-align:center">
+                  <div id="rdbTiposMoneda" style="font-size:20px" data-bind="dxRadioGroup: rdbTiposMoneda"></div>
+                  <div id="btnCancelarTipoMoneda" style="margin-top:10px" data-bind="dxButton: btnCancelarTipoMoneda"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="popupSeleccionInstitucion" data-bind="dxPopup: popupSeleccionInstitucion">
+          <div data-options="dxTemplate: {name: 'content'}">
+            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div>
+                    <div id="txtFiltroInstitucion" style="display:inline-block; width:70%" data-bind="dxTextBox: txtFiltroInstitucion"></div>
+                    <div id="btnFiltrar" style="display:inline-block" data-bind="dxButton: btnFiltrar"></div>
+                    <div id="btnQuitarFiltro" style="display:inline-block" data-bind="dxButton: btnQuitarFiltro"></div>
+                  </div>
+                  <div id="rdbInstituciones" style="font-size:20px" data-bind="dxRadioGroup: rdbInstituciones"></div>
+                  <div style="text-align:center">
+                    <div id="btnCancelarInstitucion" style="margin-top:10px" data-bind="dxButton: btnCancelarInstitucion"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>

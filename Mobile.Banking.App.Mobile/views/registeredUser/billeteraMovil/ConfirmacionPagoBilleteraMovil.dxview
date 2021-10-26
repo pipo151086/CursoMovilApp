@@ -1,0 +1,69 @@
+<div data-options="dxView : { name: 'ConfirmacionPagoBilleteraMovil', title: 'Confirmación de Pago' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxScrollView: { }">
+            <div style="margin-bottom:50px">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div style="text-align:justify; padding:10px">
+                            <p>
+                                AVISO: Por favor verifique todos los datos a continuación para el pago
+                                que deseas efectuar
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-controls">
+                    <span>Pago Billetera Móvil</span>
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="display:inline-block">Valor a Pagar: </label>
+                            <span class="color" style="float:right; font-size:15px; font-weight:bold" data-bind="text: '$'+Monto"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="display:inline-block">Valor uso de canal: </label>
+                            <span class="color" style="float:right; font-size:15px; font-weight:bold" data-bind="text: '$'+ValorUsoCanal"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="display:inline-block">Valor total: </label>
+                            <span class="color" style="float:right; font-size:15px; font-weight:bold" data-bind="text: '$'+ValorTotal"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="display:inline-block">Billetera Móvil a debitar: </label>
+                            <span class="color" style="float:right; font-size:15px; font-weight:bold" data-bind="text: CuentaBilletera"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="display:inline-block">Número de Billetera Móvil: </label>
+                            <span class="color" style="float:right; font-size:15px; font-weight:bold" data-bind="text: CelularBeneficiario"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="display:inline-block">Motivo: </label>
+                            <span class="color" style="float:right; font-size:15px; font-weight:bold" data-bind="text: Concepto"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="display:inline-block">E-mail Tercero: </label>
+                            <span class="color" style="float:right; font-size:15px; font-weight:bold" data-bind="text: EmailTercero"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+</div>

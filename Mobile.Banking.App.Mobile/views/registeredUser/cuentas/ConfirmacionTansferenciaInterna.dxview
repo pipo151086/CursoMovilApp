@@ -1,0 +1,88 @@
+<div data-options="dxView : { name: 'ConfirmacionTansferenciaInterna', title: 'Confirmación Transferencia', disableCache: true } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:50px">
+        <div class="row">
+          <div class="col-lg-12">
+            <div style="text-align:justify; padding:10px">
+              <p>
+                AVISO: Por favor verifique todos los datos a continuación para la transferencia
+                que deseas efectuar
+              </p>
+            </div>
+          </div>
+        </div>
+       
+        <div class="box-controls">
+
+          <span>Transferencia Interna</span>
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:inline-block">Cuenta origen: </label>
+              <span class="color" style="float:right" data-bind="text: CuentaOrigen"></span>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Titular cuenta origen: </label>
+              <span class="color" data-bind="text: TitularCuentaOrigen"></span>
+            </div>
+          </div>
+          <hr />
+          
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:inline-block">Monto: </label>
+              <span class="color" style="float:right; font-size:20px; font-weight:bold" data-bind="text:MontoMostrar"></span>
+              <span class="color" style="float:right; font-size:20px; font-weight:bold" data-bind="text:Moneda"></span>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="box-controls">
+          <span>Cuenta Destino</span>
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:inline-block">Cuenta destino: </label>
+              <span class="color" style="float:right" data-bind="text: CuentaDestino"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Titular cuenta destino: </label>
+              <span class="color" data-bind="text: TitularCuentaDestino"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">Concepto: </label>
+              <span class="color" data-bind="text: Concepto"></span>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">E-mail personal: </label>
+              <span class="color" style="text-transform:lowercase !important" data-bind="text: emailOrigen"></span>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:block">E-mail tercero: </label>
+              <span class="color" style="text-transform:lowercase !important" data-bind="text: emailDestino"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

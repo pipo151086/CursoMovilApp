@@ -1,0 +1,120 @@
+<div data-options="dxView : { name: 'PagoVisaNet', title: 'Pago con Tarjeta', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:200px">
+
+        <div id="TipoPago" style="display:block">
+          <div class="box-controls">
+            <span  style='font-size:16px' data-bind="text: 'Datos de la Tarjeta'"></span>
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <div style="display:block">
+                  <label>Número de Tarjeta</label>
+                  <div class="texts">
+                    <div id="txtNumTarjeta" data-bind="dxTextBox:txtNumTarjeta, dxValidator:validateRequired(groupValidation,'Número de tarjeta') " style="float:left; margin-top:10px "></div>
+
+                    <img style="text-align:right display:inline-block; position:relative; margin-left:10px;height:40px" src="images/icon-visa-mcard.png"  id="TipoTarjeta"></img>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr/>
+
+            <div class="row" style="margin-top:10px">
+              <div class="col-lg-12 texts">
+                <div style="display:block ">
+                  <label>Fecha Expiración</label>
+                  <div style="display:block">
+                    <div style="display:inline-block; text-align:center; width: 50%">
+                      <label>Mes</label>
+                      <div id="btnCambiarMM" style="display:block" data-bind="dxButton: btnCambiarMM"></div>
+                    </div>
+
+                    <div style="display:inline-block; float:right; width: 45%; text-align:center">
+                      <label>Año</label>
+                      <div id="btnCambiarAA" style="display:block" data-bind="dxButton: btnCambiarAA"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr/>
+
+            <div class="row" style="margin-top:10px">
+              <div class="col-lg-12 texts">
+                <div style="display:block">
+                  <label>Código de Seguridad</label>
+                  <div id="txtCodigoSeguridad" data-bind="dxNumberBox:txtCodigoSeguridad, dxValidator:validateRequired(groupValidation,'Código')" style="width:50%"></div>
+                </div>
+              </div>
+            </div>
+            <hr/>
+
+            <div class="row" style="margin-top:10px">
+              <div class="col-lg-12 texts">
+                <div style="display:block">
+                  <label>Monto</label>
+                  <div class="texts">
+                    <div class="" id="txtMonto" style="font-size:20px; display:inline-block;color:#d52133 !important; enable:false" data-bind="dxNumberBox:txtMonto"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr/>
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Correo Comprobante</label>
+                <span id="txtCorreoComprobante" class="color" style="float:left; display: inline-flex;font-size: 15px;width:100%" data-bind="dxTextBox: txtCorreoComprobante, dxValidator: ({
+                validationGroup:groupValidation,
+                validationRules:[
+                     validateRequired(groupValidation, '').validationRules[0],
+                     validateEmail(false, groupValidation, 'Mail Factura').validationRules[0],
+                       ]}) "></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div id="popupSeleccionMM" data-bind="dxPopup: popupSeleccionMM">
+          <div data-options="dxTemplate: {name: 'content'}">
+            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+              <div class="row">
+                <div class="col-lg-12" style="text-align:center">
+                  <div id="rdbMM" style="font-size:20px" data-bind="dxRadioGroup: rdbMM"></div>
+                  <div id="btnCancelarMM" style="margin-top:10px" data-bind="dxButton: btnCancelarMM"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="popupSeleccionAA" data-bind="dxPopup: popupSeleccionAA">
+          <div data-options="dxTemplate: {name: 'content'}">
+            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+              <div class="row">
+                <div class="col-lg-12" style="text-align:center">
+                  <div id="rdbAA" style="font-size:20px" data-bind="dxRadioGroup: rdbAA"></div>
+                  <div id="btnCancelarAA" style="margin-top:10px" data-bind="dxButton: btnCancelarAA"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

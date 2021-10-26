@@ -1,0 +1,80 @@
+<div data-options="dxView : { name: 'InfoTarjeta', title: 'Información Tarjeta' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+      <div data-bind="dxScrollView: { }">
+        <div style="margin-bottom:50px">
+          <style>
+            #btnCambiarTarjeta {
+            color: #d52133 !important;
+            background-color: transparent !important;
+            }
+
+            #btnCambiarTarjeta .dx-button-text {
+            font-size: 14px !important;
+            }
+
+            #rdbTarjetas .dx-item-content {
+            font-size: 20px !important;
+            }
+          </style>
+
+          <div id="seleccionTarjeta" class="row" style="padding:10px">
+            <div class="col-lg-12 texts">
+              <label class="tags">Seleccione </label>
+              <div style="float:right;">
+                <div id="lkpTarjetas" data-bind="dxLookup: lkpTarjetas"></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:10px">
+            <div class="box-controls">
+              <span data-bind="text: 'Resumen'"></span>
+
+              <div class="row">
+                <div class="col-lg-12 texts">
+                  <label id="txtDescTarjeta" style="float:left"></label>
+                  <div style="text-align:right">
+                    <span class="color" style="display:block; font-size:14px" id="spnNumeroTarjeta"></span>
+                  </div>
+                </div>
+              </div>
+
+              <hr/>
+              
+              <div class="row">
+                <div class="col-lg-12 texts">
+                  <label style="float:left ">Disponible para Compras</label>
+                  <div style="text-align:right">
+                    <span class="color" style="display:block; font-size:14px" id="spnDisponCompras"></span>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <hr />
+              <div class="row">
+                <div class="col-lg-12 texts">
+                  <label style="float:left ">Disponible para Retiros</label>
+                  <div style="float:right;">
+                    <span class="color" style="display:block; font-size:14px" id="spDisponRetiros"></span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+
+              <div class="row">
+                <div class="col-lg-12 texts">
+                  <label style="float:left">Disponible Extrafinanciamiento</label>
+                  <div style="float:right;">
+                    <span class="color" style="display:block; font-size:14px" id="spnExtraFin"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>

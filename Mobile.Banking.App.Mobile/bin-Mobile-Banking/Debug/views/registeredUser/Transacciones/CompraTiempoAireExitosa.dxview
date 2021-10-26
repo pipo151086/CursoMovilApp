@@ -1,0 +1,51 @@
+<div data-options="dxView : { name: 'CompraTiempoAireExitosa', title: 'Compra Tiempo Aire', disableCache:true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxScrollView: {  }">
+            <div style="margin-top:25px">
+                <div class="row" style="padding: 10px">
+                    <div class="col-lg-12 texts">
+                        <span>
+                            AVISO: La compra de tiempo aire se realizó exitosamente.
+                        </span>
+                    </div>
+                </div>
+                <div class="box-controls">
+                    <span>Información Personal</span>
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Secuencial:</label>
+                            <span class="color" style="float:right; font-size:20px" data-bind="text:Secuencial"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Operadora:</label>
+                            <span class="color" style="float:right; font-size:20px" data-bind="text:Operadora"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Número de teléfono:</label>
+                            <span class="color" style="float:right; font-size:20px" data-bind="text:NumberPhone"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Monto: </label>
+                            <span class="color" style="float:right; font-size:20px" data-bind="text:'$'+ Valor"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Tarjeta:</label>
+                            <span class="color" style="float:right; font-size:20px" data-bind="text:Tarjeta"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

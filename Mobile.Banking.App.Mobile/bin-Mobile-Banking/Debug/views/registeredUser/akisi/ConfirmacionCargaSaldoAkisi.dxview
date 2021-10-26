@@ -1,0 +1,56 @@
+<div data-options="dxView : { name: 'ConfirmacionCargaSaldoAkisi', title: 'Billetera Akisi', disableCache: true  } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+
+      <div class="box-controls">
+        <span>Confirmación de Carga de Saldo</span>
+
+        <div class="row">
+          <div class="col-lg-12 texts">
+            <label style="float:left; margin-top:5px">Número Teléfono</label>
+            <span class="color" style="float:right; font-size:20px" data-bind="text: numeroTelefono"></span>
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col-lg-12 texts">
+            <label style="float:left; margin-top:5px">Titular</label>
+            <span class="color" style="float:right; font-size:20px" data-bind="text: titular"></span>
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col-lg-12 texts">
+            <label style="float:left; margin-top:5px">Monto</label>
+            <span class="color" style="float:right; font-size:20px" data-bind="text: montoMostrar"></span>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-lg-12 texts">
+            <label style="float:left; margin-top:5px">Cuenta</label>
+            <div style="float:right;">
+              <div id="btnCambiarCuenta" style="display:inline-block" data-bind="dxButton: btnCambiarCuenta"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="popupSeleccionCuenta" data-bind="dxPopup: popupSeleccionCuenta">
+        <div data-options="dxTemplate: {name: 'content'}">
+          <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+            <div class="row">
+              <div class="col-lg-12" style="text-align:center">
+                <div id="rdbCuentas" style="font-size:20px" data-bind="dxRadioGroup: rdbCuentas"></div>
+                <div id="btnCancelarCuenta" style="margin-top:10px" data-bind="dxButton: btnCancelarCuenta"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

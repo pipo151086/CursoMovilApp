@@ -1,0 +1,124 @@
+<div data-options="dxView : { name: 'SolCtaForm1', title: 'SolCtaForm1', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <div data-bind="dxScrollView: {showScrollbar:'never' }" class="scrollFormSolCtaDig">
+      <div class="titleFormSolCtaDigCont">
+        <span class="titleFormSolCtaDig">Solicitud de Cuenta de Ahorro</span>
+      </div>
+
+      <div class="contPaginatorCtaDigital">
+        <span class="pagnatorTlt" id="pagnatorTlt"></span>
+        <div id="paginatorDots"></div>
+      </div>
+
+      <div class="subtitleFormSolCtaDigCont" style="">
+        <span class="subtitleFormSolCtaDig">Formulario de solicitud</span>
+
+        <span class="subtitleFormSolCtaDig" style="float: right;">Página 1 de 4</span>
+
+        <div class="expSubtittleCont" >
+          <span class="expSubtittleText">Por favor responde las siguientes preguntas para solicitar tu cuenta.</span>
+        </div>
+      </div>
+
+      <div class="formSolCtaDig" >
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">1. Tipo de documento de identificación:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formRadioGroupComp" id="rgTipoIdentificacion" data-bind="dxRadioGroup: rgTipoIdentificacion, dxValidator:validateRequired(CtaDigDPIPasF1, 'Obligatorio')"></div>
+          </div>
+        </div>
+
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblNumeroDocumento">2. Número de DPI:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="" id="txtNumeroDocumento" data-bind="dxTextBox: txtNumeroDocumento, dxValidator: validateDNI(true, CtaDigDPIPasF1, 'Número Documento')"></div>
+          </div>
+        </div>
+
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblPrimerNombreDpi">3. Primer Nombre:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="" id="txtPrimerNombreDpi" data-bind="dxTextBox: txtPrimerNombreDpi, dxValidator: validateRequired(CtaDigDPIPasF1, 'Primer Nombre')"></div>
+          </div>
+        </div>
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblSegundoNombreDpi">4. Segundo Nombre:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="" id="txtSegundoNombreDpi" data-bind="dxTextBox: txtSegundoNombreDpi"></div>
+          </div>
+        </div>
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblPrimerApellidoDpi">5. Primer Apellido:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="" id="txtPrimerApellidoDpi" data-bind="dxTextBox: txtPrimerApellidoDpi, dxValidator: validateRequired( CtaDigDPIPasF1, 'Primer Apellido')"></div>
+          </div>
+        </div>
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblSegundoApellidoDpi">6. Segundo Apellido:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="" id="txtSegundoApellidoDpi" data-bind="dxTextBox: txtSegundoApellidoDpi, dxValidator: validateRequired( CtaDigDPIPasF1, 'Segundo Apellido')"></div>
+          </div>
+        </div>
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblApellidoCasadaDpi">7. Apellido de Casada:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="" id="txtApellidoCasadaDpi" data-bind="dxTextBox: txtApellidoCasadaDpi"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblNumeroNitDpi">8. Número de NIT:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="" id="txtNumeroNitDpi" data-bind="dxTextBox: txtNumeroNitDpi, dxValidator:  validateRequired(false, CtaDigDPIPasF1, 'Fecha de Nacimiento')"></div>
+            <!--<div style="" id="txtNumeroNitDpi" data-bind="dxTextBox: txtNumeroNitDpi, dxValidator: validateRUC(false, CtaDigDPIPasF1, 'Número de NIT')"></div>-->
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblFechaNacimientoDpi">9. Fecha de Nacimiento:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div id="dtFechaNacimiento" data-bind="dxDateBox: dtFechaNacimientoDpi, dxValidator: validateRequired(false, CtaDigDPIPasF1, 'Fecha de Nacimiento')"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblNumeroTelefonoDpi">10. Número Teléfono:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="" id="txtNumeroTelefonoDpi" data-bind="dxTextBox: txtNumeroTelefonoDpi, dxValidator: validateHibridPhone(true, CtaDigDPIPasF1, 'Número de teléfono')"></div>
+          </div>
+        </div>
+
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">11. Género:</div>
+          <div class="formSolCtaDigFieldValue">
+            <!--<div class="formSolCtaDigFieldValueComp"  id="tipoIdentificacion"  data-bind="dxSelectBox: tipoIdentificacion, dxValidator:validateRequired(CtaDigDPIPasF1, 'Tipo de identificación')"></div>-->
+            <div class="formRadioGroupComp" id="rgGenero" data-bind="dxRadioGroup: rgGenero, dxValidator:validateRequired(CtaDigDPIPasF1, 'Obligatorio')"></div>
+
+          </div>
+        </div>
+
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnActiveCtaDigital" id="btnValidar" style="" data-bind="dxButton: btnValidar"></div>
+        </div>
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnInactiveCtaDigital" id="btnRegresar" style="" data-bind="dxButton: btnRegresar"></div>
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+</div>

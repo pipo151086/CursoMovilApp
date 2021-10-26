@@ -1,0 +1,86 @@
+<div data-options="dxView : { name: 'RequestPIN', title: 'RequestPIN', disableCache: true } ">
+  <div id="divContentRequestPin" data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+    <style>
+      .btn {
+      border-radius: 100% !important;
+      }
+    </style>
+    <div id="contentRequestPin" style="width:100%; text-align:center;align-self:center;background: white;">
+      <div class="img-pin">
+        <img id="imgCandado" style="height:80px; width:80px; margin-top:20px" src="images/icono-candado.png" ></img>
+        <span class="span-pin" id="spanSeleccionAcceso">Selecciona tu método de acceso</span>
+
+      </div>
+      <div id="ContainerBotones" style="background: white; ">
+        <div style="margin-left:5px;margin-right:5px; width: 150px;height:130px; border: solid 1px;border-radius: 5px;" data-bind="dxButton: {onClick:koClickHuella}">
+          <img style="width:50%" src="images/fingerprint-colored.png"></img>
+          <span id="spnHuella" style="color: #d52133; display: block;font-family: Gotham-Book;">Huella</span>
+        </div>
+
+        <div style="margin-left:5px;margin-right:5px; width: 150px;height:130px;border: solid 1px;border-radius: 5px;" data-bind="dxButton: {onClick:koClickCodigo}">
+          <img style="width:95%" src="images/codigo.png"></img>
+          <span id="spnCodigo" style="color: #d52133 !important; display: block;font-family: Gotham-Book;">Código</span>
+        </div>
+      </div>
+
+      <div id="ContainerCode" style="display:none;">
+        <div style="width:100%">
+          <input style="background: transparent; color: transparent; width: 1px;margin-left: -50px;" id="txtNumberPIN" pattern="[0-9]*"></input>
+        </div>
+        <div style="text-align:center; width:100%; display:block; margin-top:5px">
+          <div class="img-char-pin">
+            <div id="charVacio1" class="img-char-pin-vacio"></div>
+          </div>
+          <div class="img-char-pin">
+            <div id="charVacio2" class="img-char-pin-vacio"></div>
+          </div>
+          <div class="img-char-pin">
+            <div id="charVacio3" class="img-char-pin-vacio"></div>
+          </div>
+          <div class="img-char-pin">
+            <div id="charVacio4" class="img-char-pin-vacio"></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:20px; width:100%; margin-bottom:10px">
+        <div id="btnOlvidoPIN" style="display:none" class="btn3" data-bind="dxButton: { text: '¿Olvidó su PIN?', onClick: clickOlvidoPIN }"></div>
+        <div id="btnCancelar" class="btn3" style="display:block;">
+          <a style="display:inline-block; text-decoration:none !important; color:#d52133" id="linkCancelar" data-bind="click: clickCancelar">
+            <span style="text-transform:none !important; font-family: Gotham-Book !important; font-size:15px; ">Cancelar</span>
+          </a>
+        </div>
+      </div>
+      <div class="area-teclado" id="containerDisclaimer" data-bind="click: clickView">
+        <br/>
+        <br/>
+        <p id="disclaimerParraph" style="color:white; font-family:Gotham-Book !important; line-height: 1.5;">
+          Declaro que conozco y acepto las condiciones de uso y las políticas de seguridad de esta aplicación. Adicionalmente, declaro conocer que todas las huellas digitales o registros faciales configurados en mi equipo celular tienen acceso a este canal transaccional, por lo que libero desde ya al banco de cualquier responsabilidad, por el uso que se le diera a este.
+        </p>
+
+      </div>
+      <div style="width:100%; position:fixed; height:10px; background-color: #d52133; bottom:0px"></div>
+
+      <div data-bind="dxPopup: {
+                        height: 'auto',
+                        title: 'Olvido de PIN',
+                        visible: visible,
+                        animation: animationConfig,
+                     closeOnOutsideClick :true
+                    }">
+        <div style="text-align:center;width:100%" data-options="dxTemplate: { name: 'content' }">
+          <div style="text-align:justify;width:100%">
+            <p>Si has olvidado tu PIN de acceso deberás realizar el proceso de registro nuevamente y establecer un nuevo PIN.</p>
+            <p style="text-align:center; font-weight:bold; margin-bottom:20px">¿Estás de acuerdo con esto?</p>
+            <div style="text-align:center">
+              <div id="btnAceptarOP" style="bottom:0px;right:0px; color:#d52133;" data-bind="dxButton: { text: 'Aceptar', onClick: clickAceptarOlvidoPIN }"></div>
+              <div id="btnCancelarOP" style="bottom:0px;left:0px; color:#d52133;" data-bind="dxButton: { text: 'Cancelar', onClick: togglePopup }"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>

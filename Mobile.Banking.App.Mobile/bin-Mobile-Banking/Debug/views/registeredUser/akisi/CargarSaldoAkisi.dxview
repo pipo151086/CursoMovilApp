@@ -1,0 +1,38 @@
+<div data-options="dxView : { name: 'CargarSaldoAkisi', title: 'Billetera Akisí', disableCache: true  } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+
+      <div class="box-controls">
+        <span>Consulta de Carga de Saldo</span>
+        <div class="row" id="divNumeroTelefono">
+          <label class="col-lg-6" style="display:inline-block; float:left; margin-top:5px">Núm. Telef.</label>
+          <div class="col-lg-6" style="display:inline-block; float:right; text-align:right; max-width: 50%;">
+            <div id="txtNumeroTelefono" data-bind="dxTextBox:txtNumeroTelefono,  dxValidator: ({
+                 validationGroup: groupValidation,
+                  validationRules:[
+                     validateRequired(groupValidation, '').validationRules[0],
+                     {
+                       type: 'pattern',
+                       pattern: '^[0-9]{8}',
+                       message: 'Número no válido'
+                     }]               
+                 }) ">
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col-lg-12 texts">
+            <label style="float:left; margin-top:10px">Monto</label>
+            <div style="text-align:right">
+              <b id="currSymbol" style="display:inline-block; font-size:20px; color:#d52133; position:relative;"></b>
+              <div style="display:inline-block;color:#d52133 !important;" id="txtMonto" data-bind="dxNumberBox:txtMonto, dxValidator:validateRequired(groupValidation,'Monto')"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

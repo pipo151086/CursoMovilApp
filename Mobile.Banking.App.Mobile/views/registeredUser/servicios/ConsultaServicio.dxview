@@ -1,0 +1,16 @@
+<div data-options="dxView : { name: 'ConsultaServicio', title: 'Consulta Servicio', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+        <div data-bind="dxScrollView: {  }">
+            <div style="padding-bottom:300px">
+                <div class="box-controls">
+                    <span data-bind="text: koTitle"></span>
+
+                    <div style="text-align: center;" id="dinamicViewContent"></div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

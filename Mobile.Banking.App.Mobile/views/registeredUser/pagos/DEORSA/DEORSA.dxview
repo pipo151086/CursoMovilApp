@@ -1,0 +1,67 @@
+<div data-options="dxView : { name: 'DEORSA', title: 'Pago de Servicio', disableCache: true  } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+    <style>
+      hr {
+      margin-top: 10px !important;
+      margin-bottom: 5px !important;
+      }
+
+      .dx-list-item-content, .dx-list .dx-empty-message {
+      padding: 10px 10px !important;
+      }
+
+
+    </style>
+
+    <div id="datosPagar" style="">
+      <div class="box-controls">
+        <span data-bind="text: 'Deorsa'"></span>
+        <div class="row">
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Tipo Búsqueda</label>
+          </div>
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 100px !important;">
+            <div id="slTipoBusqueda"  data-bind="dxSelectBox: slTipoBusqueda"></div>
+          </div>
+          <hr />
+        </div>
+
+        <div class="row" id="divNumeroDocumento">
+          <div class="col-lg-6 texts" style="display:inline-block">
+            <label style="display:block">Núm. Doc.</label>
+          </div>
+          <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+            <div id="txtNumeroDocumento" data-bind="dxTextBox:txtNumeroDocumento, dxValidator:
+                ({
+                validationGroup:groupValidation,
+                validationRules:[
+                     validateRequired(groupValidation, '').validationRules[0]                                      
+                       ]}) ">
+
+            </div>
+          </div>
+          <hr />
+        </div>
+
+        <div class="row" id="divValorPagar" style ="display:none">
+          <div class="texts" style="display:inline-block;padding-left: 15px;">
+            <label style="display:block;margin-top: 8px;">Valor a Pagar</label>
+          </div>
+          <div class="texts" style="display:inline-block; float:right; text-align:right;padding-right:15px">
+            <div style="text-align:right;display: table-cell;">
+              <span id="spnMoneda" class="color" style="display: table-cell; font-size:20px; color:#d52133; position:relative;" ></span>
+              <div style="display: table-cell;color:#d52133 !important;width: 75% !important;font-size: 18px; width: 100px !important;" id="valorTotalPagar" data-bind="dxNumberBox:valorTotalPagar, dxValidator:validateRequired(groupValidation2,'')"></div>
+            </div>
+          </div>
+          <hr />
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

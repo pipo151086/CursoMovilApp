@@ -1,0 +1,104 @@
+<div data-options="dxView : { name: 'RegCuposMax', title: 'Cupos Máximos', disableCache: true  } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <style>
+
+      .formItem{
+      padding:10px;
+      }
+      
+      
+    </style>
+
+    <div id="scrollView" data-bind="dxScrollView: { }" style="padding:10px">
+      <p style="text-align: justify;line-height: normal;">
+        Para control de tus fondos, configura el monto maximo que podras utilizar en tus operaciones, los montos configurados deben estar dentro del limite definido por Banco de Antigua indicados abajo.
+        <br></br>
+        Más información 2420-5555
+      </p>
+
+      <div class="formItem" style="">
+        <span>Producto</span>
+        <div id="rdbProducto" style="" data-bind="dxRadioGroup: rdbProducto"></div>
+      </div>
+
+      <div id="CtasConfig">
+
+        <div id="seleccionCuenta" class="row" style="padding:10px">
+          <div class="col-lg-12 texts">
+            <label class="tags">Seleccione</label>
+            <div style="float:right; position:relative;">
+              <div id="lkpCuentas" data-bind="dxLookup: lkpCuentas"></div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div style="padding-bottom: 350px;" id="accMontosCta" data-bind="dxAccordion:accMontosCta"></div>
+
+      </div>
+
+
+
+
+
+
+      <div id="TrjsConfig" style="display:none">
+        <div id="seleccionTarjeta" style="padding-top:2px">
+          <div class="col-lg-12 texts">
+            <label class="tags">Seleccione </label>
+            <div style="float:right;">
+              <div id="lkpTarjetas" data-bind="dxLookup: lkpTarjetas"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>

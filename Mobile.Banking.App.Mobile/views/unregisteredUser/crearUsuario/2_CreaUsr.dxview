@@ -1,0 +1,172 @@
+<div data-options="dxView : { name: '_2_CreaUsr', title: '2_CreaUsr', disableCache: true } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <style>
+      .formItem{
+      padding:10px;
+      }
+
+
+      .wrapper-progressBar {
+      width: 100%;
+      position: fixed;
+      }
+
+      .progressBar {
+      padding: 0px !important
+      }
+
+      .progressBar li {
+      list-style-type: none;
+      float: left;
+      width: 33%;
+      position: relative;
+      text-align: center;
+      /*TODO  height: 50px; */
+      margin-top: 10px;
+      /*margin-bottom: 10px;*/
+      height: 45px;
+      }
+
+      .progressBar li:before {
+      content: " ";
+      line-height: 30px;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      border: 14px solid #ddd;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px;
+      background-color: #ddd
+      }
+
+      .progressBar li:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px !important;
+      background-color: #ddd;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+      }
+
+      .progressBar li:first-child:after {
+      content: none;
+      }
+
+      .progressBar li.active {
+      color: #d52133;
+      }
+
+      .progressBar li.active:before {
+      border-color: #d52133;
+      background-color: #d52133
+      }
+
+      .progressBar .active:after {
+      background-color: #d52133;
+      }
+
+      .stepperNumberLabelContainer {
+      font-family: Gotham-Book;
+      font-size: 14px;
+      top: -36px;
+      position: relative;
+      color: black !important;
+      font-weight: bold;
+      }
+
+      .stepperLabel {
+      margin-top: 5px;
+      font-size: 13px;
+      }
+
+      .normalIndicator{
+      color:white
+      }
+    </style>
+
+    <div class="containerSlide">
+      <div class="noClientButtonBack" data-bind="click:clickBack">
+        <i class="dx-icon fa fa-chevron-left"></i>
+      </div>
+      <img id="slideLogo" class="SlideLogo" src="images/BDA-blanco.png"></img>
+    </div>
+
+    <div class="wrapper-progressBar">
+      <ul class="progressBar" >
+        <li id="stepper1" class="active">
+          <div class="stepperNumberLabelContainer" style="color: lightgray !important;">
+            <div class="normalIndicator">
+              <i class="fa fa-check"></i>
+            </div>
+            <div class="stepperLabel">Térm. y Cond.</div>
+          </div>
+        </li>
+        <li id="stepper2" class="active">
+          <div class="stepperNumberLabelContainer"  >
+            <div class="normalIndicator">2</div>
+            <div class="stepperLabel">Información</div>
+          </div>
+        </li>
+        <li id="stepper3">
+          <div class="stepperNumberLabelContainer"  style="color: lightgray !important;">
+            <div class="normalIndicator">3</div>
+            <div class="stepperLabel">Contacto</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="botonesTitulo tituloWizardCrearUsuario" >
+      Creación de usuario Bantigua en línea
+    </div>
+
+    <div data-bind="dxScrollView: { }" style="margin-top:-10px">
+      <div class="createUserForm">
+
+        <div class="formItem" style="">
+          <span class="creaUsrSpnLbl">Tipo Identificación</span>
+          <div id="tipoIdentificacion" data-bind="dxSelectBox:tipoIdentificacion, dxValidator: validateRequired(groupValidation, 'Tipo Identificación')"></div>
+        </div>
+        <div class="formItem" style="">
+          <span class="creaUsrSpnLbl">Número Documento</span>
+          <div style="" id="txtNumeroDocumento" data-bind="dxTextBox: txtNumeroDocumento, dxValidator: validateDNI(true, groupValidation, 'Número Documento')"></div>
+        </div>
+        <div class="formItem" style="">
+          <span class="creaUsrSpnLbl">Selecciona Un Producto</span>
+          <div id="tipoProducto" data-bind="dxSelectBox:tipoProducto, dxValidator: validateRequired(groupValidation, 'Tipo Producto')"></div>
+        </div>
+        <div class="formItem" style="">
+          <span class="creaUsrSpnLbl">Número del Producto</span>
+          <div id="txtNumeroProducto" data-bind="dxTextBox: txtNumeroProducto,  dxValidator: { validationGroup: groupValidation, validationRules:[
+               {
+               type: 'pattern',
+               pattern: '^[0-9]*$',
+               message: 'Número no válido'
+               },
+               {
+               type: 'required',
+               message: 'Campo obligatorio'
+               }
+               ]}
+               "
+               ></div>
+        </div>
+        <div class="formItem" style="">
+          <span class="creaUsrSpnLbl">Moneda del Producto</span>
+          <div id="tipoMoneda" data-bind="dxSelectBox:tipoMoneda, dxValidator: validateRequired(groupValidation, 'Moneda Producto')"></div>
+        </div>
+        <div class="formItem" style="">
+          <span class="creaUsrSpnLbl">Fecha de Nacimiento</span>
+          <div id="dtFechaNacimiento" data-bind="dxDateBox: dtFechaNacimiento"></div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

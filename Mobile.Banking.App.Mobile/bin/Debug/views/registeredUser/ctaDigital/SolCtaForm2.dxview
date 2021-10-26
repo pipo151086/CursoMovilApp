@@ -1,0 +1,105 @@
+<div data-options="dxView : { name: 'SolCtaForm2', title: 'SolCtaForm2', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <div data-bind="dxScrollView: {showScrollbar:'never' }" class="scrollFormSolCtaDig">
+      <div class="titleFormSolCtaDigCont">
+        <span class="titleFormSolCtaDig">Solicitud de Cuenta de Ahorro</span>
+      </div>
+
+      <div class="contPaginatorCtaDigital">
+        <span class="pagnatorTlt" id="pagnatorTlt"></span>
+        <div id="paginatorDots"></div>
+      </div>
+
+      <div class="subtitleFormSolCtaDigCont" style="">
+        <span class="subtitleFormSolCtaDig">Formulario de solicitud</span>
+
+        <span class="subtitleFormSolCtaDig" style="float: right;">Página 2 de 4</span>
+
+        <div class="expSubtittleCont" >
+          <span class="expSubtittleText">Por favor responde las siguientes preguntas para solicitar tu cuenta.</span>
+        </div>
+      </div>
+
+
+      <div class="formSolCtaDig" >
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">12. Tipo de Nacionalidad:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formSolCtaDigFieldValueComp"  id="tipoNacionalidad"  data-bind="dxSelectBox: tipoNacionalidad, dxValidator:validateRequired(CtaDigDPIPasF2, 'Tipo de Nacionalidad')"></div>
+          </div>
+        </div>
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">13. Nacionalidad:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formSolCtaDigFieldValueComp"  id="nacionalidad"  data-bind="dxSelectBox: nacionalidad, dxValidator:validateRequired(CtaDigDPIPasF2, 'Nacionalidad')"></div>
+          </div>
+        </div>
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">14. Condición Migratoria:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formSolCtaDigFieldValueComp"  id="condicionMigratoria"  data-bind="dxSelectBox: condicionMigratoria, dxValidator:validateRequired(CtaDigDPIPasF2, 'Condición Migratoria')"></div>
+          </div>
+        </div>
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">15. Nivel de Estudios:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formSolCtaDigFieldValueComp"  id="nivelEstudios"  data-bind="dxSelectBox: nivelEstudios, dxValidator:validateRequired(CtaDigDPIPasF2, 'Nivel de Estudios')"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">16. Profesión u Oficio:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formSolCtaDigFieldValueComp"  id="profOficio"  data-bind="dxSelectBox: profOficio, dxValidator:validateRequired(CtaDigDPIPasF2, 'Profesión u oficio')"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">17. Estado Civil:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formSolCtaDigFieldValueComp"  id="estadoCivil"  data-bind="dxSelectBox: estadoCivil, dxValidator:validateRequired(CtaDigDPIPasF2, 'Estado Civil')"></div>
+          </div>
+        </div>
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel">18. Dirección de Residencia:</div>
+          <div class="formSolCtaDigFieldValue">
+
+            <div style="" id="dirPrincipal" data-bind="dxTextBox: dirPrincipal, dxValidator: validateRequired(CtaDigDPIPasF2, 'Calle Principal')"></div>
+
+            <div style="margin-top:5px;margin-bottom:5px;width:50%" id="dirNumero" data-bind="dxTextBox: dirNumero"></div>
+
+            <div style="" id="dirTransversal" data-bind="dxTextBox: dirTransversal"></div>
+
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblNumeroTelefonoDpi">19. Número de Teléfono:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="" id="numTelefRes" data-bind="dxTextBox: numTelefRes, dxValidator: validateHibridPhone(true, CtaDigDPIPasF2, 'Número de teléfono')"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="">20. Correo electrónico:</div>
+          <div class="formSolCtaDigFieldValue">
+            <div style="" id="correoElecRes" data-bind="dxTextBox: correoElecRes, dxValidator: validateEmail(true, CtaDigDPIPasF2, 'Correo Electrónico')"></div>
+          </div>
+        </div>
+
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnActiveCtaDigital" id="btnValidar" style="" data-bind="dxButton: btnValidar"></div>
+        </div>
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnInactiveCtaDigital" id="btnRegresar" style="" data-bind="dxButton: btnRegresar"></div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>

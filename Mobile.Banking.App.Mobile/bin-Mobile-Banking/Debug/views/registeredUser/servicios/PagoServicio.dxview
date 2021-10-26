@@ -1,0 +1,116 @@
+<div data-options="dxView : { name: 'PagoServicio', title: titleServicio, disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+        <style>
+            .rowItemInForm {
+                text-align: left;
+                padding-bottom: 10px;
+                width: 100% !important;
+                display: inline-flex;
+                margin-right: auto;
+                margin-left: auto;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .innerLabel {
+                margin-top: 4px;
+                width: 40%;
+            }
+
+            .innerElement {
+                width: 60%;
+                text-align: right;
+            }
+        </style>
+
+        <div  id="scrollView" data-bind="dxScrollView: {  }">
+            <div style="padding-bottom:300px">
+                <div class="box-controls">
+                    <span data-bind="text: koTitle"></span>
+                    <div id="containerTitular" style="text-align:center">
+                        <label id="idTitular"></label>
+                    </div>
+
+                    <div id="containerIdentificador" style="text-align:center;font-size:12px">
+                        <label id="idIdentificadorContrapartida">Identificador: </label><label id="idIndentificador"></label>
+                    </div>
+
+                    <div id="idGridRubros" data-bind="dxDataGrid: koGridRubros"></div>
+
+                    <div class="rowItemInForm">
+                        <label class="innerLabel">TOTAL:</label>
+                        <span class="innerElement" style="font-size: large;color:#d52133;font-weight:600" id="spnTotalAPagar"></span>
+                    </div>
+
+                    <div class="rowItemInForm" id="containerFormaPago">
+                        <label class="innerLabel">Forma de Pago:</label>
+                        <div class="innerElement" id="MetodoPago" data-bind="dxLookup: koMetodoPago, dxValidator: validateRequired(groupValidation, 'Método de pago')"></div>
+                    </div>
+
+                    <div id="PagoTarjeta" style="display:none;margin-top: 0px;">
+                        <div class="row" id="containerCodigoSeg">
+                            <div class="col-lg-12 texts" style="margin:10px">
+                                <label style="float:left; margin-top:4px">Código de seguridad (CVV): </label>
+                                <div style="float:right;width: 20%;">
+                                    <div id="txtCodigoSeg" style="float:right" data-bind="dxTextBox: koCodigoSeg"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" id="containerCaducidad">
+                            <div class="col-lg-12 texts" style="margin:10px;">
+                                <div class="title-1" style="text-align:center">
+                                    <i class="fa fa-calendar"></i>
+                                    <span> Caducidad Tarjeta</span>
+                                </div>
+                                <div style="display:block">
+                                    <div style="display:inline-block; text-align:center; width: 50%">
+                                        <label>Mes</label>
+                                        <div id="btnCambiarMM" style="display:block" data-bind="dxButton: btnCambiarMM"></div>
+                                    </div>
+                                    <div style="display:inline-block; float:right; width: 45%; text-align:center">
+                                        <label>Año</label>
+                                        <div id="btnCambiarAA" style="display:block" data-bind="dxButton: btnCambiarAA"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="rowItemInForm" id="containerDescripcion">
+                        <label class="innerLabel">Descripción:</label>
+                        <div class="innerElement" style="" id="txtDescripcion" data-bind="dxTextBox: koTxtDescripcion"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="popupSeleccionMM" data-bind="dxPopup: popupSeleccionMM">
+                <div data-options="dxTemplate: {name: 'content'}">
+                    <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                        <div class="row">
+                            <div class="col-lg-12" style="text-align:center">
+                                <div id="rdbMM" style="font-size:20px" data-bind="dxRadioGroup: rdbMM"></div>
+                                <div id="btnCancelarMM" style="margin-top:10px" data-bind="dxButton: btnCancelarMM"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="popupSeleccionAA" data-bind="dxPopup: popupSeleccionAA">
+                <div data-options="dxTemplate: {name: 'content'}">
+                    <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                        <div class="row">
+                            <div class="col-lg-12" style="text-align:center">
+                                <div id="rdbAA" style="font-size:20px" data-bind="dxRadioGroup: rdbAA"></div>
+                                <div id="btnCancelarAA" style="margin-top:10px" data-bind="dxButton: btnCancelarAA"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

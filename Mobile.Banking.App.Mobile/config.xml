@@ -1,0 +1,162 @@
+﻿<widget id="com.mobile.banking.tempbantigua"
+        version="1.0"
+        versionCode="1"
+        xmlns:gap="http://phonegap.com/ns/1.0"
+        encoding="UTF-8"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        >
+  <name>MobileBankingTemplate</name>
+  <description>Template</description>
+  <author email="email@sample.com" href="http://sample.com">Portales Distributors</author>
+  <preference name="permissions" value="none" />
+  <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+  <preference name="prerendered-icon" value="true" />
+  <preference name="android-windowSoftInputMode" value="adjustPan" />
+  <preference name="SplashScreen" value="splash" />
+  <preference name="SplashScreenDelay" value="60000" />
+  <preference name="AutoHideSplashScreen" value="false" />
+  <preference name="SplashShowOnlyFirstTime" value="false" />
+  <preference name="FadeSplashScreen" value="false" />
+  <preference name="ShowSplashScreenSpinner" value="false" />
+  <preference name="DisallowOverscroll" value="true" />
+  <preference name="StatusBarOverlaysWebView" value="false" />
+  <preference name="StatusBarBackgroundColor" value="#d52133" />
+  <preference name="phonegap-version" value="cli-9.0.0" />
+
+  <!--OK_ANDROID-->
+  <plugin name="phonegap-plugin-push" spec="1.10.6">
+    <param name="SENDER_ID" value="463565428250" />
+  </plugin>
+
+  <plugin name="cordova-plugin-file" spec="4.3.3" />
+  <preference name="orientation" value="portrait" />
+  <plugin name="cordova-plugin-device" />
+  <plugin name="cordova-plugin-geolocation" spec="2.4.3" />
+  <plugin name="cordova-plugin-splashscreen" onload="true" />
+  <plugin name="cordova-plugin-vibration" spec="2.1.6" />
+  <plugin name="cordova-plugin-whitelist" />
+  <plugin name="cordova-plugin-ios-longpress-fix" />
+  <plugin name="cordova-plugin-statusbar" onload="true" />
+  <plugin name="cordova-plugin-sqlite-2" />
+  <plugin name="cordova-plugin-appversion" />
+  <plugin name="cordova-plugin-http" />
+  <plugin name="cordova-plugin-network-information"/>
+  <plugin name="cordova-plugin-ionic-keyboard"/>
+  <plugin name="cordova-plugin-appavailability" source="npm" />
+
+  <platform name="android">
+
+    <plugin name="cordova-plugin-fingerprint-aio" spec="1.7.0"/>
+    <preference name="android-minSdkVersion" value="23" />
+    <preference name="android-targetSdkVersion" value="29" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="cordova-android-support-gradle-release"/>
+
+    <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
+      <activity android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustPan" />
+    </edit-config>
+    <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+      <application android:usesCleartextTraffic="true"/>
+    </edit-config>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    </config-file>
+
+  </platform>
+
+  <platform name="ios">
+    <!-- 2732x2732 -->
+    <splash src="Resources/Default@2x~ipad~anyany.png" />
+    <!-- 1278x2732 -->
+    <splash src="Resources/Default@2x~ipad~comany.png" />
+    <!-- 1334x1334 -->
+    <splash src="Resources/Default@2x~iphone~anyany.png" />
+    <!-- 750x1334  -->
+    <splash src="Resources/Default@2x~iphone~comany.png" />
+    <!-- 1334x750  -->
+    <splash src="Resources/Default@2x~iphone~comcom.png" />
+    <!-- 2208x2208 -->
+    <splash src="Resources/Default@3x~iphone~anyany.png" />
+    <!-- 2208x1242 -->
+    <splash src="Resources/Default@3x~iphone~anycom.png" />
+    <!-- 1242x2208 -->
+    <splash src="Resources/Default@3x~iphone~comany.png" />
+    <!-- 1125x2436 -->
+    <splash height="2436" src="Resources/Default-2436h.png" width="1125" />
+    <!-- 2436x1125 -->
+    <splash height="1125" src="Resources/Default-Landscape-2436h.png" width="2436" />
+
+    <plugin name="cordova-plugin-wkwebview-engine"/>
+    <feature name="CDVWKWebViewEngine">
+      <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="WKWebViewOnly" value="true" />
+    <plugin name="cordova-plugin-wkwebviewxhrfix" url="https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix"/>
+
+    <preference name="phonegap-version" value="cli-9.0.0" />
+    <preference name="deployment-target" value="10.0" />
+    <plugin name="cordova-plugin-touch-id"/>
+    <gap:config-file platform="ios" parent="CFBundleIcons" overwrite="true">
+      <dict>
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+          <key>CFBundleIconFiles</key>
+          <array>
+            <string>Default.png</string>
+            <string>Default@2x.png</string>
+            <string>Default-568h@2x.png</string>
+            <string>Default-Landscape.png</string>
+            <string>Default-Landscape@2x.png</string>
+            <string>Default-Portrait.png</string>
+            <string>Default-Portrait@2x.png</string>
+            <string>icon.png</string>
+            <string>icon@2x.png</string>
+            <string>icon-40.png</string>
+            <string>icon-40@2x.png</string>
+            <string>icon-60.png</string>
+            <string>icon-60@2x.png</string>
+            <string>icon-60@3x.png</string>
+            <string>icon-72.png</string>
+            <string>icon-72@2x.png</string>
+            <string>icon-76.png</string>
+            <string>icon-76@2x.png</string>
+            <string>Icon-Small.png</string>
+            <string>Icon-Small@2x.png</string>
+            <string>Icon-Small-50.png</string>
+            <string>Icon-Small-50@2x.png</string>
+          </array>
+          <key>UIPrerenderedIcon</key>
+          <true />
+        </dict>
+      </dict>
+    </gap:config-file>
+
+    <plugin name="cordova-plugin-geolocation"/>
+    <config-file platform="ios" target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+      <string>Saber el lugar de donde nos contactas es muy importante, utilizaremos estos datos para detectar cualquier posible actividad que este fuera de lo habitual y brindarte mayor seguridad.</string>
+    </config-file>
+
+    <config-file platform="ios" target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+      <string>Saber el lugar de donde nos contactas es muy importante, utilizaremos estos datos para detectar cualquier posible actividad que este fuera de lo habitual y brindarte mayor seguridad.</string>
+    </config-file>
+
+    <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
+      <string>Vamos a acceder a la librería de fotos para guardar información de tu Cuenta o Tarjeta y así, la tengas siempre a mano para compartirla.</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+      <string>Vamos a acceder a la librería de fotos para guardar información de tu Cuenta o Tarjeta y así, la tengas siempre a mano para compartirla.</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
+      <string>Vamos a acceder a la librería de fotos para guardar información de tu Cuenta o Tarjeta y así, la tengas siempre a mano para compartirla.</string>
+    </edit-config>
+    
+
+  </platform>
+
+
+  <access origin="*" />
+</widget>

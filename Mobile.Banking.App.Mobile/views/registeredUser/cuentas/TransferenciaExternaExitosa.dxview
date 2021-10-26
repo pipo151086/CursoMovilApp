@@ -1,0 +1,96 @@
+<div data-options="dxView : { name: 'TransferenciaExternaExitosa', title: 'Transferencia Externa Exitosa', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+        <div data-bind="dxScrollView: {  }">
+            <div style="margin-bottom:50px">
+                <div class="row" style="padding: 10px">
+                    <div class="col-lg-12 texts" style="text-align:center">
+                        <span>
+                            AVISO: La transferencia se realizó exitosamente.
+                        </span>
+                    </div>
+                </div>
+                <div class="box-controls">
+                    <span>Información Personal</span>
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Valor Transferir</label>
+                            <span class="color" style="float:right; font-size:20px" data-bind="text: ValorTransferir"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Valor Total</label>
+                            <span class="color" style="float:right; font-size:20px" data-bind="text:ValorTransferirTotal"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Cuenta Debitar</label>
+                            <span class="color" style="float:right" data-bind="text: NumeroCuenta"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-controls">
+                    <span>Cuenta Destino</span>
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Nombres/Apellidos</label>
+                            <span class="color" style="float:right" data-bind="text: NombresPellidos"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <!--<div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">CI/RUC/PAS</label>
+                            <span class="color" style="float:right" data-bind="text: TipoIdentificacion"></span>
+                        </div>
+                    </div>
+                    <hr />-->
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Entidad Financiera</label>
+                            <span class="color" style="float:right" data-bind="text: EntidadFinancieraTercero"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Tipo Cuenta</label>
+                            <span class="color" style="float:right" data-bind="text: TipoCtaDesc"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Cuenta/Tarjeta</label>
+                            <span class="color" style="float:right" data-bind="text: NumeroCuentaTercero"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Motivo</label>
+                            <span class="color" style="float:right" data-bind="text: Motivo"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">Observación</label>
+                            <span class="color" style="float:right" data-bind="text: Observacion"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left">E-mail de Beneficiario</label>
+                            <span class="color" style="float:right" data-bind="text: EmailTercero"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

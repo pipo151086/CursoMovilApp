@@ -1,0 +1,128 @@
+<div data-options="dxView : { name: 'RegUsrPass', title: 'RegUsrPass', disableCache: true  } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' }" class="dx-content-background">
+    <style>
+      .formItem{
+      padding:10px;
+      }
+
+      .dx-tooltip-wrapper .dx-overlay-content{
+      background-color:white
+      }
+
+      .dx-invalid-message.dx-overlay-wrapper{
+      /*display: none;*/
+      }
+
+      #txtClaveNueva > div > div.dx-placeholder {
+      display: grid;
+      top: 0px;
+      color: #f7a8a8 !important;
+      }
+
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #f7a8a8 !important;
+      }
+
+      .progress{
+      margin-bottom:0px
+      }
+
+      .error-list{
+      margin: 5px 0px 0px 0px;
+      }
+
+      .claveNuevaInvalid{
+      pointer-events: none;
+      font-weight: bold;
+      background-color: #fff;
+      border: 2px solid #FF392C;
+      color: #FF392C;
+      content: '!';
+      position: absolute;
+      top: 0px;
+      margin-top: 6px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 11px;
+      -moz-border-radius: 11px;
+      -ms-border-radius: 11px;
+      -o-border-radius: 11px;
+      border-radius: 11px;
+      text-align: center;
+      line-height: 19px;
+      right: 5px;
+      }
+
+
+      .dx-texteditor.dx-invalid .dx-texteditor-container:after{
+      background-color: #fff;
+      border: 2px solid #FF392C;
+      color: #FF392C;
+      line-height: 17px;
+      }
+    </style>
+
+    <div class="containerSlide">
+      <img class="SlideLogo" src="images/BDA-blanco.png"></img>
+    </div>
+
+    <div class="botonesTitulo tituloWizardCrearUsuario" style="padding:10px; text-align:justify; height: 125px;  margin-top: 0px;font-weight: normal;">
+      <p style="line-height: normal;">
+        <b>Registro de Usuario y nueva clave de acceso</b>
+        <br/><br/>
+        Para continuar es necesario registrar un nuevo nombre de usuario y clave, datos que a partir de hoy debes utilizar para acceder a Bantigua en línea.
+      </p>
+    </div>
+
+    <div data-bind="dxScrollView: { }" style="margin-top:-10px">
+      <div class="createUserForm">
+
+        <div class="formItem" style="">
+          <span>Nombre de Usuario</span>
+          <i id="noValidIcon" style="color:red" class='fa fa-exclamation-circle' aria-hidden='true'></i>
+          <i id="validIcon" style="color:green; display:none" class='fa fa-check-circle' aria-hidden='true'></i>
+          <div id="txtNombreUsuario" data-bind="dxTextBox:txtNombreUsuario, dxValidator:  {validationGroup: groupValidation, validationRules:[
+              {
+                  type: 'stringLength',
+                  min: 6,
+                  message: 'Mínimo seis caracteres',
+              },
+              {
+                  type: 'required',
+                  message: 'Campo obligatorio'
+              }
+              ]}"></div>
+          <div id="alertUserName" style="color: red;    line-height: normal;    font-family: 'Gotham-Book';    font-size: small">Nombre de usuario no disponible</div>
+          <!--<div id="ttUserTaken" data-bind="dxTooltip:ttUserTaken"></div>-->
+        </div>
+
+        <div class="formItem" id="pwd-container">
+          <span>Clave Actual</span>
+          <div id="txtClaveAntigua" style="text-transform: uppercase" data-bind="dxTextBox: txtClaveAntigua, dxValidator: validateRequired(groupValidation, 'Clave Anterior')"></div>
+        </div>
+
+
+        <div class="formItem" style="">
+          <span>Nueva Clave</span>
+          <div>
+            <input id="txtClaveNueva" placeholder="Nueva Clave" style="text-transform: uppercase" type="password" class="dx-texteditor-container dx-texteditor-input" data-bind="value:koClaveNueva"/>
+            <div class="claveNuevaInvalid" style="display:none">!</div>
+          </div>
+        </div>
+
+        <div class="formItem" style="padding: 0px 10px;">
+          <span>Nueva Clave (Confirmación)</span>
+          <div id="txtConfirmaClaveNueva" style="text-transform: uppercase" data-bind="dxTextBox: txtConfirmaClaveNueva, dxValidator: validateCompare(groupValidation, comparisonTarget, 'Nueva Clave', 'Clave de Confirmación')"></div>
+        </div>
+
+        <div style="padding:10px; text-align:justify;font-weight: normal; ">
+          <p style="line-height: normal; font-family: 'Gotham-Book';">
+            <b style="color:red">Importante: </b>Recuerda que tu clave es personal e intransferible. Cámbiala periódicamente por tu seguridad.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

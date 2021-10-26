@@ -1,0 +1,67 @@
+<div data-options="dxView : { name: 'PagoBilleteraMovil', title: 'Pago' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxScrollView: { }">
+            <div style="margin-bottom:200px">
+                <div class="box-controls">
+                    <span data-bind="text: 'Datos de Pago'"></span>
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left; margin-top:10px">Monto</label>
+                            <div style="text-align:right">
+                                <b style="display:inline-block; font-size:20px; color:#d52133; position:relative;">$</b>
+                                <div style="display:inline-block;color:#d52133 !important;" id="txtMonto" data-bind="dxNumberBox:txtMonto, dxValidator:validateRequired(groupValidation,'Monto')"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left; margin-top:10px">Billetera Móvil:</label>
+                            <div style="float:right;">
+                                <div id="lkpBilleteraMovil" data-bind="dxLookup: lkpBilleteraMovil, dxValidator:validateRequired(groupValidation,'Billetera Móvil')"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-controls">
+                    <span data-bind="text: 'Cuenta Destino'"></span>
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left; margin-top:10px">Celular</label>
+                            <div style="text-align:right">
+                                <div style="display:inline-block;color:#d52133 !important;" id="txtCelularBeneficiario" data-bind="dxTextBox:txtCelularBeneficiario,dxValidator:validateCellPhone(true,groupValidation,'Celular Beneficiario')"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left; margin-top:10px">Concepto</label>
+                            <div style="text-align:right">
+                                <div style="display:inline-block;color:#d52133 !important;" id="txtConcepto" data-bind="dxTextBox:txtConcepto, dxValidator:validateRequired(groupValidation,'Concepto')"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-controls">
+                    <span data-bind="text: 'Notificación de pago por e-mail'"></span>
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left; margin-top:10px">Puedes enviar una notificación de correo electrónico al beneficiario de pago a realizar.</label>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-12 texts">
+                            <label style="float:left; margin-top:10px">E-Mail</label>
+                            <div style="text-align:right">
+                                <div style="display:inline-block;color:#d52133 !important;" id="txtCorreoBeneficiario" data-bind="dxTextBox:txtCorreoBeneficiario,dxValidator:validateEmail(false,groupValidation,'E-Mail')"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

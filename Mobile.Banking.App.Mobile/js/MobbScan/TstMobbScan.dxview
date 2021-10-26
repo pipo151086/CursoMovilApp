@@ -1,0 +1,42 @@
+<div data-options="dxView : { name: 'TstMobbScan', title: 'TstMobbScan' } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+    <div data-bind="dxScrollView: {  }">
+      <div style="width:100%;text-align:center;">
+        <div class="btnActiveCtaDigital" id="btnValidar" style="width:90%" data-bind="dxButton: TestMobbScanFront"></div>
+      </div>
+
+      <div style="width:100%;text-align:center;">
+        <div class="btnActiveCtaDigital" id="btnValidar" style="width:90%" data-bind="dxButton: TestMobbBack"></div>
+      </div>
+
+      <div style="width:100%;text-align:center;">
+        <div class="btnActiveCtaDigital" id="btnValidar" style="width:90%" data-bind="dxButton: TestMobbScanLiveness"></div>
+      </div>
+
+      <div>
+        Front Side:
+        <br />
+        <img id="frontSide" width="300" />
+        <br />
+        <br />
+        Back Side:
+        <br />
+        <img id="backSide" width="300" />
+        <br />
+        <br />
+        Data:
+        <br />
+        <pre id="data" />
+        <br />
+        <br />
+      </div>
+      <div id="faceValidationSection"></div>
+      <div id="videoShow"></div>
+
+
+
+    </div>
+  </div>
+</div>

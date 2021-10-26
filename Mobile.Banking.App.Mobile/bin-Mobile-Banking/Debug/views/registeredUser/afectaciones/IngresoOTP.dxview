@@ -1,0 +1,114 @@
+<div data-options="dxView : { name: 'IngresoOTP', title: 'Clave Dinámica',disableCache: true  } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <style>
+      #container {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      }
+
+      .codigoOTP {
+      font-size: 45px;
+      text-align: center;
+      width: 100%;
+      font-family: Gotham-Book;
+      color: #717070;
+      font-weight: bolder;
+      }
+
+      #txtClave {
+      font-size: x-large;
+      width: 120px;
+      text-transform: uppercase;
+      margin-left: auto;
+      margin-right: auto;
+      }
+
+      #otp .clsNumberBoxOTP {
+      font-size: 22px;
+      }
+
+      #otp .dx-texteditor-input {
+      padding: 31px 0 7px;
+      background: transparent;
+      color: rgba(0,0,0,.87);
+      font-size: 20px;
+      text-align: center;
+      }
+
+      #otp.dx-texteditor .dx-texteditor-container {
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-radius: 0px !important;
+      border-color: #d52133 !important;
+      border-width: 2px !important;
+      }
+
+      .btn-success-otp{
+      background-color: #00e367 !important;
+      color: white !important;
+      border-radius: 60px;
+      transition: all ease-in 0.3s;
+      }
+
+      .btn-success-otp:hover{
+      background-color:green !important;
+      }
+
+      .btn-danger-otp{
+      background-color: #d52133 !important;
+      color: white !important;
+      border-radius: 60px;
+      transition: all ease-in 0.3s;
+      }
+
+      .btn-danger-otp:hover{
+      background-color:darkred !important;
+      }
+    </style>
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:80px">
+        <div id="container"></div>
+        <div class="clsNumberBoxOTP">
+          <div id="otp" class="clsNumberBoxOTP" style="margin-bottom:75px;margin-top:-135px; margin-left:auto; width:100px; margin-right:auto" data-bind="dxTextBox: otp"></div>
+        </div>
+
+        <div class="area-btn-teclado">
+          <div class="row-btn-teclado">
+            <div class="btn-teclado" id="btn1" data-bind="dxButton: btn1"></div>
+            <div class="btn-teclado" id="btn2" data-bind="dxButton: btn2"></div>
+            <div class="btn-teclado" id="btn3" data-bind="dxButton: btn3"></div>
+          </div>
+          <div class="row-btn-teclado">
+            <div class="btn-teclado" id="btn4" data-bind="dxButton: btn4"></div>
+            <div class="btn-teclado" id="btn5" data-bind="dxButton: btn5"></div>
+            <div class="btn-teclado" id="btn6" data-bind="dxButton: btn6"></div>
+          </div>
+          <div class="row-btn-teclado">
+            <div class="btn-teclado" id="btn7" data-bind="dxButton: btn7"></div>
+            <div class="btn-teclado" id="btn8" data-bind="dxButton: btn8"></div>
+            <div class="btn-teclado" id="btn9" data-bind="dxButton: btn9"></div>
+          </div>
+          <div class="row-btn-teclado">
+            <div class="btn-teclado" style="border-color:grey" id="btnClearAll" data-bind="dxButton: btnClearAll"></div>
+            <div class="btn-teclado" id="btn0" data-bind="dxButton: btn0"></div>
+            <div class="btn-teclado" style="border-color:grey" id="btnClear" data-bind="dxButton: btnClear"></div>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <label>La clave expirará en:</label>
+          <span class='color' style="font-size:14px" data-bind="timer: $root.countDown"></span>
+        </div>
+
+        <div style="text-align:center; width:100%;">
+          <div style="margin-right:20px;" class="btn-success-otp" id="btnAceptar" data-bind="dxButton: btnAceptar"></div>
+          <div style="margin-left:20px" class="btn-danger-otp" id="btnCancelar" data-bind="dxButton: btnCancelar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

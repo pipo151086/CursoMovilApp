@@ -1,0 +1,61 @@
+<div data-options="dxView : { name: 'RegBeneficiariosInternos', title: 'Registrar Cuentas de Terceros', disableCache: true  } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:150px">
+
+
+        <div class="box-controls">
+          <span data-bind="text: CORE_TAG('RegInternalBeneficiaries')"></span>
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="display:inline-block; margin-top:16px">Nro. Cuenta </label>
+              <div style="float:right; width:60%">
+                <div id="txtNumeroCta" data-bind="dxTextBox:txtNumeroCta, dxValidator:validateRequired(groupValidation,'Número de Cuenta')" style="width:75%;display:inline-block"></div>
+                <div title="Verificar" data-bind="dxButton:btnVerificar" style="display:inline-block;"></div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left; margin-top:16px">Nombre del Tercero</label>
+              <div id="txtBeneficiario" data-bind="dxTextBox:txtBeneficiario, dxValidator:validateRequired(groupValidation,'Beneficiario')" style="display:inline-block; float:right; width:60%"></div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-12 texts">
+              <label style="float:left; margin-top:16px">Nombre / Alias de Cuenta</label>
+              <div id="txtReferencia" data-bind="dxTextBox:txtReferencia" style="display:inline-block; float:right;width:60%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="padding:15px">
+          <div class="col-lg-12">
+            <div style="text-align:justify">
+              <p style="word-break:break-word; word-wrap: break-word">
+                Antes de realizar sus transferencias, registre las cuentas a
+                las que desea transferir sus fondos.
+                Recuerde que el sistema grabará esta respuesta sin considerar caracteres
+                especiales, ni diferencia entre mayúsculas y minúsculas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="padding:15px">
+          <div class="col-lg-12">
+            <div style="text-align:justify">
+              <p style="word-break:break-word; word-wrap: break-word">
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

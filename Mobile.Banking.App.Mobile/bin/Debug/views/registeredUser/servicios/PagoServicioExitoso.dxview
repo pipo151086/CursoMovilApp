@@ -1,0 +1,80 @@
+<div data-options="dxView : { name: 'PagoServicioExitoso', title: 'Pago de Servicio Exitoso', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+        <style>
+            .rowItemInForm {
+                text-align: left;
+                padding-bottom: 5px;
+                padding-top: 8px;
+                width: 100% !important;
+                display: inline-flex;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 0px !important;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .innerLabel {
+                width: 40%;
+            }
+
+            .innerElement {
+                width: 60%;
+                text-align: right;
+                color: #d52133;
+            }
+        </style>
+
+        <div data-bind="dxScrollView: {  }">
+            <div style="padding-bottom:300px">
+                <div class="box-controls">
+                    <span data-bind="text: koTitle"></span>
+
+                    <h1 style="color: gray;font-weight: bold;text-align: center;margin-right:auto;margin-left:auto; font-family: Gotham-Book;">El pago se realizó exitosamente</h1>
+
+                    <div class="rowItemInForm" id="">
+                        <label class="innerLabel" id="idIdentificadorContrapartida">Contrato:</label>
+                        <label class="innerElement" data-bind="text: koContrato"></label>
+                    </div>
+                    <hr />
+                    <div class="rowItemInForm" id="">
+                        <label class="innerLabel">Titular:</label>
+                        <label class="innerElement" data-bind="text: koTitular"></label>
+                    </div>
+                    <hr />
+                    <div class="rowItemInForm" id="">
+                        <label class="innerLabel">Valor:</label>
+                        <label class="innerElement" data-bind="text: koValor"></label>
+                    </div>
+                    <hr />
+                    <div class="rowItemInForm" id="">
+                        <label class="innerLabel">Comisión:</label>
+                        <label class="innerElement" data-bind="text: koComision"></label>
+                    </div>
+                    <hr />
+                    <div class="rowItemInForm" id="">
+                        <label class="innerLabel">Total:</label>
+                        <label class="innerElement" data-bind="text: koTotal"></label>
+                    </div>
+                    <hr />
+                    <div class="rowItemInForm" id="">
+                        <label class="innerLabel">Forma de pago:</label>
+                        <label class="innerElement" data-bind="text: koFormaPago"></label>
+                    </div>
+                    <hr />
+                    <div class="rowItemInForm" id="">
+                        <label class="innerLabel">N° Cta/Tarjeta:</label>
+                        <label class="innerElement" data-bind="text: koCuentaTarjeta"></label>
+                    </div>
+                    <hr />
+                    <div class="rowItemInForm" id="">
+                        <label class="innerLabel">Transacción:</label>
+                        <label class="innerElement" data-bind="text: koTransaccionSecuencial"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

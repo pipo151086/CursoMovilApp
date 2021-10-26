@@ -1,0 +1,270 @@
+<div data-options="dxView : { name: 'LandingPage', title: 'LandingPage', disableCache: true } ">
+  <div id="fullContainer" data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+      #txtUsuario > div > input {
+      text-align: center
+      }
+
+      #txtClave > div > input {
+      text-align: center
+      }
+
+      .botonesTitulo {
+      color: #d52133;
+      font-family: Gotham-Book;
+      margin-top: 15px;
+      font-weight: bold;
+      }
+
+      .floatButtonNoClient {
+      bottom: 84px;
+      /*border-color: white !important;*/
+      /*border: solid;*/
+      }
+
+      .blur {
+      filter: blur(4px);
+      -o-filter: blur(4px);
+      -ms-filter: blur(4px);
+      -moz-filter: blur(4px);
+      -webkit-filter: blur(4px);
+      }
+
+
+      .dx-overlay-content.dx-popup-fullscreen.dx-resizable.dx-popup-fullscreen-width {
+      background-color: transparent !important;
+      }
+
+      #content > div.dx-viewport.dx-device-phone.dx-device-mobile.dx-device-generic.dx-simulator.dx-theme-ios7.dx-theme-ios7-typography.dx-color-scheme-default > div.dx-overlay-wrapper.dx-popup-wrapper.dx-overlay-modal.dx-overlay-shader > div {
+      background-color: transparent !important;
+      }
+
+      .botonNoCliente {
+      width: 60px;
+      color: white !important;
+      height: 60px;
+      border-radius: 60px;
+      }
+
+      .botonNoCliente :active {
+      color: #333 !important;
+      }
+
+      .iconBotonNoCliente {
+      padding: 12px 8px 12px 8px;
+      font-size: 38px;
+      }
+
+      .textBotonNoCliente {
+      font-size: 13px;
+      height: 34px;
+      display: inline-flex;
+      line-height: normal;
+      }
+
+      .containerBotonNoCliente {
+      color: white !important;
+      text-align: -webkit-center;
+      z-index: 1502;
+      width: 140px;
+      display: inline-block;
+      margin: 10px 0px 0px 0px;
+      }
+
+
+      .containerBotonNoCliente > img {
+      width: 60px;
+      height: 60px;
+      }
+
+      .containerBotonNoCliente > img:hover{
+      width: 55px;
+      height: 55px;
+      }
+
+      .btn-enviar{
+      background-color:#d52133 !important;
+      color:white !important;
+      border-radius: 5px;
+      font-weight: 600;
+      }
+
+      .dx-placeholder:before{
+      text-transform: capitalize;
+      }
+
+
+
+
+
+
+      #contBtnCtaDig :active:after {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transition: 0s
+      }
+
+      #contBtnCtaDig:active {
+      border: 0.5px outset rgba(0,0,0,0.1);
+      /*background-color: rgb(0, 0, 0,0.1);*/
+      }
+
+
+
+
+
+
+
+    </style>
+
+
+    <div class="img-register-user" />
+    <div class="area-register">
+      <div class="row">
+        <div class="col-lg-12" style="text-align:right">
+          <div style="margin-top:5px; margin-bottom:5px; opacity:0.8;text-transform: uppercase" id="txtUsuario" data-bind="dxTextBox: txtUsuario, dxValidator: validateRequired(groupValidation)"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12" style="text-align:right">
+          <div style="margin-top:5px; margin-bottom:5px; opacity:0.8;text-align:center;text-transform: uppercase" id="txtClave" data-bind="dxTextBox: txtClave, dxValidator: validateRequired(groupValidation)"></div>
+        </div>
+      </div>
+      <div style="width:100%; text-align:center">
+        <div class="btn-enviar" data-bind="dxButton: btnEnviar"></div>
+      </div>
+      <div style="width:100%; text-align:center; margin-top:10px">
+        <div id="btnOlvideUsuario" style="border-radius: 10px;display:inline-block;background-color:white !important; width: 150px;" data-bind="dxButton: btnOlvideUsuario"></div>
+        <div style="width:2px; height:18px; background-color:#d52133; margin-left:0px; margin-right:0px; display:inline-block;position: relative;top: 5px;">  </div>
+        <div id="btnOlvideClave" style="border-radius: 10px;display:inline-block; background-color:white !important; width: 150px;" data-bind="dxButton: btnOlvideClave"></div>
+      </div>
+
+      <div class="botonesTitulo">También puedes acceder por medio de:</div>
+      <div id="ContainerBotones" style="background: white; ">
+        <div id="HuellaBtn" style="margin-left:5px;margin-right:5px;  width: 130px;height:120px; border: solid 1px;border-radius: 5px;" data-bind="dxButton: {onClick:koClickHuella}">
+          <img style="width:50%" src="images/fingerprint-colored.png"></img>
+          <span id="spnHuella" style="color: #d52133; display: block;font-family: Gotham-Book;">Huella</span>
+        </div>
+
+        <div id="PinBtn" style="margin-left:5px;margin-right:5px; width: 130px;height:120px;border: solid 1px;border-radius: 5px;" data-bind="dxButton: {onClick:koClickCodigo}">
+          <img style="width:95%" src="images/codigo.png"></img>
+          <span id="spnCodigo" style="color: #d52133 !important; display: block;font-family: Gotham-Book;">Código</span>
+        </div>
+      </div>
+
+      <div id="contBtnCtaDig" style="" data-bind="click:koClickCtaDig">
+        <div id="BtnCtaDig" style="">
+          <span id="txt1BtnCtaDig" style="">Abre tu</span>
+          <span id="txt2BtnCtaDig" style="">Cuenta de Ahorro</span>
+          <div id="txt34ContBtnCtaDig">
+            <span id="txt3BtnCtaDig" style="">100%&nbsp&nbsp</span>
+            <span id="txt4BtnCtaDig" style="">digital</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="LandingFloater" class="botonNoCliente btn-default " style="position:fixed;right:15px;bottom:90px;box-shadow: 2px 2px 6px #808080 !important;" data-bind="click:floaterLanding">
+      <i style="padding: 15px 0px 0px 18px; font-size: 30px;" class="dx-icon iconBotonNoCliente fa fa-plus"></i>
+      <!--<div class="text-floater-inner" style="padding: 19px 0px 0px 16px;    font-size: 49px;">+</div>-->
+    </div>
+
+
+
+
+    <div id="puMenuNoCli" data-bind="dxPopup: puMenuNoCli">
+      <div data-options="dxTemplate: {name: 'content'}">
+        <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }" style="text-align:center">
+
+          <div class="containerBotonNoCliente" data-bind="click:agenciaClick">
+            <img class="" src="images/iconos/noClientIcons/iRed-agen.png"></img>
+            <div class="textBotonNoCliente">Red de Agencias</div>
+          </div>
+
+          <div class="containerBotonNoCliente">
+            <!--<div id="button" class="botonNoCliente btn-default" data-bind="click:prodBeneClick">
+              <i class="dx-icon iconBotonNoCliente fa fa-handshake-o"></i>
+            </div>-->
+            <img class="botonNoCliente" src="images/iconos/noClientIcons/iProdsBene.png"  data-bind="click:prodBeneClick"></img>
+            <div class="textBotonNoCliente">Productos, beneficios y promociones</div>
+          </div>
+
+          <div class="containerBotonNoCliente">
+            <!--<div id="button" class="botonNoCliente btn-default" data-bind="click:medioPagoClick">
+              <i class="dx-icon iconBotonNoCliente fa fa-mobile"></i>
+            </div>-->
+            <img class="botonNoCliente" src="images/iconos/noClientIcons/iMedios-pago.png"  data-bind="click:medioPagoClick"></img>
+            <div class="textBotonNoCliente">Medios de pago digitales</div>
+          </div>
+
+          <div class="containerBotonNoCliente">
+            <!-- <div id="button" class="botonNoCliente btn-default" data-bind="click:creaUsuarioClick">
+              <i class="dx-icon iconBotonNoCliente fa fa-user"></i>
+            </div>-->
+            <img class="botonNoCliente" src="images/iconos/noClientIcons/iCrea-usuario.png"  data-bind="click:creaUsuarioClick"></img>
+            <div class="textBotonNoCliente">Crea tu usuario</div>
+          </div>
+
+          <div class="containerBotonNoCliente">
+            <!--<div id="button" class="botonNoCliente btn-default" data-bind="click:guiaUsuarioClick">
+              <i class="dx-icon iconBotonNoCliente fa fa-book"></i>
+            </div>-->
+            <img class="botonNoCliente" src="images/iconos/noClientIcons/iGuia-usuario.png"  data-bind="click:guiaUsuarioClick"></img>
+            <div class="textBotonNoCliente">Guía de usuario</div>
+          </div>
+
+          <div class="containerBotonNoCliente">
+            <!--<div id="button" class="botonNoCliente btn-default" data-bind="click:puntosPagoClick">
+              <i class="dx-icon iconBotonNoCliente fa fa-home"></i>
+            </div>-->
+            <img class="botonNoCliente" src="images/iconos/noClientIcons/iPunto-pago.png"  data-bind="click:puntosPagoClick"></img>
+            <div class="textBotonNoCliente">Puntos de pago</div>
+          </div>
+
+          <div class="containerBotonNoCliente">
+            <!-- <div id="button" class="botonNoCliente btn-default" data-bind="click:solProdClick">
+              <i class="dx-icon iconBotonNoCliente fa fa-credit-card"></i>
+            </div>-->
+            <img class="botonNoCliente" src="images/iconos/noClientIcons/iSol-prod.png"  data-bind="click:solProdClick"></img>
+            <div class="textBotonNoCliente">Solicitud de productos</div>
+          </div>
+
+          <div class="containerBotonNoCliente">
+            <!--  <div id="button" class="botonNoCliente btn-default" data-bind="click:tipoCambioClick">
+              <i class="dx-icon iconBotonNoCliente fa fa-usd"></i>
+            </div>-->
+            <img class="botonNoCliente" src="images/iconos/noClientIcons/iTipo-cambio.png"  data-bind="click:tipoCambioClick"></img>
+            <div class="textBotonNoCliente">Tipo de Cambio</div>
+          </div>
+
+          <div class="containerBotonNoCliente">
+            <!--<div id="button" class="botonNoCliente btn-default" data-bind="click:canalAtencionClick">
+              <i class="dx-icon iconBotonNoCliente fa fa-comments-o"></i>
+            </div>-->
+            <img class="botonNoCliente" src="images/iconos/noClientIcons/iCanal-atencion.png"  data-bind="click:canalAtencionClick"></img>
+            <div class="textBotonNoCliente">Canales de atención</div>
+          </div>
+
+          
+          
+          
+          
+          
+          
+          
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+</div>

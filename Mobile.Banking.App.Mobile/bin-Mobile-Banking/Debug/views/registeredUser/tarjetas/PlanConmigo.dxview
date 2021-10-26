@@ -1,0 +1,72 @@
+<div data-options="dxView : { name: 'PlanConmigo', title: 'Plan Conmigo', disableCache: true   } ">
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }"  class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:50px">
+        
+        <div id="seleccionTarjeta" class="row" style="padding:10px">
+          <div class="col-lg-12 texts">
+            <label class="tags">Tarjeta titular:</label>
+            <div style="float:right;">
+              <div id="btnCambiarTarjeta" style="display:inline-block" data-bind="dxButton: btnCambiarTarjeta"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="datosTarjeta" style="display:none">
+          <div class="box-controls">
+            <span style="text-align:center" data-bind="text: 'Plan Conmigo ' + marcaTarjeta"></span>
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label>Fecha de Corte de tu Plan</label>
+                <span id="spnFechaCortePlan" class="color" style="float:right" data-bind="text: fechaUltimoCortePlan"></span>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label>Saldo de puntos anterior</label>
+                <span id="spnSaldoPuntosAnterior" class="color" style="float:right" data-bind="text: saldoPuntosAnterior"></span>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label>Puntos ganados</label>
+                <span id="spnPuntosGanados" class="color" style="float:right" data-bind="text: puntosGanados"></span>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label>Puntos canjeados</label>
+                <span id="spnPuntosCanjeados" class="color" style="float:right" data-bind="text: puntosCanjeados"></span>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label>Total puntos acumulados</label>
+                <span id="spnTotalPuntosAcumulados" class="color" style="float:right" data-bind="text: totalPuntosAcumulados"></span>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+
+
+        <div id="popupSeleccionTarjeta" data-bind="dxPopup: popupSeleccionTarjeta">
+          <div data-options="dxTemplate: {name: 'content'}">
+            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+              <div class="row">
+                <div class="col-lg-12" style="text-align:center">
+                  <div id="rdbTarjetas" style="font-size:20px" data-bind="dxRadioGroup: rdbTarjetas"></div>
+                  <div id="btnCancelar" style="margin-top:10px" data-bind="dxButton: btnCancelar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<div data-options="dxView : { name: 'historicACH', title: 'Histórico', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { showLoadIndicator: true }" class="dx-content-background">
+    <div data-bind="dxScrollView: { }">
+      <div style="margin-bottom:50px">
+
+        <style>
+
+          #btnCambiarCuenta {
+          color: #d52133 !important;
+          background-color: transparent !important;
+          }
+
+          #btnCambiarCuenta .dx-button-text {
+          font-size: 14px !important;
+          text-transform: uppercase !important;
+          }
+
+          #rdbCuentas .dx-item-content {
+          font-size: 18px !important;
+          }
+
+          .dx-popup-content, .dx-popup-content.dx-dialog-content{
+          padding:10px;
+          }
+        </style>
+        <div style="margin-bottom:10px">
+          <div class="box-controls">
+            <!--<span data-bind="text: 'Información Origen'"></span>-->
+            <span data-bind="text: CORE_TAG('ConsultarInformacion')"></span>
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:10px">Cuenta</label>
+                <div style="float:right;">
+                  <div id="btnCambiarCuenta" style="display:inline-block" data-bind="dxButton: btnCambiarCuenta"></div>
+                  <!--<div id="lkpCuentasTransferencia" data-bind="dxLookup: lkpCuentasTransferencia"></div>-->
+                </div>
+              </div>
+            </div>
+            <br/>
+
+            <div class="row" style="display:block;text-align:center;">
+              <div class="col-md-6 texts" style="display:inline-block; width:49%">
+                <label class="texts">Desde</label>
+                <div id="dtFechaDesde" data-bind="dxDateBox: dtFechaDesde"></div>
+              </div>
+              <div class="col-md-6 texts" style="display:inline-block; width:49%">
+                <label class="texts">Hasta</label>
+                <div id="dtFechaHasta" data-bind="dxDateBox: dtFechaHasta"></div>
+              </div>
+            </div>
+            <hr/>
+
+
+            <div id="popupSeleccionCuenta" data-bind="dxPopup: popupSeleccionCuenta">
+              <div data-options="dxTemplate: {name: 'content'}">
+                <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                  <div class="row">
+                    <div class="col-lg-12" style="text-align:center">
+                      <div id="rdbCuentas" style="font-size:20px" data-bind="dxRadioGroup: rdbCuentas"></div>
+                      <div id="btnCancelarCuenta" style="margin-top:10px" data-bind="dxButton: btnCancelarCuenta"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div style="width:100%;text-transform:uppercase" class="color">
+                <div id="lstMovimientos" data-bind="dxList: lstMovimientos">
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

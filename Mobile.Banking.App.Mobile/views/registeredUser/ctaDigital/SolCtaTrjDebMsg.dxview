@@ -1,0 +1,183 @@
+<div data-options="dxView : { name: 'SolCtaTrjDebMsg', title: 'SolCtaTrjDebMsg', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+    <style>
+      .elBeneContainer{
+      display:flex;
+      margin: 5px 0px;
+      }
+
+      .elBeneImg{
+      width:55px
+      }
+
+      .elBeneTextCont{
+      flex:1;
+      font-family:Gotham-Book;
+      color:gray;
+      text-align:left
+      }
+      .elBeneText{
+      margin-left: 10px;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      }
+
+      .btnDownloadCtaNumber .dx-button-content .dx-button-text{
+      white-space: pre-wrap;
+      font-size: 11px;
+      line-height: normal;
+      margin: 5px 0px 0px 20px;
+      display: grid;
+      width: 85%;
+
+      position: sticky;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      }
+
+      .btnDownloadCtaNumber .dx-button-content i{
+      /*width:15px;*/
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 5px;
+      top: 26px;
+      color:#d52133 !important
+      }
+
+
+      .tltMsgBienvenido{
+      width: 100%;
+      text-align: center;
+      }
+
+      #btnAceptarCta.dx-overlay-content.dx-button {
+      text-align:center;
+
+      }
+
+      #btnAceptarCta > div{
+      width: 100%;
+      }
+    </style>
+
+    <div data-bind="dxScrollView: {showScrollbar:'never' }" class="scrollFormSolCtaDig">
+      <div class="titleFormSolCtaDigCont">
+        <span class="titleFormSolCtaDig">Solicitud de Cuenta de Ahorro</span>
+      </div>
+     
+      <div class="contPaginatorCtaDigital">
+        <span class="pagnatorTlt" id="pagnatorTlt"></span>
+        <div id="paginatorDots"></div>
+      </div>
+
+
+      <div class="subtitleFormSolCtaDigCont" style="">
+        <span class="subtitleFormSolCtaDig">Tarjeta de débito Bantigua</span>
+      </div>
+
+      <img src="images/iconos/todo-inc-trj.png" style="width:100%"></img>
+      <div style="width:100%;text-align:center">
+        <div style="width:90%;display: inline-block;">
+
+          <div class="elBeneContainer">
+            <img src="images/iconos/bn1-sms.jpg" class="elBeneImg" ></img>
+            <div class="elBeneTextCont" >
+              <span class="elBeneText">Alerta SMS por consumo</span>
+            </div>
+          </div>
+
+          <div class="elBeneContainer">
+            <img src="images/iconos/bn2-robo.jpg" class="elBeneImg" ></img>
+            <div class="elBeneTextCont" >
+              <span class="elBeneText">Programa de protección robo y fraude</span>
+            </div>
+          </div>
+
+          <div class="elBeneContainer">
+            <img src="images/iconos/bn3-sin-costo-2.jpg" class="elBeneImg" ></img>
+            <div class="elBeneTextCont" >
+              <span class="elBeneText">Sin costo adicional de renovación </span>
+            </div>
+          </div>
+
+          <div class="elBeneContainer">
+            <img src="images/iconos/bn4-web.jpg" class="elBeneImg" ></img>
+            <div class="elBeneTextCont" >
+              <span class="elBeneText">Acceso en la página web transaccional</span>
+            </div>
+          </div>
+
+          <div class="elBeneContainer">
+            <img src="images/iconos/bn5-bene.jpg" class="elBeneImg" ></img>
+            <div class="elBeneTextCont" >
+              <span class="elBeneText">Beneficios en tiendas aliadas</span>
+            </div>
+          </div>
+
+          <div class="elBeneContainer">
+            <img src="images/iconos/bn6-salud.jpg" class="elBeneImg" ></img>
+            <div class="elBeneTextCont" >
+              <span class="elBeneText">Protege Salud</span>
+            </div>
+          </div>
+
+          <div class="elBeneContainer">
+            <img src="images/iconos/bn7-trjs.jpg" class="elBeneImg" ></img>
+            <div class="elBeneTextCont" >
+              <span class="elBeneText">Tarjetas adicionales gratis</span>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+        <div style="width:100%;text-align:center;margin: 25px 0px;">
+          <div class="btnActiveCtaDigital" id="btnSiguiente" style="width:230px" data-bind="dxButton: btnSiguiente"></div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div id="popupCtaLista" data-bind="dxPopup: popupCtaLista">
+      <div data-options="dxTemplate: {name: 'content'}">
+        <div class="row">
+          <div style="text-align:center">
+            <div id="contImgExpCtaDigital" style="color:gray;font-family:Gotham-Book">
+              <b>Tu Cuenta de Ahorro se ha creado exitosamente.</b>
+              <br/>
+              <br/>
+              <div>
+                No. de cuenta: <div style="" id="nuevoNumCta"></div>
+              </div>
+            </div>
+            <br/>
+
+
+            
+              <div style="width:50%;display:flex;    position: fixed;    bottom: 0px; left:0px">
+                <div style="width:100%;" id="btnDescargarCta" data-bind="dxButton: btnDescargarCta"></div>
+              </div>
+              
+              <div style="width:50%;display:flex;    position: fixed;    bottom: 8px; right:0px">
+                <div style="width:100%;" id="btnAceptarCta" data-bind="dxButton: btnAceptarCta"></div>
+              </div>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

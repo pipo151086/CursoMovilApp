@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>MobileBanking_App</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+    <!--BEGIN CSS DEV-->
+    <!--<link rel="dx-theme" data-theme="android5.light" href="css/dx.android5.light.css" data-active="false"/>-->
+    <link rel="stylesheet" type="text/css" href="css/devextreme/dx.spa.css" />
+    <link rel="stylesheet" type="text/css" href="css/devextreme/dx.common.css" />
+    <link rel="dx-theme" data-theme="android5.light" href="css/devextreme/dx.android5.light.css" />
+    <link rel="dx-theme" data-theme="ios7.default" href="css/devextreme/dx.ios7.default.css" />
+    <link rel="dx-theme" data-theme="win10.black" href="css/devextreme/dx.win10.black.css" data-active="true" />
+    <link rel="dx-theme" data-theme="generic.contrast" href="css/devextreme/dx.contrast.css" />
+    <link rel="dx-theme" data-theme="generic.contrast.compact" href="css/devextreme/dx.contrast.compact.css" />
+    <link rel="dx-theme" data-theme="generic.dark.compact" href="css/devextreme/dx.dark.compact.css" />
+    <link rel="dx-theme" data-theme="generic.light.compact" href="css/devextreme/dx.light.compact.css" />
+    <!--END CSS DEV-->
+    <!--BEGIN CSS PLANTILLA-->
+    <link href="css/styles/framework.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/login.css" />
+    <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
+    <!--END CSS PLANTILLA-->
+
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <!--BEGIN BASIC SCRIPT-->
+    <script type="text/javascript" src="js/jquery/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/knockout/knockout-3.4.0.js"></script>
+
+    <!--END BASIC SCRIPT-->
+    <!--BEGIN SCRIPT GLOBALIZE-->
+    <script type="text/javascript" src="js/globalize/cldr.min.js"></script>
+    <script type="text/javascript" src="js/globalize/cldr/event.min.js"></script>
+    <script type="text/javascript" src="js/globalize/cldr/supplemental.min.js"></script>
+    <script type="text/javascript" src="js/globalize/globalize.min.js"></script>
+    <script type="text/javascript" src="js/globalize/globalize/number.min.js"></script>
+    <script type="text/javascript" src="js/globalize/globalize/date.min.js"></script>
+    <script type="text/javascript" src="js/globalize/globalize/message.min.js"></script>
+    <script type="text/javascript" src="js/globalize/globalize/currency.min.js"></script>
+    <!--END SCRIPT GLOBALIZE-->
+    <!--BEGIN SCRIPT DEV-->
+    <script type="text/javascript" src="js/dx.all.js"></script>
+    <!--END SCRIPT DEV-->
+    <!--BEGIN SCRIPT PLANTILLA-->
+    <script type="text/javascript" src="js/scripts/custom.js"></script>
+    <script type="text/javascript" src="js/scripts/framework-plugins.js"></script>
+    <!--END SCRIPT PLANTILLA-->
+    <!--BEGIN OTHER SCRIPT-->
+
+    <script type="text/javascript" src="js/KernelCore/mobileBankingCoreBuild.js"></script>
+
+    <!--END OTHER SCRIPT-->
+    <!--BEGIN CONFIG FILES-->
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="text/javascript" src="mobilebanking_app.shared.config.js"></script>
+    <script type="text/javascript" src="mobilebanking_app.config.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="data/db.js"></script>
+    <script type="text/javascript" src="js/globalElements/parameters.js"></script>
+    <!--END CONFIG FILES-->
+    <!--BEGIN SCRIPT CORE-->
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/messages.js"></script>
+    <script type="text/javascript" src="js/catalogs.js"></script>
+    <!--END SCRIPT CORE-->
+    <!--BEGIN HANDLER SCRIPT-->
+    <script type="text/javascript" src="js/globalElements/handlerSession.js"></script>
+    <script type="text/javascript" src="js/bdHandler/dbLocalHandler.js"></script>
+    <script type="text/javascript" src="js/bdHandler/dbUserHandler.js"></script>
+    <!--
+<script type="text/javascript" src="js/bdHandler/dbServicios.js"></script>
+    -->
+    <script type="text/javascript" src="js/bdHandler/dbCredentialUsage.js"></script>
+
+    <script type="text/javascript" src="js/bdHandler/StorageHandler.js"></script>
+    <!--END HANDLER SCRIPT-->
+    <!--BEGIN COMUNICATION SCRIPT-->
+    <script type="text/javascript" src="js/transactions.js"></script>
+    <script type="text/javascript" src="js/behavior-error.js"></script>
+    <!--END COMUNICATION SCRIPT-->
+    <!--BEGIN GLOBAL SCRIPT-->
+    <script type="text/javascript" src="js/globalElements/commonElements.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDcM_xURNyC_-_0yqcUBABS89whkbRqDj4"></script>
+
+    <!--END GLOBAL SCRIPT-->
+
+    <script type="text/javascript" src="js/Utils/SwiperBox.js"></script>
+    <script type="text/javascript" src="js/Utils/pwstrength.js"></script>
+
+
+    <!--BEGIN LAYOUT-->
+    <script type="text/javascript" src="layouts/SlideOut/SlideOutLayout.js"></script>
+    <link rel="stylesheet" type="text/css" href="layouts/SlideOut/SlideOutLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/SlideOut/SlideOutLayout.html" />
+
+    <script type="text/javascript" src="layouts/Empty/EmptyLayout.js"></script>
+    <link rel="stylesheet" type="text/css" href="layouts/Empty/EmptyLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/Empty/EmptyLayout.html" />
+    <!--END LAYOUT-->
+    <!--BEGIN VIEWS-->
+    <!--LOGIN-->
+    <script type="text/javascript" src="views/registeredUser/movilAccount/RequestPIN.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/movilAccount/RequestPIN.dxview" />
+    <script type="text/javascript" src="views/registeredUser/account/CambiarClaveAcceso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/account/CambiarClaveAcceso.dxview" />
+
+
+    <script type="text/javascript" src="views/unregisteredUser/RegisterSecurePIN.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/RegisterSecurePIN.dxview" />
+    <script type="text/javascript" src="views/unregisteredUser/RegisterUser.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/RegisterUser.dxview" />
+
+    <!--OLVIDO DE CLAVE Y USERNAME-->
+    <script type="text/javascript" src="views/unregisteredUser/ForgottenUserName.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/ForgottenUserName.dxview" />
+    <script type="text/javascript" src="views/unregisteredUser/ForgottenPassword.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/ForgottenPassword.dxview" />
+    <script type="text/javascript" src="views/unregisteredUser/ForgottenPasswordSecondInstance.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/ForgottenPasswordSecondInstance.dxview" />
+
+    <!--CONTACTOS-->
+    <script type="text/javascript" src="views/registeredUser/contactos/Ubiquenos.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/contactos/Ubiquenos.dxview" />
+    <script type="text/javascript" src="views/registeredUser/contactos/MapaAgencia.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/contactos/MapaAgencia.dxview" />
+
+    <!--INVERSIONES-->
+    <script type="text/javascript" src="views/registeredUser/captaciones/Inversiones.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/captaciones/Inversiones.dxview" />
+
+    <!--CREDITOS-->
+    <script type="text/javascript" src="views/registeredUser/creditos/CuotasCredito.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/creditos/CuotasCredito.dxview" />
+
+    <!--TRANSACCIONES-->
+    <script type="text/javascript" src="views/registeredUser/Transacciones/CompraTiempoAire.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/Transacciones/CompraTiempoAire.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/Transacciones/CompraTiempoAireExitosa.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/Transacciones/CompraTiempoAireExitosa.dxview" />
+
+    <!--INGRESO DE OTP-->
+    <script type="text/javascript" src="views/registeredUser/afectaciones/IngresoOTP.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/afectaciones/IngresoOTP.dxview" />
+
+    <!--BENEFICIARIOS EXTERNOS-->
+    <script type="text/javascript" src="views/registeredUser/perfilTransaccional/BeneficiariosExternos.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/perfilTransaccional/BeneficiariosExternos.dxview" />
+    <script type="text/javascript" src="views/registeredUser/perfilTransaccional/RegBeneficiarioExterno.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/perfilTransaccional/RegBeneficiarioExterno.dxview" />
+
+    <!--BENEFICIARIOS INTERNOS-->
+    <script type="text/javascript" src="views/registeredUser/perfilTransaccional/BeneficiariosInternos.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/perfilTransaccional/BeneficiariosInternos.dxview" />
+    <script type="text/javascript" src="views/registeredUser/perfilTransaccional/RegBeneficiariosInternos.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/perfilTransaccional/RegBeneficiariosInternos.dxview" />
+
+    <!--TARJETAS-->
+    <script type="text/javascript" src="views/registeredUser/tarjetas/MovimientosTarjeta.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/tarjetas/MovimientosTarjeta.dxview" />
+
+    <!--TRANSFERENCIAS INTERNAS-->
+    <script type="text/javascript" src="views/registeredUser/cuentas/TransferenciasInternas.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/cuentas/TransferenciasInternas.dxview" />
+    <script type="text/javascript" src="views/registeredUser/cuentas/ConfirmacionTansferenciaInterna.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/cuentas/ConfirmacionTansferenciaInterna.dxview" />
+    <script type="text/javascript" src="views/registeredUser/cuentas/TransferenciaInternaExitosa.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/cuentas/TransferenciaInternaExitosa.dxview" />
+
+    <!--TRANSFERENCIAS EXTERNAS-->
+    <script type="text/javascript" src="views/registeredUser/cuentas/ConfirmacionTransferenciaExterna.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/cuentas/ConfirmacionTransferenciaExterna.dxview" />
+    <script type="text/javascript" src="views/registeredUser/cuentas/TransferenciaExternaExitosa.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/cuentas/TransferenciaExternaExitosa.dxview" />
+    <script type="text/javascript" src="views/registeredUser/cuentas/TransferenciaExterna.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/cuentas/TransferenciaExterna.dxview" />
+
+    <!--POSICION CONSOLIDADA-->
+    <script type="text/javascript" src="views/registeredUser/cuentas/PosicionConsolidada.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/cuentas/PosicionConsolidada.dxview" />
+
+    <!--CUENTAS-->
+    <script type="text/javascript" src="views/registeredUser/cuentas/Movimientos.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/cuentas/Movimientos.dxview" />
+
+    <!--END VIEWS-->
+
+
+    <script type="text/javascript" src="views/unregisteredUser/PinConfirmation.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/PinConfirmation.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/tarjetas/PlanConmigo.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/tarjetas/PlanConmigo.dxview" />
+
+
+
+
+
+
+    <script type="text/javascript" src="views/registeredUser/creditos/PuntosCredito.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/creditos/PuntosCredito.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/billeteraMovil/CrearBilleteraMovil.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/billeteraMovil/CrearBilleteraMovil.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/billeteraMovil/ConfirmacionCrearBilleteraMovil.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/billeteraMovil/ConfirmacionCrearBilleteraMovil.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/billeteraMovil/AdministracionBilleteraMovil.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/billeteraMovil/AdministracionBilleteraMovil.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/billeteraMovil/PagoBilleteraMovil.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/billeteraMovil/PagoBilleteraMovil.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/billeteraMovil/NotificacionCobroBilleteraMovil.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/billeteraMovil/NotificacionCobroBilleteraMovil.dxview" />
+
+
+    <script type="text/javascript" src="views/registeredUser/billeteraMovil/ConsultaPagosPendientesBilleteraMovil.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/billeteraMovil/ConsultaPagosPendientesBilleteraMovil.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/billeteraMovil/ConfirmacionPagoBilleteraMovil.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/billeteraMovil/ConfirmacionPagoBilleteraMovil.dxview" />
+
+
+
+
+    <script type="text/javascript" src="views/registeredUser/servicios/SeleccionServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/servicios/SeleccionServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/servicios/ConsultaServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/servicios/ConsultaServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/servicios/PagoServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/servicios/PagoServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/servicios/PagoServicioConfirmacion.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/servicios/PagoServicioConfirmacion.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/servicios/PagoServicioExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/servicios/PagoServicioExitoso.dxview" />
+
+    <script type="text/javascript" src="views/UnitTest.js"></script>
+    <link rel="dx-template" type="text/html" href="views/UnitTest.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/creditos/InformacionCreditos.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/creditos/InformacionCreditos.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/creditos/DetalleCredito.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/creditos/DetalleCredito.dxview" />
+
+
+    <script type="text/javascript" src="views/registeredUser/viewsACH/infoACH.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/viewsACH/infoACH.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/viewsACH/historicACH.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/viewsACH/historicACH.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/perfilTransaccional/ConfirmarBeneficiarioExterno.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/perfilTransaccional/ConfirmarBeneficiarioExterno.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/creditos/PagoCredito.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/creditos/PagoCredito.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/creditos/PagoCreditoConfirmacion.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/creditos/PagoCreditoConfirmacion.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/creditos/PagoCreditoExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/creditos/PagoCreditoExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/tarjetas/PagoTarjetaCredito.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/tarjetas/PagoTarjetaCredito.dxview" />
+    <script type="text/javascript" src="views/registeredUser/tarjetas/ConfirmacionPagoTarjeta.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/tarjetas/ConfirmacionPagoTarjeta.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/tarjetas/PagoTarjetaExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/tarjetas/PagoTarjetaExitoso.dxview" />
+
+
+    <script type="text/javascript" src="views/registeredUser/pagos/TipoServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/TipoServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/EEGSA/EEGSA.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/EEGSA/EEGSA.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/DEORSA/DEORSA.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/DEORSA/DEORSA.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/CLARO/CLARO.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/CLARO/CLARO.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/TIGO/TIGO.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/TIGO/TIGO.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/TIGOSTAR/TIGOSTAR.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/TIGOSTAR/TIGOSTAR.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/MOVISTAR/MOVISTAR.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/MOVISTAR/MOVISTAR.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/PAQUETIGOS/PAQUETIGOS.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/PAQUETIGOS/PAQUETIGOS.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/SUPERPACK/SUPERPACK.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/SUPERPACK/SUPERPACK.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/TUENTI/TUENTI.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/TUENTI/TUENTI.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/DEOCSA/DEOCSA.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/DEOCSA/DEOCSA.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/PAQUETIGOS/PAQUETIGOSInfo.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/PAQUETIGOS/PAQUETIGOSInfo.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/SUPERPACK/SUPERPACKInfo.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/SUPERPACK/SUPERPACKInfo.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/TUENTI/TUENTIInfo.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/TUENTI/TUENTIInfo.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/CLARO/CLAROPagarServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/CLARO/CLAROPagarServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/DEOCSA/DEOCSAPagarServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/DEOCSA/DEOCSAPagarServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/PAQUETIGOS/PAQUETIGOSPagarServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/PAQUETIGOS/PAQUETIGOSPagarServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/PAQUETIGOS/PAQUETIGOSExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/PAQUETIGOS/PAQUETIGOSExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/CLARO/CLAROExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/CLARO/CLAROExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/DEOCSA/DEOCSAExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/DEOCSA/DEOCSAExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/DEORSA/DEORSAPagarServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/DEORSA/DEORSAPagarServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/DEORSA/DEORSAExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/DEORSA/DEORSAExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/MOVISTAR/MOVISTARPagarServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/MOVISTAR/MOVISTARPagarServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/MOVISTAR/MOVISTARExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/MOVISTAR/MOVISTARExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/TIGO/TIGOPagarServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/TIGO/TIGOPagarServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/TIGO/TIGOExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/TIGO/TIGOExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/SUPERPACK/SUPERPACKPagarServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/SUPERPACK/SUPERPACKPagarServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/SUPERPACK/SUPERPACKExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/SUPERPACK/SUPERPACKExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/TIGOSTAR/TIGOSTARPagarServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/TIGOSTAR/TIGOSTARPagarServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/TIGOSTAR/TIGOSTARExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/TIGOSTAR/TIGOSTARExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/TUENTI/TUENTIPagarServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/TUENTI/TUENTIPagarServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/TUENTI/TUENTIExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/TUENTI/TUENTIExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/EEGSA/EGGSAPagarServicio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/EEGSA/EGGSAPagarServicio.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/pagos/EEGSA/EEGSAExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/pagos/EEGSA/EEGSAExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/tarjetas/InfoTarjeta.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/tarjetas/InfoTarjeta.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/tarjetas/SaldoTarjeta.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/tarjetas/SaldoTarjeta.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/tarjetas/EstadoCuentaTarjeta.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/tarjetas/EstadoCuentaTarjeta.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/Transacciones/PagoVisaNet.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/Transacciones/PagoVisaNet.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/Transacciones/PagoVisaNetExitoso.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/Transacciones/PagoVisaNetExitoso.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/akisi/CargarSaldoAkisi.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/akisi/CargarSaldoAkisi.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/akisi/ConfirmacionCargaSaldoAkisi.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/akisi/ConfirmacionCargaSaldoAkisi.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/akisi/ExitosoCargaSaldoAkisi.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/akisi/ExitosoCargaSaldoAkisi.dxview" />
+
+    <script type="text/javascript" src="views/unregisteredUser/LandingPage.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/LandingPage.dxview" />
+
+    <script type="text/javascript" src="views/unregisteredUser/InsertPin.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/InsertPin.dxview" />
+
+    <script type="text/javascript" src="views/unregisteredUser/noClienteOp/GuiaUsr.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/noClienteOp/GuiaUsr.dxview" />
+
+    <script type="text/javascript" src="views/unregisteredUser/noClienteOp/SolProductos.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/noClienteOp/SolProductos.dxview" />
+
+    <script type="text/javascript" src="views/unregisteredUser/noClienteOp/CanalesAtencion.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/noClienteOp/CanalesAtencion.dxview" />
+
+    <script type="text/javascript" src="views/unregisteredUser/noClienteOp/TipoCambio.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/noClienteOp/TipoCambio.dxview" />
+
+    <script type="text/javascript" src="views/unregisteredUser/crearUsuario/1_TermCond.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/crearUsuario/1_TermCond.dxview" />
+
+    <script type="text/javascript" src="views/unregisteredUser/crearUsuario/2_CreaUsr.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/crearUsuario/2_CreaUsr.dxview" />
+
+    <script type="text/javascript" src="views/unregisteredUser/noClienteOp/RedAgencias.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/noClienteOp/RedAgencias.dxview" />
+
+    <script type="text/javascript" src="views/unregisteredUser/crearUsuario/3_ContactInfo.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/crearUsuario/3_ContactInfo.dxview" />
+
+    <script type="text/javascript" src="views/unregisteredUser/crearUsuario/4_Confirm.js"></script>
+    <link rel="dx-template" type="text/html" href="views/unregisteredUser/crearUsuario/4_Confirm.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/account/InfoContacto.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/account/InfoContacto.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/account/RegPregSeg.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/account/RegPregSeg.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/account/RegUsrPass.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/account/RegUsrPass.dxview" />
+
+    <script type="text/javascript" src="views/registeredUser/perfilTransaccional/RegCuposMax.js"></script>
+    <link rel="dx-template" type="text/html" href="views/registeredUser/perfilTransaccional/RegCuposMax.dxview" />
+</head>
+
+<body class="dual-sidebar" onload="">
+    <div id="loadProcess" style="position:absolute; height:100%; width:100%; background-color:white; transition: all ease-in 0.3s; opacity: 0">
+        <div style="margin-top:60%; width:100%; text-align:center">
+            <img src="images/731.gif" />
+        </div>
+        <div style="width:100%; text-align:center; margin-top:20px; font-family:Gotham-Book">
+            <span id="spnMessageLoad" style="font-size:14px; font-weight:300;text-transform:none"></span>
+        </div>
+    </div>
+    <div class="gallery-fix"></div> <!-- Important for all pages that have galleries or portfolios -->
+
+    <div id="header-fixed" style="display:none">
+
+        <a class="open-left-sidebar" href="#"><img style="width:48px" src="images/iconos/menu.png" /></a>
+
+        <a class="header-logo"></a>
+        <a class="open-right-sidebar" href="#"><img style="width:48px" src="images/iconos/icono-mail.png" /></a>
+    </div>
+
+    <div class="all-elements">
+        <div class="snap-drawers" id="snapDrawers">
+
+            <!--Right Sidebar -->
+
+            <div class="snap-drawer snap-drawer-right">
+                <div class="sidebar-header">
+                    <div class="sidebar-header-logo">
+                        <a></a>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+
+                <div class="container no-bottom">
+                    <div class="sidebar-form contact-form no-bottom">
+                        <div style="font-size: 20px;color: #51515C;font-weight: bold; font-family: gotham-book;">Escríbenos:</div>
+
+                        <div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label style="margin-top:20px; font-size:12px">Motivo</label>
+                                    <div style="float:right;width:65%" id="txtMotivoContacto"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label style="margin-top:20px; font-size:12px">Mensaje</label>
+                                    <i id="numCaracteres">(200 / 200 caracteres)</i>
+                                    <div style="float:right;width:65%" id="txtMensajeContacto"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label style="margin-top:20px; text-transform:none !important; font-size:12px">Correo</label>
+                                    <div style="float:right;width:65%" id="txtCorreoContacto2"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label style="margin-top:20px; text-transform:none !important; font-size:12px">Teléfono</label>
+                                    <div style="float:right;width:65%" id="txtTelefonoContacto2"></div>
+                                </div>
+                            </div>
+
+                            <div class="row" style="width: 100%;text-align: center;margin-top: 10px; z-index:1;">
+                                <!--<div class="btn-movil-small btn-default" id="btnEnviarMensaje" style="position:initial"></div>-->
+                                <div class="col-lg-12">
+                                    <div class="" style="color: #d52133 !important" id="btnEnviarMensaje"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    .left-footer-text {
+                        margin-top: 3px;
+                        font-size: 15px;
+                        font-weight: 900;
+                        font-family: gotham-book;
+                        color: #51515C;
+                    }
+                </style>
+
+                <div id="socialMedia" style="display: grid;padding-left: 25px;position: absolute;    bottom: inherit;    margin-bottom: 40px;">
+                    <div class="row">
+                        <div class="col-sm-12" style="font-size: 18px; font-weight: 900;font-family: gotham-book; color:#d52133">Contáctanos:</div>
+                    </div>
+                    <div class="row" style="display: inline-flex;">
+                        <div class="col-sm-2">
+                            <img class="" src="images/iconos/i-dial.png" height="28" width="28" />
+                        </div>
+                        <div class="left-footer-text">2420-5555</div>
+                    </div>
+
+                    <div class="row" style="display: inline-flex;">
+                        <div class="col-sm-2">
+                            <img class="" src="images/iconos/i-wa.png" height="28" width="28" />
+                        </div>
+                        <div class="left-footer-text">5800-5146</div>
+                    </div>
+
+                    <div class="row" style="display: inline-flex;">
+                        <div class="col-sm-2">
+                            <img class="" src="images/iconos/i-email.png" height="28" width="28" />
+                        </div>
+                        <div class="left-footer-text" style="margin-top: 6px !important; font-size: 11px !important;">servicioalcliente@bancodeantigua.com.gt</div>
+                    </div>
+
+
+
+                    <div class="row" style="display: inline-flex;">
+                        <div class="col-sm-2">
+                            <img class="" src="images/iconos/i-fb.png" height="28" width="28" />
+                        </div>
+                        <div class="left-footer-text" style="">BancodeAntiguaGuatemala</div>
+                    </div>
+
+                    <div class="row" style="display: inline-flex;">
+                        <div class="col-sm-2">
+                            <img class="" src="images/iconos/i-ig.png" height="28" width="28" />
+                        </div>
+                        <div class="left-footer-text" style="">bantigua_oficialgt</div>
+                    </div>
+
+                </div>
+
+                <p class="sidebar-footer">
+                    Powered by Portales Distributors Inc.
+                </p>
+            </div>
+
+            <div id="content" class="snap-content">
+                <div class="header-clear" style="display:none"></div>
+                <div class="dx-viewport"></div>
+                <div id="loadPanel"></div>
+            </div>
+            <div id="floatButtons" class="area-btn-movil">
+
+            </div>
+            <div class="area-navbar" id="navBar" style="display:none;"></div>
+        </div>
+        <a href="#" class="back-to-top-badge"><i class="fa fa-caret-up"></i></a>
+    </div>
+
+    <!--Fly up share box and notifications go here -->
+    <!--These are the only features that should be placed outside the all-elements class-->
+
+    <div class="share-bottom">
+        <h3>Let's get social!</h3>
+        <div class="share-socials-bottom">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.themeforest.net/">
+                <i class="fa fa-facebook facebook-color"></i>
+                Facebook
+            </a>
+            <a href="https://twitter.com/home?status=Check%20out%20ThemeForest%20http://www.themeforest.net">
+                <i class="fa fa-twitter twitter-color"></i>
+                Twitter
+            </a>
+            <a href="https://plus.google.com/share?url=http://www.themeforest.net">
+                <i class="fa fa-google-plus google-color"></i>
+                Google
+            </a>
+
+            <a href="https://pinterest.com/pin/create/button/?url=http://www.themeforest.net/&media=https://0.s3.envato.com/files/63790821/profile-image.jpg&description=Themes%20and%20Templates">
+                <i class="fa fa-pinterest-p pinterest-color"></i>
+                Pinterest
+            </a>
+            <a href="sms:+1234567890">
+                <i class="fa fa-comment-o sms-color"></i>
+                Text
+            </a>
+            <a href="mailto:?&subject=Check this page out!&body=http://www.themeforest.net">
+                <i class="fa fa-envelope-o mail-color"></i>
+                Email
+            </a>
+            <div class="clear"></div>
+        </div>
+        <a href="#" class="close-share-bottom">Close</a>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="./js/contactenos.js"></script>
+<script>
+    $('#loadPanel').dxLoadPanel(setupLoadPanel());
+    $('#btnFloatButtonCancel').dxButton({ visible: false, icon: 'fa ' + iconosCore.times });
+    $('#btnFloatButtonAccept').dxButton({ visible: false, icon: 'fa ' + iconosCore.check });
+    $('#btnFloatButtonSave').dxButton({ visible: false, icon: 'fa ' + iconosCore.floppy });
+    $('#btnFloatButtonDelete').dxButton({ visible: false, icon: 'fa ' + iconosCore.minus });
+    $('#btnFloatButtonNew').dxButton({ visible: false, icon: 'fa ' + iconosCore.plus });
+    $('#btnFloatButtonOther').dxButton({ visible: false });
+
+</script>

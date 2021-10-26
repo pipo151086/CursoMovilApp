@@ -1,0 +1,47 @@
+<div data-options="dxView : { name: 'PAQUETIGOS', title: 'Pago de Servicio', disableCache: true  } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+      <style>
+        hr {
+        margin-top: 10px !important;
+        margin-bottom: 5px !important;
+        }
+
+      </style>
+
+
+
+      <div id="datosPagar" style="">
+        <div class="box-controls">
+          <span data-bind="text: 'PAQUETIGOS'"></span>
+
+          <div class="row" id="divNumeroTelefono">
+
+            <div class="col-lg-5 texts" style="display:inline-block;padding-left:2px;padding-left:5px">
+              <label style="display:block">Núm. Teléfono</label>
+            </div>
+
+            <div class="col-lg-7 texts" style="display:inline-block; float:right; text-align:right;width: 150px; padding-right:5px">
+              <div id="txtNumeroTelefono" data-bind="dxTextBox:txtNumeroTelefono, dxValidator: ({
+                 validationGroup: groupValidation,
+                  validationRules:[
+                     validateRequired(groupValidation, '').validationRules[0],
+                     {
+                       type: 'pattern',
+                       pattern: '^[0-9]{8}',
+                       message: 'Número no válido'
+                     }]               
+                 }) "></div>
+            </div>
+            <hr />
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+</div>

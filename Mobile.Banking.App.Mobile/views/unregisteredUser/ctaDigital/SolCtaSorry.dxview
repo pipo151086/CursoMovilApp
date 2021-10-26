@@ -1,0 +1,31 @@
+<div data-options="dxView : { name: 'SolCtaSorry', title: 'SolCtaSorry', disableCache: true  } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <div data-bind="dxScrollView: { }" style="">
+      <div style="padding: 0% 5%;">
+
+        <div class="contMsgUsrCtaDigital" >
+          <img class="imgMsgUsrCtaDigital" src="images/BDA.png"></img>
+          <p class="tltMsgUsrCtaDigital">¡Lo sentimos!</p>
+          <p class="tltMsgUsrCtaDigital" style="font-size:25px">En este momento no podemos procesar tu solicitud</p>
+        </div>
+
+        <p style="line-height: inherit;    font-size: 16px;display: inline-block; text-align:justify !important;">
+
+          Puedes comunicarte al <b>PBX 2420-5555 para obtener más información o visita la Agencia más cercana.</b>
+          <br/>
+          <br/>
+          Agradecemos tu compresión.
+          <br/>
+          <br/>
+        </p>
+
+        <div style="width:100%;text-align:center;margin: 25px 0px;">
+          <div class="btnActiveCtaDigital" id="btnAgenciaCercana" style="width:230px" data-bind="dxButton: btnAgenciaCercana"></div>
+        </div>
+
+
+      </div>
+    </div>
+    
+  </div>
+</div>

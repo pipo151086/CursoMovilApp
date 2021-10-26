@@ -1,0 +1,37 @@
+<div data-options="dxView : { name: 'TIGOSTAR', title: 'Pago de Servicio', disableCache: true  } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+      <style>
+        hr {
+        margin-top: 10px !important;
+        margin-bottom: 5px !important;
+        }
+
+      </style>
+
+
+
+      <div id="datosPagar" style="">
+        <div class="box-controls">
+          <span data-bind="text: 'TIGO STAR'"></span>
+          
+          <div class="row" id="divNumeroTelefono">
+
+            <div class="col-lg-6 texts" style="display:inline-block">
+              <label style="display:block">No. Cuenta</label>
+            </div>
+
+            <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;width: 160px;">
+              <div id="txtCodigoCliente" data-bind="dxTextBox:txtCodigoCliente, dxValidator: validateRequired(groupValidation, '')"></div>
+            </div>
+            <hr />
+          </div>
+
+
+        </div>
+      </div>
+
+
+    </div>
+</div>

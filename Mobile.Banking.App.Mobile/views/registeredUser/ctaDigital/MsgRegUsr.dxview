@@ -1,0 +1,77 @@
+<div data-options="dxView : { name: 'MsgRegUsr', title: 'MsgRegUsr', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+      .parrafRegUsr{
+      line-height: inherit;
+      font-size: 16px;
+      display: inline-block;
+      text-align:justify !important;
+      }
+
+    </style>
+    <div data-bind="dxScrollView: { }" style="">
+      <div style="padding: 0% 5%;margin-bottom: 55px;">
+
+        <div class="contMsgUsrCtaDigital" >
+          <img class="imgMsgUsrCtaDigital" src="images/BDA.png"></img>
+          <p class="tltMsgUsrCtaDigital">¡Bienvenido a tu cuenta de ahorro 100% Digital!</p>
+        </div>
+
+        <p class="parrafRegUsr">
+          Por favor, completa los siguientes pasos para solicitar este producto digital:
+          <br/>
+          <br/>
+          <p class="parrafRegUsr">
+            <b>1.</b>	Accede a tu Bantigua en línea ingresando: <b>Usuario y Clave. Huella o Código.</b>
+          </p>
+          <br/>
+          <p class="parrafRegUsr">
+            <b>2.</b>	En la parte superior izquierda de esta pantalla <b>selecciona “Menú”.</b>
+          </p>
+          <br/>
+          <p class="parrafRegUsr">
+            <b>3.</b>	Al lado izquierdo veras un listado de opciones, deberás <b>seleccionar el siguiente botón:</b>
+          </p>
+
+          <div style="text-align: -webkit-center;">
+            <div id="contBtnCtaDig" style="">
+              <div id="BtnCtaDig" style="">
+                <span id="txt2BtnCtaDig" style="">
+                  <span id="txt1BtnCtaDig" style="">Abre tu&nbsp</span>Cuenta de Ahorro
+                </span>
+                <div id="txt34ContBtnCtaDig">
+                  <span id="txt3BtnCtaDig" style="">100%&nbsp</span>
+                  <span id="txt4BtnCtaDig" style="">digital</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <br/>
+          <p class="parrafRegUsr">
+            <b>4.</b>	Por favor  <b>verifica que la información</b> que se te despliegue  <b>
+              sea correcta y este actualizada, de lo contrario deberás ingresar la información valida.
+            </b>
+            <br/>
+            <br/>
+
+            A lo largo del proceso enviaremos información importante a tu correo electrónico. Por favor, no la compartas con nadie.
+          </p>
+        </p>
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnActiveCtaDigital" id="btnEmpezar" style="" data-bind="dxButton: btnEmpezar"></div>
+        </div>
+
+        <!--<div style="width:100%;text-align:center;">
+          <div class="btnInactiveCtaDigital" id="btnVolver" style="" data-bind="dxButton: btnVolver"></div>
+        </div>-->
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

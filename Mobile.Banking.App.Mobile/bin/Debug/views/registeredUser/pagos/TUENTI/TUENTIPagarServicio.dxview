@@ -1,0 +1,101 @@
+<div data-options="dxView : { name: 'TUENTIPagarServicio', title: 'Pago de Servicio', disableCache: true } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+      <div data-bind="dxScrollView: {  }">
+        <div style="margin-bottom:80px">
+
+          <style>
+
+          </style>
+
+          <div class="box-controls">
+            <span>TUENTI</span>
+
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Número Teléfono </label>
+                <span id="txtNumeroTelefono" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNumeroTelefono"></span>
+              </div>
+            </div>
+            <hr />
+
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Producto </label>
+                <span id="txtProducto" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtProducto"></span>
+              </div>
+            </div>
+            <hr />
+
+
+            <div class="row ">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Nombre</label>
+                <span id="txtNombre" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNombre"></span>
+              </div>
+            </div>
+            <hr  class=""/>
+
+            <div class="row esPrePago">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Nit</label>
+                <span id="txtNit" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNit"></span>
+              </div>
+            </div>
+            <hr  class=""/>
+
+            <div class="row ">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Correo</label>
+                <span id="txtCorreo" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtCorreo"></span>
+              </div>
+            </div>
+            <hr  class=""/>
+
+
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Monto a Pagar</label>
+                <span id="txtMontoPagar" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtMontoPagar"></span>
+              </div>
+            </div>
+            <hr/>
+            
+            
+            <div class="row">
+              <div class="col-lg-6 texts" style="display:inline-block">
+                <label style="display:block;padding-top: 8px;">Cuenta</label>
+              </div>
+              <div class="col-lg-6 texts" style="display:inline-block; float:right; text-align:right;padding-right:0px !important">
+                <div id="btnCambiarCuenta" style="display:inline-block" data-bind="dxButton: btnCambiarCuenta"></div>
+              </div>
+            </div>
+            <hr/>
+
+
+          </div>
+
+
+          <div id="popupSeleccionCuenta" data-bind="dxPopup: popupSeleccionCuenta">
+            <div data-options="dxTemplate: {name: 'content'}">
+              <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                <div class="row">
+                  <div class="col-lg-12" style="text-align:center">
+                    <div id="rdbCuentas" style="font-size:20px" data-bind="dxRadioGroup: rdbCuentas"></div>
+                    <div id="btnCancelarCuenta" style="margin-top:10px" data-bind="dxButton: btnCancelarCuenta"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+</div>

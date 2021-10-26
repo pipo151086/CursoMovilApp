@@ -1,0 +1,81 @@
+<div data-options="dxView : { name: 'TIGOSTARExitoso', title: 'Pago de Servicio Exitoso', disableCache: true  } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+
+      <div data-bind="dxScrollView: {  }">
+        <div style="margin-bottom:80px">
+
+          <style>
+
+          </style>
+
+          <div class="row" style="padding: 10px">
+            <div class="col-lg-12 texts" style="text-align:center">
+              <span>
+                AVISO: El pago se realizó exitosamente.
+              </span>
+            </div>
+          </div>
+
+
+          <div class="box-controls">
+            <span>TIGOSTAR</span>
+
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Código Cliente </label>
+                <span id="txtCodigoCliente" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtCodigoCliente"></span>
+              </div>
+            </div>
+            <hr />
+
+            <div class="row esPostPago">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Nombre del Cliente</label>
+                <span id="txtTitular" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtTitular"></span>
+              </div>
+            </div>
+            <hr  class="esPostPago"/>
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Monto a Pagar</label>
+                <span id="txtMontoPagar" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtMontoPagar"></span>
+              </div>
+            </div>
+            <hr/>
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Cuenta</label>
+                <span id="txtCuenta" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtCuenta"></span>
+              </div>
+            </div>
+            <hr/>
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Número Autorización</label>
+                <span id="txtCuenta" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNumAutorizacion"></span>
+              </div>
+            </div>
+            <hr/>
+
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">No. De Referencia</label>
+                <span id="txtCuenta" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: txtNumReferencia"></span>
+              </div>
+            </div>
+            <hr/>
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+</div>

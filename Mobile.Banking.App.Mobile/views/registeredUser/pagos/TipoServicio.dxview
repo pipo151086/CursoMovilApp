@@ -1,0 +1,15 @@
+<div data-options="dxView : { name: 'TipoServicio', title: 'Tipo Servicio', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+
+
+
+    </style>
+    
+        <div class="demo-container" style="text-align: center;align-items: center;text-align: -webkit-center;">
+      <div style="text-align: center;align-items: center;text-align: -webkit-center;margin: auto; width: 277px;" id="tlServicios"></div>
+    </div>
+
+  </div>
+</div>

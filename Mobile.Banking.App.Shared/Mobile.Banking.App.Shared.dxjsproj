@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>4a2c4378-297c-4d4d-a1b6-7ccea11ec82a</ProjectGuid>
+    <AutoAssignPort>True</AutoAssignPort>
+    <RunInSimulator>True</RunInSimulator>
+    <UploadPluginsToTheCourier>True</UploadPluginsToTheCourier>
+    <Name>Mobile.Banking.App.Shared</Name>
+    <RootNamespace>MobileBanking_App</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <UpgradeNotifyShown>18.2.6</UpgradeNotifyShown>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap\bootstrap.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\bootstrap\bootstrap.css.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\dx.android5.light.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\icons\dxicons.ttf" />
+    <Content Include="css\icons\dxicons.woff" />
+    <Content Include="css\icons\dxicons.woff2" />
+    <Content Include="css\icons\dxiconsios.ttf" />
+    <Content Include="css\icons\dxiconsios.woff" />
+    <Content Include="css\icons\dxiconsios.woff2" />
+    <Content Include="css\dx.dark.compact.css" />
+    <Content Include="css\dx.light.compact.css" />
+    <Content Include="css\dx.contrast.compact.css" />
+    <Content Include="css\dx.contrast.css" />
+    <Content Include="css\dx.win10.black.css" />
+    <Content Include="css\dx.win10.white.css" />
+    <Content Include="css\devextreme\dx.common.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\dx.contrast.compact.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\dx.contrast.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\dx.dark.compact.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\dx.ios7.default.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\dx.light.compact.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\dx.spa.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\dx.win10.black.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\icons\dxicons.eot">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\icons\dxicons.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\icons\dxicons.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\icons\dxiconsios.eot">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\icons\dxiconsios.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\devextreme\icons\dxiconsios.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\font-awesome\css\font-awesome.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\font-awesome\fonts\fontawesome-webfont.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\font-awesome\fonts\fontawesome-webfont.woff2">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\jquery\jquery-ui.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="data\db.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="fonts\SWENSON.TTF">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\731.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\ach-info-335X309-09.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\ach-info-600x720.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\ach-info-850x600.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\achs-logos.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\ALIA.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\BDA-blanco.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\bda-house.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\BDA.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\BIMO.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\circulo-numeros.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\codigo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\CRE.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\CTA.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\dpi-bda-back.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\dpi-bda-front.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\face_id_icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\fingerprint-colored.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\fingerprint.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\icon-visa-mcard.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\icono-candado.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\icono-visto-pintado.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\icono-visto.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\1-5.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\2-5.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\3-5.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\4-5.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\5-5.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\akisilogo-app.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\billetera-movil.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\bn1-sms.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\bn2-robo.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\bn3-sin-costo-2.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\bn4-web.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\bn5-bene.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\bn6-salud.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\bn7-trjs.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\bullet-activo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\bullet-pasivo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\configuracion.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\contactanos.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\credito.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\cuentas-old.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\cuentas.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\i-dial.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\i-email.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\i-fb.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\i-ig.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\i-wa.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\icon-clock-ag.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\icon-phone-ag.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\icono-mail.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\icons8-building-48.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\inversiones.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\linea-punteada.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\menu.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\noClientIcons\iCanal-atencion.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\noClientIcons\iCrea-usuario.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\noClientIcons\iGuia-usuario.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\noClientIcons\iMedios-pago.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\noClientIcons\iProdsBene.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\noClientIcons\iPunto-pago.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\noClientIcons\iRed-agen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\noClientIcons\iSol-prod.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\noClientIcons\iTipo-cambio.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\perfil-transaccional.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\salir.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\seguridad.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\servicios\EnergiaElectrica.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\servicios\InternetMovil.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\servicios\ServicioCable.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\servicios\Telefonia.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\todo-inc-trj.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\trajetas.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\tran-ach.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\transacciones.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\transferencias.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\tus-cuentas.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\iconos\ubicanos.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\INV.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\markerLocation.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\MasterCard-logo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\money-7.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\pagos-icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\registerUser.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\scan-doc-back-icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\scan-doc-front-icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\seguridad.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\TCF.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\time-money.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\TRJ.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\TRJS.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\visa-logo-14.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\devextreme\localization\dx.messages.es.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\devextreme\localization\es-EC\ca-gregorian.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\devextreme\localization\es-EC\dataFields.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\devextreme\localization\es-EC\numbers.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\devextreme\localization\es-EC\suplemental\currencyData.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\devextreme\localization\es-EC\suplemental\likelySubtags.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\devextreme\localization\es-EC\suplemental\numberingSystem.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\devextreme\localization\es-EC\suplemental\timeData.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\devextreme\localization\es-EC\suplemental\weekData.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\devextreme\localization\es-EC\timeZoneNames.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\dx.all.debug.js" />
+    <Content Include="js\dx.all.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalize\cldr.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalize\cldr\event.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalize\cldr\supplemental.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalize\cldr\unresolved.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalize\globalize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalize\globalize.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalize\globalize\currency.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalize\globalize\date.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalize\globalize\message.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalize\globalize\number.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="mobilebanking_app.shared.config.js">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="css\bootstrap\" />
+    <Folder Include="css\devextreme\" />
+    <Folder Include="css\devextreme\icons\" />
+    <Folder Include="css\font-awesome\" />
+    <Folder Include="css\font-awesome\css\" />
+    <Folder Include="css\font-awesome\fonts\" />
+    <Folder Include="css\icons\" />
+    <Folder Include="css\jquery\" />
+    <Folder Include="data\" />
+    <Folder Include="fonts\" />
+    <Folder Include="images\" />
+    <Folder Include="images\iconos\" />
+    <Folder Include="images\iconos\noClientIcons\" />
+    <Folder Include="images\iconos\servicios" />
+    <Folder Include="js\" />
+    <Folder Include="js\devextreme\" />
+    <Folder Include="js\devextreme\localization\" />
+    <Folder Include="js\devextreme\localization\es-EC\" />
+    <Folder Include="js\devextreme\localization\es-EC\suplemental\" />
+    <Folder Include="js\globalize\" />
+    <Folder Include="js\globalize\cldr\" />
+    <Folder Include="js\globalize\globalize\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences">
+    <Message Text="Copying references to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))">
+    </MSBuild>
+  </Target>
+  <Target Name="CopyFilesToOutputDirectory">
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content-&gt;'$(OutputPath)$([MSBuild]::MakeRelative($(MSBuildProjectDirectory),'%(FullPath)'))')" />
+  </Target>
+  <Target Name="CoreCompile">
+    <!--<Message Text="'$(MSBuildToolsPath)'"></Message>-->
+    <!--<Message Text="'$(BuildingProject)'"></Message>-->
+    <!--<Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high"></Message>-->
+    <!--<Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high"></Message>-->
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+</Project>

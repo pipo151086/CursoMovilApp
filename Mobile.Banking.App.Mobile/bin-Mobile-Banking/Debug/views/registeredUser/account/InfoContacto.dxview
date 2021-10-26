@@ -1,0 +1,104 @@
+<div data-options="dxView : { name: 'InfoContacto', title: 'InfoContacto', disableCache: true  } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+      .formItem{
+      padding:10px;
+      }
+
+      .boxContainer{
+      border:solid gray thin;
+      margin: 5px;
+      border-radius: 5px;
+      }
+    </style>
+
+
+    <div class="containerSlide">
+      <!--<div class="noClientButtonBack" data-bind="click:clickBack">
+        <i class="dx-icon fa fa-chevron-left"></i>
+      </div>-->
+      <img class="SlideLogo" src="images/BDA-blanco.png"></img>
+    </div>
+
+
+
+    <div class="botonesTitulo tituloWizardCrearUsuario" style="padding:10px; text-align:justify; height: 140px;  margin-top: 0px;font-weight: normal;">
+      <p style="line-height: normal;">
+        <b>Nueva opción de seguridad:</b>
+        <br/><br/>
+        Para la ejecución de transacciones en canales electrónicos te enviaremos una clave temporal al correo registrado en esta opción. Recuerda mantener actualizada tu información de contacto.
+      </p>
+    </div>
+
+
+    <div data-bind="dxScrollView: { }" style="margin-top:-10px">
+      <div class="createUserForm" style="margin-bottom: 550px;">
+
+        <div class="boxContainer" style="margin-top:15px">
+          <div class="formItem" style="">
+            <span>Correo Electrónico</span>
+            <div id="txtMail" data-bind="dxTextBox:txtMail, dxValidator: validateEmail(true, groupValidation, 'Correo')"></div>
+          </div>
+
+          <div class="formItem" style="">
+            <span>Correo Electrónico (Confirmación)</span>
+            <div id="txtMailConfirm" data-bind="dxTextBox:txtMailConfirm, dxValidator: { validationRules:[
+               {
+                  type: 'compare',
+                  comparisonTarget: function(){ 
+                      var corr = $('#txtMail').dxTextBox('instance');
+                      if(corr) {
+                          return corr.option('value');        
+                      }
+                  },
+                  message: 'No coinciden los correos ingresados'
+              },
+              {
+                  type: 'required',
+                  message: 'Campo obligatorio'
+              }
+              ]}"></div>
+          </div>
+        </div>
+
+        <div class="boxContainer">
+          <div class="formItem" style="">
+            <span>Número Celular</span>
+            <div id="txtTelef" data-bind="dxTextBox:txtTelef, dxValidator: validateHibridPhone(true, groupValidation, 'Teléfono')"></div>
+          </div>
+
+          <div class="formItem" style="">
+            <span>Número Celular (Confirmación)</span>
+            <div id="txtTelefConfirm" data-bind="dxTextBox:txtTelefConfirm, dxValidator: { validationRules:[
+               {
+                  type: 'compare',
+                  comparisonTarget: function(){ 
+                      var telf = $('#txtTelef').dxTextBox('instance');
+                      if(telf) {
+                          return telf.option('value');        
+                      }
+                  },
+                  message: 'No coinciden los teléfonos'
+              },
+              {
+                  type: 'required',
+                  message: 'Campo obligatorio'
+              }
+              ]}"></div>
+          </div>
+        </div>
+
+
+        <div style="padding:10px; text-align:justify;font-weight: normal;font-family: 'Gotham-Book'; ">
+          <p style="line-height: normal; font-family: 'Gotham-Book';">
+          <b style="color:red">Importante: </b>Te recordamos que tus datos son confidenciales, personales e intransferibles.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,86 @@
+<div data-options="dxView : { name: 'FormUnreg2_DpiPas', title: 'FormUnreg2_DpiPas', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+    <div data-bind="dxScrollView: {showScrollbar:'never' }" class="scrollFormSolCtaDig">
+      <div class="titleFormSolCtaDigCont">
+        <span class="titleFormSolCtaDig">Solicitud de Cuenta de Ahorro</span>
+      </div>
+      <div class="subtitleFormSolCtaDigCont" style="">
+        <span class="subtitleFormSolCtaDig">Preguntas de Validación</span>
+        <div class="expSubtittleCont" >
+          <span class="expSubtittleText">Por favor responde las siguientes preguntas para solicitar tu cuenta.</span>
+        </div>
+      </div>
+
+
+      <div class="formSolCtaDig" >
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblEsPEP">
+            11. ¿Es Persona Políticamente Expuesta (PEP)?
+            <i class="dx-icon fa fa-info-circle" id="infoPEP" style="color:#D9000D;font-size:18px"></i>
+          </div>
+          <div id="ttPEP" data-bind="dxTooltip:ttPEP"></div>
+
+          <div class="formSolCtaDigFieldValue">
+            <div class="formRadioGroupComp" id="rgEsPEP" data-bind="dxRadioGroup: rgEsPEP, dxValidator:validateRequired(grpValDpiPas, 'Obligatorio')"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblEsFamliarPEP">12. ¿Es Familiar o Asociado de Persona Políticamente Expuesta?</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formRadioGroupComp" id="rgEsFamliarPEP" data-bind="dxRadioGroup: rgEsFamliarPEP, dxValidator:validateRequired(grpValDpiPas, 'Obligatorio')"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblEsCEP">
+            13. ¿Es Contratista o Proveedor del Estado (CEP)? <i class="dx-icon fa fa-info-circle" id="infoCEP" style="color:#D9000D;font-size:18px"></i>
+          </div>
+          <div id="ttCEP" data-bind="dxTooltip:ttCEP"></div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formRadioGroupComp" id="rgEsCEP" data-bind="dxRadioGroup: rgEsCEP, dxValidator:validateRequired(grpValDpiPas, 'Obligatorio')"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblEsCiudadanoUSA">14. ¿Es ciudadano o residente de los Estados Unidos de América?</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formRadioGroupComp" id="rgEsCiudadanoUSA" data-bind="dxRadioGroup: rgEsCiudadanoUSA, dxValidator:validateRequired(grpValDpiPas, 'Obligatorio')"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblVivioUSA">15. ¿En los últimos 3 años ha residido al menos 183 días en los Estados Unidos de América?</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formRadioGroupComp" id="rgVivioUSA" data-bind="dxRadioGroup: rgVivioUSA, dxValidator:validateRequired(grpValDpiPas, 'Obligatorio')"></div>
+          </div>
+        </div>
+
+        <div class="formSolCtaDigFieldCont">
+          <div class="formSolCtaDigFieldLabel" id="lblPoseeResUSA">16. ¿Posee dirección de residencia, correspondencia o teléfono registrados en los Estados Unidos de América?</div>
+          <div class="formSolCtaDigFieldValue">
+            <div class="formRadioGroupComp" id="rgPoseeResUSA" data-bind="dxRadioGroup: rgPoseeResUSA, dxValidator:validateRequired(grpValDpiPas, 'Obligatorio')"></div>
+          </div>
+        </div>
+
+
+
+
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnActiveCtaDigital" id="btnValidar" style="" data-bind="dxButton: btnValidar"></div>
+        </div>
+
+        <div style="width:100%;text-align:center;">
+          <div class="btnInactiveCtaDigital" id="btnRegresar" style="" data-bind="dxButton: btnRegresar"></div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>

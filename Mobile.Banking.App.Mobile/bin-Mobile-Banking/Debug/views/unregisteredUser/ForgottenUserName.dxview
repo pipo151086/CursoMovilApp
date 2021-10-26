@@ -1,0 +1,99 @@
+<div data-options="dxView : { name: 'ForgottenUserName', title: 'ForgottenUserName' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxToolbar:
+             {
+             items: [
+             { location: 'before', options: { type: 'back', text: 'Volver', onClick: clickAtras }, widget: 'button' },
+              { text: 'Olvidé mi Usuario' }
+
+             ] }"></div>
+        <div style="margin-bottom: 50px;" data-bind="dxScrollView: { }">
+            <style>
+
+                #btnEnviar > div > span {
+                    margin: 12px
+                }
+
+                #btnCambiarTipoDocumento {
+                    background-color: white;
+                    color: #d52133;
+                }
+
+                #txtNumeroDocumento .dx-texteditor-container .dx-texteditor-input {
+                    font-size: 20px !important;
+                    font-weight: bold;
+                    text-align: center;
+                    color: gray !important;
+                }
+
+                #txtClave .dx-texteditor-container .dx-texteditor-input {
+                    font-size: 20px !important;
+                    font-weight: bold;
+                    text-align: center;
+                    color: gray !important;
+                }
+
+                #rdbTiposDocumento .dx-item-content {
+                    font-size: 18px !important;
+                }
+            </style>
+            <div style="margin-left:2%; margin-right:2%">
+                <div style="text-align:center; margin-top:10px; margin-bottom:10px">
+                    <i class="fa fa-users" style="color:#d52133; font-size:80px"></i>
+                </div>
+                <div class="title-1" style="text-align:center">
+                    <span>Solicitud de Envío de nombre de usuario</span>
+                </div>
+                <div style="margin-top:20px" class="row">
+                    <div class="col-lg-12">
+                        <label style="margin-top:10px">Tipo Documento</label>
+                        <div style="float:right; width:50%" id="btnCambiarTipoDocumento" data-bind="dxButton: btnCambiarTipoDocumento"></div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label style="margin-top:10px">Documento</label>
+                        <div style="float:right; width:50%" id="txtNumeroDocumento" data-bind="dxTextBox: txtNumeroDocumento, dxValidator: validateDNI(true, groupValidation, 'Número Documento')"></div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label style="margin-top:10px">Clave Acceso</label>
+                        <div style="float:right; width:50%" id="txtClave" data-bind="dxTextBox: txtClave, dxValidator: validateRequired(groupValidation, 'Clave de Acceso')"></div>
+                    </div>
+                </div>
+                <hr />
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align:center">
+                        <span style="font-size: 12px !important; color:gray; text-transform:none; font-size:16px">
+                            Ingresa tu número de documento y la contraseña que usas para ingresar a la Banca por Internet, tu usuario será enviado al correo electrónico registrado.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row" style="width: 100%;text-align: center;">
+                    <div class="col-lg-12" style="">
+                        <!-- <div class="btn-movil btn-default" id="btnEnviar" data-bind="dxButton: btnEnviar"></div>-->
+                        <div class="" id="btnEnviar" data-bind="dxButton: btnEnviar"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="popupSeleccionTipoDocumento" data-bind="dxPopup: popupSeleccionTipoDocumento">
+                <div data-options="dxTemplate: {name: 'content'}">
+                    <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }">
+                        <div class="row">
+                            <div class="col-lg-12" style="text-align:center">
+                                <div id="rdbTiposDocumento" style="font-size:20px" data-bind="dxRadioGroup: rdbTiposDocumento"></div>
+                                <div id="btnCancelarTipoDocumento" style="margin-top:10px" data-bind="dxButton: btnCancelarTipoDocumento"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

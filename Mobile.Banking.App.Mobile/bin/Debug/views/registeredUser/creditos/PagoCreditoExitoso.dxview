@@ -1,0 +1,54 @@
+<div data-options="dxView : { name: 'PagoCreditoExitoso', title: 'Pago de Crédito Exitoso', disableCache: true } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+      <div data-bind="dxScrollView: {  }">
+        <div style="margin-bottom:50px">
+          <div class="row" style="padding: 10px">
+            <div class="col-lg-12 texts" style="text-align:center">
+              <span>
+                AVISO: El pago de crédito se realizó exitosamente.
+              </span>
+            </div>
+          </div>
+
+
+
+
+          <div class="box-controls">
+            <span>Información de Cuenta Origen</span>
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">No. Cuenta Origen</label>
+                <span id="ctaOrigen" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: ctaOrigen"></span>
+              </div>
+            </div>
+            <hr />
+         
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Titular Cuenta Origen</label>
+                <span id="TitCtaOrigen" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: TitCtaOrigen"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-controls">
+            <span>Información Crédito</span>
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">No. Crédito a Pagar</label>
+                <span id="credPagar" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: credPagar"></span>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-12 texts">
+                <label style="display:block">Monto Pagar</label>
+                <span id="valorTotalPagar" class="color" style="float:left; display: inline-flex;font-size: 20px;" data-bind="text: valorTotalPagar"></span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>          
+    </div>
+</div>

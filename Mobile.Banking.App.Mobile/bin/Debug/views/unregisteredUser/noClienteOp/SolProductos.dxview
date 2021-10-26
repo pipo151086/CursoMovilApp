@@ -1,0 +1,70 @@
+<div data-options="dxView : { name: 'SolProductos', title: 'SolProductos', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <style>
+
+            .btn-default:hover > div {
+                color: white
+            }
+
+            .btn-default:hover > i {
+                color: white
+            }
+
+            .customButtonSol {
+                background-color: #eee !important;
+            }
+        </style>
+
+
+        <div class="containerSlide">
+            <div class="noClientButtonBack" data-bind="click:clickBack">
+                <i class="dx-icon fa fa-chevron-left"></i>
+            </div>
+            <img id="slideLogo" class="SlideLogo" src="images/BDA-blanco.png"></img>
+        </div>
+
+        <div style="text-align:center">
+            <h4 class="botonesTitulo">Elige el producto que deseas solicitar</h4>
+
+            <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true, showScrollbar: 'always' }">
+                <div>
+                    <div class="btn-default customButtonSol" data-bind="click:clkTrjCred">
+                        <div>Tarjeta de Crédito</div>
+                        <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+                    </div>
+                    <div class="btn-default customButtonSol" data-bind="click:clkCredBantigua">
+                        <div>Crédito Bantigua</div>
+                        <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+                    </div>
+                    <div class="btn-default customButtonSol" data-bind="click:clkMicroCred">
+                        <div>Microcrédito Bantigua</div>
+                        <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+                    </div>
+                    <div class="btn-default customButtonSol" data-bind="click:clkCredUnifica">
+                        <div>Crédito Unifica</div>
+                        <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+                    </div>
+
+
+                    <div class="btn-default customButtonSol" data-bind="click:clkCredRemesas">
+                        <div>Crédito Remesas</div>
+                        <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+                    </div>
+                    <div class="btn-default customButtonSol" data-bind="click:clkPymeBantigua">
+                        <div>Pyme Bantigua</div>
+                        <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+                    </div>
+                    <div class="btn-default customButtonSol" data-bind="click:clkCredGanadero">
+                        <div>Crédito Ganadero</div>
+                        <i class="dx-icon iconBotonNoCliente fa fa-chevron-right"></i>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

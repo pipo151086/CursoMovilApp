@@ -1,0 +1,138 @@
+<div data-options="dxView : { name: 'RedAgencias', title: 'RedAgencias', disableCache: true  } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+      .itmAgenciaContainer{
+      padding: 10px;
+      }
+
+      .itmAgenciaTitle{
+      display: flex;
+      white-space: pre-wrap;
+      font-size:15px;
+      }
+
+      .itmDistanceNextLine{
+      color: gray;
+      }
+
+      .itmDistance{
+      position: absolute;
+      right: 10px;
+      white-space: pre-wrap;
+      color: gray;
+      }
+
+      .itmAgenciaDireccion{
+      white-space: pre-wrap;
+      padding-left: 5px;
+      }
+
+      .itmAgenciaRegion{
+      font-size:10px;
+      padding-left: 5px;
+      }
+
+
+      .dx-list-item-content:after{
+      margin-top:0px !important
+      }
+
+
+      .nombreAgencia{
+      color:#d52133;
+      font-size: 18px;
+      font-weight: bolder;
+      }
+
+      .subtlt{
+
+      color:gray;
+      font-size: 13px;
+      font-weight: bolder;
+      }
+
+      .subtlt3{
+      padding-left:5px;
+      color:gray;
+      font-size: 9px;
+      }
+
+      .elLlamar :hover{
+      background-color:#e5e5e5;
+      }
+
+      .gm-style .gm-style-iw-c{
+      padding:  12px 15px 12px 12px !important;
+      }
+
+      .dx-overlay-content .dx-popup-normal .dx-resizable{
+      z-index:2;
+      }
+
+    </style>
+
+    <div class="containerSlide">
+      <div class="noClientButtonBack" data-bind="click:clickBack">
+        <i class="dx-icon fa fa-chevron-left"></i>
+      </div>
+      <img id="slideLogo" class="SlideLogo" src="images/BDA-blanco.png"></img>
+    </div>
+
+
+    <div id="luAgencias" data-bind="dxLookup:luAgencias" style="box-shadow: 0 6px 8px -6px black; z-index: 1;"></div>
+    <div class="map-google" id="googleMap" style="width:100%; display:block; height:100%;"></div>
+    <div id="panelRoute" style="height:300px; display:none;box-shadow: 0 6px 8px -6px black; z-index: 1;"></div>
+    <div id="ttInfoAgencia" data-bind="dxTooltip:ttInfoAgencia"></div>
+
+    <div id="popupInfoAg" data-bind="dxPopup: popupInfoAg">
+      <div data-options="dxTemplate: {name: 'content'}">
+        <div data-bind="dxScrollView: { }" style="">
+          <div id="agInfoContainer" style="">
+            <div style="display: flex;">
+              <div style="width:50px;text-align: center;align-items: center;align-self: center;">
+                <img style="width:30px" src="./images/iconos/icons8-building-48.png"></img>
+              </div>
+              <div style="width:100%">
+                <div class="nombreAgencia" id="nombreAg"></div>
+                <p class="subtlt" style="padding-left:5px;line-height: normal;" id="dirAg"></p>
+                <div class="subtlt3" id="regAg"></div>
+              </div>
+              <div style="text-align: center;align-items: center;align-self: center;">
+                <div class="subtlt3" style="font-weight:bolder; font-size: 12px;" id="distAg"></div>
+              </div>
+            </div>
+            <hr/>
+
+            <div style="display: flex;">
+              <div style="width:50px;text-align: center;align-items: center;align-self: center;">
+                <img style="width:30px" src="./images/iconos/icon-clock-ag.png"></img>
+              </div>
+              <div style="width:100%">
+                <div class="nombreAgencia" style="color:gray !important" >Horario</div>
+                <div class="subtlt" style=" padding-left:5px;" id="horarioAg"></div>
+                <div class="subtlt3" id="feriadoAg"></div>
+              </div>
+            </div>
+            <hr/>
+
+            <div style="display: flex;" class="elLlamar" data-bind="click:llamar" >
+              <div lass="elLlamar" style="width:50px;text-align: center;align-items: center;align-self: center;">
+                <img style="width:30px" src="./images/iconos/icon-phone-ag.png"></img>
+
+              </div>
+              <div lass="elLlamar" style="width:100%">
+                <div class="subtlt">Llamar a esta oficina</div>
+                <div class="subtlt3" id="telefAg"></div>
+              </div>
+            </div>
+            <hr/>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

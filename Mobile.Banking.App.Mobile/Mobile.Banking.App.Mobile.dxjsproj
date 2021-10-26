@@ -1,0 +1,1199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>aabc0ac3-cc30-4f93-a66e-b4f64f1c2937</ProjectGuid>
+    <AutoAssignPort>True</AutoAssignPort>
+    <RunInSimulator>True</RunInSimulator>
+    <UploadPluginsToTheCourier>True</UploadPluginsToTheCourier>
+    <RootNamespace>MobileBanking_App</RootNamespace>
+    <ApplicationPage>index.html</ApplicationPage>
+    <Name>Mobile.Banking.App.Mobile</Name>
+    <KeyIpaPath>..\..\..\..\..\..\..\Compartido_Miguel Altamirano\Instaladores BancaMovil\DevelopmentBS\BSDevelopment.p12</KeyIpaPath>
+    <ProvisionProfile>..\..\..\..\..\..\..\Compartido_Miguel Altamirano\Instaladores BancaMovil\DevelopmentBS\ProfileBanca.mobileprovision</ProvisionProfile>
+    <IpaPrivateKeyFile>certificates\ios_private_key.txt</IpaPrivateKeyFile>
+    <TemplateFileIpa>templates\ApplicationTemplate.ipa</TemplateFileIpa>
+    <UseCustomTemplateNameIpa>False</UseCustomTemplateNameIpa>
+    <IpaDevicesFamily>Universal</IpaDevicesFamily>
+    <BundleIdentifier>BantiguaMobileApp.BantiguaMobileApp</BundleIdentifier>
+    <IpaSupportedLanguages>es-EC</IpaSupportedLanguages>
+    <KeyApkPath>..\..\Mobile.Certificates\Mobile.Banking\BSAndroidCert\android_certificate.p12</KeyApkPath>
+    <VersionCode>5</VersionCode>
+    <TemplateFileApk>templates\TmplAndroid.apk</TemplateFileApk>
+    <UseCustomTemplateNameApk>False</UseCustomTemplateNameApk>
+    <ApkDexFilePackageName>com.bantigua.banking</ApkDexFilePackageName>
+    <KeyDebuggable>True</KeyDebuggable>
+    <PhoneGapTokenKey>AwoDNw-BBgTE_jhegJGn</PhoneGapTokenKey>
+    <DebugSitePortNumber>50000</DebugSitePortNumber>
+    <UseWebDev>False</UseWebDev>
+    <DefaultDevice>iPhone6</DefaultDevice>
+    <DeviceOrientation>Portrait</DeviceOrientation>
+    <DisplayUnhandledExceptions>True</DisplayUnhandledExceptions>
+    <ScreenOrientation>Portrait</ScreenOrientation>
+    <ApplicationTitle>Bantigua App</ApplicationTitle>
+    <VersionPackage>3.5.0.0</VersionPackage>
+    <ShowSplashScreen>True</ShowSplashScreen>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <KeyApkAlias>tmpl</KeyApkAlias>
+    <PackagePublisherID>bc20227c-2270-4b19-865c-1ee9789624fa</PackagePublisherID>
+    <AppxPackageProductID>2991bb4c-f1fe-4d1a-9c6f-3561b231d8e0</AppxPackageProductID>
+    <KeyPackageIdentityPublisher>CN=bc20227c-2270-4b19-865c-1ee9789624fa</KeyPackageIdentityPublisher>
+    <UpgradeNotifyShown>18.2.6</UpgradeNotifyShown>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="certificates\1.cer">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="certificates\bda.cer">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\Gotham-Black-Regular.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\Gotham-Bold.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\Gotham-BoldItalic.otf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\Gotham-Bold_0.otf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\Gotham-Book.otf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\Gotham-BookItalic.otf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\SWENSON.TTF">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\layout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\login.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\styles\animate.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\styles\font-awesome.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\styles\framework.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\styles\style.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="index.css" />
+    <Content Include="cordova.js" />
+    <Content Include="js\bdHandler\dbCredentialUsage.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\bdHandler\dbLocalHandler.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\bdHandler\dbServicios.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\behavior-error.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\catalogs.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\common.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jquery\jquery-3.5.1.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\KernelCore\mobileBankingCoreBuild-min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\KernelCore\mobileBankingCoreBuild.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\knockout\knockout-3.4.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\MobbScan\mobbScanHandler.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\MobbScan\TstMobbScan.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\MobbScan\TstMobbScan.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\transactions.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\UbiGeografica\UbiGeo1_2_3.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\UbiGeografica\UbiGeo4.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\Utils\html2canvas.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\Utils\i18next.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\Utils\pwstrength-bootstrap.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\Utils\pwstrength.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\Utils\SwiperBox.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\Utils\zxcvbn.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Empty\EmptyLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Empty\EmptyLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Empty\EmptyLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Pivot\PivotLayout.css.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Pivot\PivotLayout.html.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Pivot\PivotLayout.js.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Popup\PopupLayout.css.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Popup\PopupLayout.html.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Popup\PopupLayout.js.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Simple\SimpleLayout.css.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Simple\SimpleLayout.html.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Simple\SimpleLayout.js.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\SlideOut\SlideOutLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\SlideOut\SlideOutLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\SlideOut\SlideOutLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Split\SplitLayout.css.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Split\SplitLayout.html.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Split\SplitLayout.js.bak">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\Default%402x~ipad~anyany.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\Default%402x~ipad~comany.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\Default%402x~iphone~anyany.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\Default%402x~iphone~comany.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\Default%402x~iphone~comcom.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\Default%403x~iphone~anyany.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\Default%403x~iphone~anycom.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\Default%403x~iphone~comany.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\Default-2436h.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\Default-Landscape-2436h.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\PackageIcons.iOS.icon-83.5@2x~ipad.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\PackageIcons.iOS.icon-87.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Resources\PackageIcons.iOS.icon-small@3x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\account\CambiarClaveAcceso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\account\CambiarClaveAcceso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\account\InfoContacto.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\account\InfoContacto.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\account\RegPregSeg.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\account\RegPregSeg.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\account\RegUsrPass.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\account\RegUsrPass.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\afectaciones\IngresoOTP.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\afectaciones\IngresoOTP.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\akisi\CargarSaldoAkisi.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\akisi\CargarSaldoAkisi.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\akisi\ConfirmacionCargaSaldoAkisi.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\akisi\ConfirmacionCargaSaldoAkisi.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\akisi\ExitosoCargaSaldoAkisi.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\akisi\ExitosoCargaSaldoAkisi.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\AdministracionBilleteraMovil.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\AdministracionBilleteraMovil.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\ConfirmacionCrearBilleteraMovil.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\ConfirmacionCrearBilleteraMovil.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\ConfirmacionPagoBilleteraMovil.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\ConfirmacionPagoBilleteraMovil.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\ConsultaPagosPendientesBilleteraMovil.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\ConsultaPagosPendientesBilleteraMovil.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\CrearBilleteraMovil.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\CrearBilleteraMovil.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\NotificacionCobroBilleteraMovil.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\NotificacionCobroBilleteraMovil.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\PagoBilleteraMovil.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\billeteraMovil\PagoBilleteraMovil.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\captaciones\Inversiones.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\captaciones\Inversiones.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\contactos\MapaAgencia.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\contactos\MapaAgencia.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\contactos\Ubiquenos.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\contactos\Ubiquenos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\CuotasCredito.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\CuotasCredito.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\DetalleCredito.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\DetalleCredito.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\InformacionCreditos.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\InformacionCreditos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\PagoCredito.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\PagoCredito.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\PagoCreditoConfirmacion.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\PagoCreditoConfirmacion.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\PagoCreditoExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\PagoCreditoExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\PuntosCredito.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\creditos\PuntosCredito.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaForm1.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaForm1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaForm2.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaForm2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaForm3.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaForm3.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaForm4.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaForm4.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\SolCtaScanDoc1.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\SolCtaScanDoc1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\SolCtaScanDoc2.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\SolCtaScanDoc2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\SolCtaSelfie.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\SolCtaSelfie.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\ConfirmacionTansferenciaInterna.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\ConfirmacionTansferenciaInterna.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\ConfirmacionTransferenciaExterna.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\ConfirmacionTransferenciaExterna.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\Movimientos.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\Movimientos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\PosicionConsolidada.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\PosicionConsolidada.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\TransferenciaExterna.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\TransferenciaExterna.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\TransferenciaExternaExitosa.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\TransferenciaExternaExitosa.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\TransferenciaInternaExitosa.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\TransferenciaInternaExitosa.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\TransferenciasInternas.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\cuentas\TransferenciasInternas.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\movilAccount\RequestPIN.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\movilAccount\RequestPIN.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\CLARO\CLARO.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\CLARO\CLARO.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\CLARO\CLAROExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\CLARO\CLAROExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\CLARO\CLAROPagarServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\CLARO\CLAROPagarServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEOCSA\DEOCSA.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEOCSA\DEOCSA.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEOCSA\DEOCSAExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEOCSA\DEOCSAExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEOCSA\DEOCSAPagarServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEOCSA\DEOCSAPagarServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEORSA\DEORSA.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEORSA\DEORSA.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEORSA\DEORSAExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEORSA\DEORSAExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEORSA\DEORSAPagarServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\DEORSA\DEORSAPagarServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\EEGSA\EEGSA.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\EEGSA\EEGSA.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\EEGSA\EEGSAExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\EEGSA\EEGSAExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\EEGSA\EGGSAPagarServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\EEGSA\EGGSAPagarServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\MOVISTAR\MOVISTAR.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\MOVISTAR\MOVISTAR.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\MOVISTAR\MOVISTARExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\MOVISTAR\MOVISTARExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\MOVISTAR\MOVISTARPagarServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\MOVISTAR\MOVISTARPagarServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\PAQUETIGOS\PAQUETIGOS.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\PAQUETIGOS\PAQUETIGOS.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\PAQUETIGOS\PAQUETIGOSExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\PAQUETIGOS\PAQUETIGOSExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\PAQUETIGOS\PAQUETIGOSInfo.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\PAQUETIGOS\PAQUETIGOSInfo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\PAQUETIGOS\PAQUETIGOSPagarServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\PAQUETIGOS\PAQUETIGOSPagarServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\SUPERPACK\SUPERPACK.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\SUPERPACK\SUPERPACK.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\SUPERPACK\SUPERPACKExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\SUPERPACK\SUPERPACKExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\SUPERPACK\SUPERPACKInfo.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\SUPERPACK\SUPERPACKInfo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\SUPERPACK\SUPERPACKPagarServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\SUPERPACK\SUPERPACKPagarServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGOSTAR\TIGOSTAR.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGOSTAR\TIGOSTAR.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGOSTAR\TIGOSTARExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGOSTAR\TIGOSTARExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGOSTAR\TIGOSTARPagarServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGOSTAR\TIGOSTARPagarServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGO\TIGO.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGO\TIGO.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGO\TIGOExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGO\TIGOExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGO\TIGOPagarServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TIGO\TIGOPagarServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TipoServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TipoServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TUENTI\TUENTI.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TUENTI\TUENTI.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TUENTI\TUENTIExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TUENTI\TUENTIExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TUENTI\TUENTIInfo.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TUENTI\TUENTIInfo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TUENTI\TUENTIPagarServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\pagos\TUENTI\TUENTIPagarServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\BeneficiariosExternos.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\BeneficiariosExternos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\BeneficiariosInternos.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\BeneficiariosInternos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\ConfirmarBeneficiarioExterno.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\ConfirmarBeneficiarioExterno.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\RegBeneficiarioExterno.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\RegBeneficiarioExterno.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\RegBeneficiariosInternos.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\RegBeneficiariosInternos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\RegCuposMax.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\perfilTransaccional\RegCuposMax.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\servicios\ConsultaServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\servicios\ConsultaServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\servicios\PagoServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\servicios\PagoServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\servicios\PagoServicioConfirmacion.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\servicios\PagoServicioConfirmacion.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\servicios\PagoServicioExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\servicios\PagoServicioExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\servicios\SeleccionServicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\servicios\SeleccionServicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetasVisa\MovimientosTarjeta.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetasVisa\MovimientosTarjeta.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\ConfirmacionPagoTarjeta.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\ConfirmacionPagoTarjeta.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\EstadoCuentaTarjeta.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\EstadoCuentaTarjeta.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\InfoTarjeta.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\InfoTarjeta.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\MovimientosTarjeta.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\MovimientosTarjeta.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\PagoTarjetaCredito.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\PagoTarjetaCredito.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\PagoTarjetaExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\PagoTarjetaExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\PlanConmigo.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\PlanConmigo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\SaldoTarjeta.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\tarjetas\SaldoTarjeta.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\Transacciones\CompraTiempoAire.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\Transacciones\CompraTiempoAire.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\Transacciones\CompraTiempoAireExitosa.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\Transacciones\CompraTiempoAireExitosa.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\Transacciones\PagoVisaNet.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\Transacciones\PagoVisaNet.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\Transacciones\PagoVisaNetExitoso.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\Transacciones\PagoVisaNetExitoso.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\viewsACH\historicACH.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\viewsACH\historicACH.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\viewsACH\infoACH.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\viewsACH\infoACH.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\UnitTest.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\UnitTest.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\crearUsuario\1_TermCond.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\crearUsuario\1_TermCond.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\crearUsuario\2_CreaUsr.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\crearUsuario\2_CreaUsr.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\crearUsuario\3_ContactInfo.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\crearUsuario\3_ContactInfo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\crearUsuario\4_Confirm.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\crearUsuario\4_Confirm.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\FormUnreg1_Triage.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\FormUnreg1_Triage.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\FormUnreg2NITSorry.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\FormUnreg2NITSorry.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\FormUnreg2_DpiPas.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\Forms\FormUnreg2_DpiPas.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\MsgRegUsr.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\MsgRegUsr.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\MsgUnregUsr.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\MsgUnregUsr.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\SolCtaSorry.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ctaDigital\SolCtaSorry.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaSuccess.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaSuccess.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaTrjDebMsg.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\registeredUser\ctaDigital\SolCtaTrjDebMsg.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ForgottenPassword.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ForgottenPassword.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ForgottenPasswordSecondInstance.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ForgottenPasswordSecondInstance.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ForgottenUserName.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\ForgottenUserName.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\InsertPin.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\InsertPin.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\LandingPage.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\LandingPage.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\noClienteOp\CanalesAtencion.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\noClienteOp\CanalesAtencion.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\noClienteOp\GuiaUsr.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\noClienteOp\GuiaUsr.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\noClienteOp\RedAgencias.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\noClienteOp\RedAgencias.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\noClienteOp\SolProductos.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\noClienteOp\SolProductos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\noClienteOp\TipoCambio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\noClienteOp\TipoCambio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\PinConfirmation.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\PinConfirmation.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\RegisterSecurePIN.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\RegisterSecurePIN.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\RegisterUser.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\unregisteredUser\RegisterUser.js">
+      <SubType>Content</SubType>
+    </Content>
+    <None Include="config.xml" />
+    <Content Include="index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\bdHandler\dbUserHandler.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\bdHandler\StorageHandler.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\contactenos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalElements\commonElements.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalElements\handlerSession.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalElements\menu.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalElements\parameters.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\messages.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\scripts\custom.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\scripts\framework-plugins.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\scripts\jquery.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\scripts\jqueryui.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="mobilebanking_app.config.js">
+      <SubType>Content</SubType>
+    </Content>
+    <None Include="Resources\PackageIcons.Android.ic_launcher_36_36.png" />
+    <None Include="Resources\PackageIcons.Android.ic_launcher_48_48.png" />
+    <None Include="Resources\PackageIcons.Android.ic_launcher_72_72.png" />
+    <None Include="Resources\PackageIcons.Android.ic_launcher_96_96.png" />
+    <None Include="Resources\PackageIcons.Android.splash_1280_720.png" />
+    <None Include="Resources\PackageIcons.Android.splash_200_320.png" />
+    <None Include="Resources\PackageIcons.Android.splash_320_200.png" />
+    <None Include="Resources\PackageIcons.Android.splash_320_480.png" />
+    <None Include="Resources\PackageIcons.Android.splash_480_320.png" />
+    <None Include="Resources\PackageIcons.Android.splash_480_800.png" />
+    <None Include="Resources\PackageIcons.Android.splash_720_1280.png" />
+    <None Include="Resources\PackageIcons.Android.splash_800_480.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon29x29%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon29x29%403x.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon29x29.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon40x40%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon40x40%403x.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon40x40~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon50x50%402x~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon50x50~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.Default%402x~iphone.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-568h%402x~iphone.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-667h.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-736h.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-Landscape%402x~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-Landscape-736h.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-Landscape~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-Portrait%402x~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-Portrait~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.Default~iphone.png" />
+    <None Include="Resources\PackageIcons.iOS.icon%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-60%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-60%403x.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-60.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-72%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-72.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-76%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-76.png" />
+    <None Include="Resources\PackageIcons.iOS.icon.png" />
+    <None Include="Resources\PackageIcons.iOS.iTunesArtwork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="certificates\" />
+    <Folder Include="css\" />
+    <Folder Include="css\fonts" />
+    <Folder Include="css\styles\" />
+    <Folder Include="js\" />
+    <Folder Include="js\bdHandler\" />
+    <Folder Include="js\globalElements\" />
+    <Folder Include="js\jquery\" />
+    <Folder Include="js\KernelCore" />
+    <Folder Include="js\knockout\" />
+    <Folder Include="js\MobbScan" />
+    <Folder Include="js\UbiGeografica" />
+    <Folder Include="js\Utils" />
+    <Folder Include="js\scripts\" />
+    <Folder Include="layouts\" />
+    <Folder Include="layouts\Empty\" />
+    <Folder Include="layouts\Navbar\" />
+    <Folder Include="layouts\Pivot\" />
+    <Folder Include="layouts\Popup\" />
+    <Folder Include="layouts\Simple\" />
+    <Folder Include="layouts\SlideOut\" />
+    <Folder Include="layouts\Split\" />
+    <Folder Include="Resources\" />
+    <Folder Include="views\" />
+    <Folder Include="views\registeredUser\" />
+    <Folder Include="views\registeredUser\account\" />
+    <Folder Include="views\registeredUser\afectaciones\" />
+    <Folder Include="views\registeredUser\captaciones\" />
+    <Folder Include="views\registeredUser\contactos\" />
+    <Folder Include="views\registeredUser\creditos\" />
+    <Folder Include="views\registeredUser\cuentas\" />
+    <Folder Include="views\registeredUser\movilAccount\" />
+    <Folder Include="views\registeredUser\billeteraMovil" />
+    <Folder Include="views\registeredUser\akisi" />
+    <Folder Include="views\registeredUser\ctaDigital" />
+    <Folder Include="views\registeredUser\pagos" />
+    <Folder Include="views\registeredUser\pagos\CLARO\" />
+    <Folder Include="views\registeredUser\pagos\DEORSA" />
+    <Folder Include="views\registeredUser\pagos\EEGSA" />
+    <Folder Include="views\registeredUser\pagos\MOVISTAR\" />
+    <Folder Include="views\registeredUser\pagos\DEOCSA" />
+    <Folder Include="views\registeredUser\pagos\PAQUETIGOS\" />
+    <Folder Include="views\registeredUser\pagos\SUPERPACK\" />
+    <Folder Include="views\registeredUser\pagos\TIGOSTAR\" />
+    <Folder Include="views\registeredUser\pagos\TIGO\" />
+    <Folder Include="views\registeredUser\pagos\TUENTI\" />
+    <Folder Include="views\registeredUser\viewsACH" />
+    <Folder Include="views\registeredUser\servicios" />
+    <Folder Include="views\registeredUser\perfilTransaccional\" />
+    <Folder Include="views\registeredUser\tarjetasVisa\" />
+    <Folder Include="views\registeredUser\tarjetas\" />
+    <Folder Include="views\registeredUser\Transacciones\" />
+    <Folder Include="views\unregisteredUser\" />
+    <Folder Include="views\unregisteredUser\crearUsuario" />
+    <Folder Include="views\unregisteredUser\ctaDigital" />
+    <Folder Include="views\unregisteredUser\ctaDigital\Forms" />
+    <Folder Include="views\unregisteredUser\noClienteOp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mobile.Banking.App.Shared\Mobile.Banking.App.Shared.dxjsproj">
+      <Name>Mobile.Banking.App.Shared</Name>
+      <Project>{4a2c4378-297c-4d4d-a1b6-7ccea11ec82a}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences">
+    <Message Text="Copying references to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))">
+    </MSBuild>
+  </Target>
+  <Target Name="CopyFilesToOutputDirectory">
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content-&gt;'$(OutputPath)$([MSBuild]::MakeRelative($(MSBuildProjectDirectory),'%(FullPath)'))')" />
+  </Target>
+  <Target Name="CoreCompile">
+    <!--<Message Text="'$(MSBuildToolsPath)'"></Message>-->
+    <!--<Message Text="'$(BuildingProject)'"></Message>-->
+    <!--<Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high"></Message>-->
+    <!--<Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high"></Message>-->
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+</Project>

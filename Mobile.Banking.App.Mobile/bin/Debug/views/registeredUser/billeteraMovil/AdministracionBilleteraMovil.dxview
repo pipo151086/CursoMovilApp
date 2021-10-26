@@ -1,0 +1,35 @@
+<div data-options="dxView : { name: 'BloqueoDesbloqueoBilleteraMovil', title: 'Administración' } " >
+    <div class="box-controls" id="movimientosCuenta">
+        <span>Datos transacción</span>
+        
+
+
+        <div class="row">
+            <div class="col-lg-12 texts">
+                <label>Transacción a realizar:</label>
+                <div id="lkpTransaction" data-bind="dxLookup: lkpTransaction, dxValidator:validateRequired(groupValidation,'Transaccion a realizar')"></div>
+            </div>
+        </div>
+
+        <hr />
+        <div class="row">
+            <br />
+            <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:10px">Billetera Móvil:</label>
+                <div style="float:right;">
+                    <div id="lkpBilleteraMovil" data-bind="dxLookup: lkpBilleteraMovil, dxValidator:validateRequired(groupValidation,'Billetera Móvil')"></div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <br />
+            <div class="col-lg-12 texts">
+                <label style="float:left; margin-top:10px">Referencia: </label>
+                <div style="float:right; width:60%; text-align:right">
+                    <div id="txtReference" data-bind="dxTextBox:koTxtReference, dxValidator:validateRequired(groupValidation,'Referencia')"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>

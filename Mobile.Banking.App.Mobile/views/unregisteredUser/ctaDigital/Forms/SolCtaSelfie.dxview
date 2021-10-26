@@ -1,0 +1,79 @@
+<div data-options="dxView : { name: 'SolCtaSelfie', title: 'SolCtaSelfie', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+      .defaultLivenessImg {
+      height: 150px;
+      top: 75px;
+      position: absolute;
+      }
+
+      .capuredImg{
+      border-radius: 10px;
+      filter: drop-shadow(5px 5px 5px lightgray);
+      }
+    </style>
+
+    <div data-bind="dxScrollView: {showScrollbar:'never' }" class="scrollFormSolCtaDig">
+      <div class="titleFormSolCtaDigCont">
+        <span class="titleFormSolCtaDig">Solicitud de Cuenta de Ahorro</span>
+      </div>
+
+      <div class="contPaginatorCtaDigital">
+        <span class="pagnatorTlt">Paso 2 / 4</span>
+        <div>
+          <div class="dot"></div>
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+
+      <div class="subtitleFormSolCtaDigCont" style="">
+        <span class="subtitleFormSolCtaDig">Autenticación</span>
+        <div class="expSubtittleCont" >
+          <span class="expSubtittleText">Sube una imagen de tu DPI y una selfie para validar tu identidad.</span>
+        </div>
+      </div>
+
+
+      <div style="width:100%; height:300px;justify-content:center;text-align:center;display: flex;margin: 35px 0px 10px 0px;">
+        <div style="width:90%; height:300px;display:flex; justify-content:center;" id="faceValidationSection">
+          <img src="images/face_id_icon.png" id="idLiveness" class="defaultLivenessImg"></img>
+        </div>
+
+
+        <div style="position: absolute; bottom: -30px;display:none" class="successLiveness">
+          <div class="formCtaDigCameraBtnOuter" style="border: 3px white solid;">
+            <i class="fa fa-check formCtaDigCameraBtnInnerText" style="font-family: 'FontAwesome';" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="formCtaDigCameraBtnContainer" id="btnSelfieBtnCont" >
+        <div class="formCtaDigCameraBtnText">
+          Tómate una selfie
+        </div>
+        <div class="formCtaDigCameraBtnOuter" id="btnCameraSelfie" style="" data-bind="dxButton: btnCameraSelfie">
+          <div class="formCtaDigCameraBtnInner"></div>
+        </div>
+      </div>
+
+
+      <div class="formCtaDigCameraBtnContainer successLiveness" id="btnSiguienteCont" style="display:none; margin-top:30px">
+        <div class="formCtaDigCameraBtnText"  >
+          ¡Fotografía tomada con éxito!
+        </div>
+      </div>
+
+      <div class="formCtaDigCameraBtnContainer successLiveness" id="btnContinuarCont" style="display:none; position: absolute; bottom: 30px;">
+        <div class="btnActiveCtaDigital" id="btnContinuar" style="" data-bind="dxButton: btnContinuar"></div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</div>
