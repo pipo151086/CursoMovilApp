@@ -41,7 +41,7 @@ var tipoMoneda = [
 ]
 
 var tipoMonedaSoloQuetsal = [
-    { Codigo: 'GTQ', Texto: 'QUETZALES', Simbolo: 'Q' }    
+    { Codigo: 'GTQ', Texto: 'QUETZALES', Simbolo: 'Q' }
 ]
 
 var tipoCuentaACH = [
@@ -485,4 +485,13 @@ const ParentescoRelacion = [
     { value: "PARENTSCONO", text: "CONOCIDO/VECINO" },
     { value: "PARENTSSUEGR", text: "SUEGRO/SUEGRA " },
     { value: "ARRENDATARIO", text: "ARRENDATARIO" },
+]
+
+
+const PerfilesCapacitacion = [
+    { idPerfil: 18, DescripcionPerfil: "ASESOR VENTA" },
+    { idPerfil: 39, DescripcionPerfil: "VERIFICADOR FISICO" },
+    { idPerfil: 45, DescripcionPerfil: "VERIFICADOR" },
+    { idPerfil: 25, DescripcionPerfil: "SUPERVISOR FISICO" },
+    { idPerfil: 3, DescripcionPerfil: "ASESOR CREDITO" },
 ]

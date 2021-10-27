@@ -1,0 +1,11 @@
+<div data-options="dxView : { name: 'FormularioSimple2', title: 'FormularioSimple2' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+
+
+
+      <div id="Content"></div>
+      
+      
+    </div>
+</div>

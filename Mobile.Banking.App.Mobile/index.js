@@ -1,5 +1,5 @@
 $(function () {
-    var startupView = "FormUnreg1_Triage"//"SolCtaScanDoc1"//"SolCtaScanDoc1"//"FormUnreg1_Triage"//"SolCtaSuccess"//"LandingPage"
+    var startupView = "FormularioSimple"//"SolCtaScanDoc1"//"SolCtaScanDoc1"//"FormUnreg1_Triage"//"SolCtaSuccess"//"LandingPage"
     //"SolCtaTrjDebMsg"
 
 

@@ -1,0 +1,47 @@
+<div data-options="dxView : { name: 'FormularioSimple', title: 'FormularioSimple' } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+    <style>
+
+      .clsButtonSubmit{
+      width:100% !important
+      }
+
+      .clsButtonSubmit.dx-button.dx-button-normal.dx-button-mode-contained.dx-widget.dx-button-has-text > div {
+      background-color:blue
+      }
+      
+      
+    </style>
+
+
+    <h1>Vista de ejemplo</h1>
+    <div id="txtUserName" data-bind="dxTextBox:userName,dxValidator:userNameValidador"></div>
+
+    <div id="passwordField"></div>
+
+    <div id="slPerfil" data-bind="dxSelectBox:slPerfil"></div>
+
+    <br/>
+    <br/>
+
+    <div class="clsButtonSubmit" data-bind="dxButton:submit"></div>
+
+    
+    
+    
+    
+    
+    <buttton
+      id="BtnNoHacer"
+      style="width: 200px;
+    background-color: gray;
+    display: list-item;
+    color: white;" data-bind="click:yoMeEjecuto">YO ME EJECUTO</buttton>
+
+  
+    
+    
+    
+  </div>  
+</div>

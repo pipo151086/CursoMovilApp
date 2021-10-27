@@ -206,7 +206,15 @@ function ConsultarUsuario_NumIntentos(tipoIdentificacion, numIdentificacion, add
     addFunction({ numeroIntentos: 0, existe: false })
 }
 
+function RegistrarLogAperturaCtaDigital(CtaDigitalForm) {
 
+    var transaction = Object.create(Transaction.RegistrarLogAperturaCtaDigital);
+    transaction.Parameters.CtaDigitalForm = CtaDigitalForm;
+
+    //SendPostRequestToService(transaction, addFunction, LoadScreen, 'Mobile');
+
+    addFunction(false);
+}
 
 
 

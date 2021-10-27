@@ -433,6 +433,16 @@ window.MobileBanking_App = $.extend(true, window.MobileBanking_App, {
         "title": "TstMobbScan",
         "onExecute": "#TstMobbScan",
         "icon": "tstmobbscan"
+      },
+      {
+        "title": "FormularioSimple",
+        "onExecute": "#FormularioSimple",
+        "icon": "formulariosimple"
+      },
+      {
+        "title": "FormularioSimple2",
+        "onExecute": "#FormularioSimple2",
+        "icon": "formulariosimple2"
       }
     ]
   }
