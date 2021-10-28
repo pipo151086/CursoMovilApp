@@ -11,7 +11,7 @@
     var CtaDigitalForm = {
         TieneSesion: false,
         TipoIdentificacion: "CED",
-        NumeroDocumento: "",
+        NumeroDocumento: "2126190470101",
 
         /*NIT FORM*/
         NombreEmpresa: "",

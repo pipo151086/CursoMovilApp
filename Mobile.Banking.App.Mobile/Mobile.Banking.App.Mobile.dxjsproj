@@ -259,6 +259,12 @@
     <Content Include="Resources\PackageIcons.iOS.icon-small@3x.png">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="views\CursoVistas\DiaDos\FormComplejo.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\CursoVistas\DiaDos\FormComplejo.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="views\CursoVistas\FormularioSimple.dxview">
       <SubType>Content</SubType>
     </Content>
@@ -1143,6 +1149,7 @@
     <Folder Include="Resources\" />
     <Folder Include="views\" />
     <Folder Include="views\CursoVistas" />
+    <Folder Include="views\CursoVistas\DiaDos" />
     <Folder Include="views\registeredUser\" />
     <Folder Include="views\registeredUser\account\" />
     <Folder Include="views\registeredUser\afectaciones\" />

@@ -443,6 +443,11 @@ window.MobileBanking_App = $.extend(true, window.MobileBanking_App, {
         "title": "FormularioSimple2",
         "onExecute": "#FormularioSimple2",
         "icon": "formulariosimple2"
+      },
+      {
+        "title": "FormComplejo",
+        "onExecute": "#FormComplejo",
+        "icon": "formcomplejo"
       }
     ]
   }

@@ -1,0 +1,62 @@
+<div data-options="dxView : { name: 'FormComplejo', title: 'FormComplejo', disableCache: true } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+    <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }" style="text-align:center">
+
+
+      <div id="miFormComplejoPart1">
+
+        <div id="slTipoDocumento" data-bind="dxSelectBox:slTipoDocumento,dxValidator: validateRequired(validationGroupPart1, 'El campo del Miguel')"></div>
+
+        <div id="txtNumeroDocumento" data-bind="dxTextBox:txtNumeroDocumento"></div>
+
+        <div id="btnValidarId" data-bind="dxButton:btnValidar"></div>
+
+      </div>
+
+      <div id="miFormComplejoPart2" style="display:none">
+
+        <div id="txtNombre" data-bind="dxTextBox:txtNombre,dxValidator:{             
+             validationRules: [
+             getValidationRule(typeValidation.Required, 'Primer Nombre'),
+             {
+             type: 'stringLength',
+            min: 2,
+            message: 'Name must have at least 2 symbols'
+             }
+             ],
+             validationGroup:validationGroupPart2             
+             }
+             "></div>
+        <div id="txtSegundoNombre" data-bind="dxTextBox:txtSegundoNombre"></div>
+        <div id="txtApellido" data-bind="dxTextBox:txtApellido,dxValidator:validateRequired(validationGroupPart2, 'Primer Apellidos')">      </div>
+        <div id="txtSegundoApellido" data-bind="dxTextBox:txtSegundoApellido"></div>
+
+        <div id="btnValidarNombre" data-bind="dxButton:btnValidarNombre"></div>
+      </div>
+    </div>
+
+
+
+
+    <div id="popUpFlotante" data-bind="dxPopup: popUpFlotante">
+      <div data-options="dxTemplate: {name: 'content'}">
+        <div data-bind="dxScrollView: { scrollByContent: true, scrollByThumb: true }" style="text-align:center">
+
+          <div>
+            HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+
+            MI POPUP
+          </div>
+
+          <div id="slParametrosSistema" data-bind="dxSelectBox:slParametrosSistema"></div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
