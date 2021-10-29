@@ -230,8 +230,15 @@ var menuTransferenciasExternas = "<div class='has-submenu' style='display:none' 
     "<a class='submenu-item' id='smnBeneficiariosExternos'><img class='bulletMenu' src='./images/iconos/bullet-pasivo.png'><img class='linea'></img></img><em>" + CORE_TAG('ExternalBeneficiariesACH') + "</em></a>" +
     "<a class='submenu-item' id='smnTransferenciaExterna'><img class='bulletMenu' src='./images/iconos/bullet-pasivo.png'></img><img class='linea'></img><em>" + CORE_TAG('ExternalTransfersACH') + "</em></a>" +
     "<a class='submenu-item' id='smnhistoricACH'><img class='bulletMenu' src='./images/iconos/bullet-pasivo.png'></img><em>" + CORE_TAG('TransactionsHistoricACH') + "</em></a>" +
-
     "</div></div>";
+
+var nuevoMenuAntojado = "<div class='has-submenu' style='display:none' id='mnMenuPaPa'><a class='menu-item show-submenu ' href='#'><img class='img-menu' src='./images/seguridad.png' /><em>" + CORE_TAG('NMENUPAPA') + "</em></a>" +
+    "<div class='submenu'>" +
+    "<a class='submenu-item' id='smnHijoNum1'><img class='bulletMenu' src='./images/iconos/bullet-pasivo.png'></img><img class='linea'></img><em>" + CORE_TAG('NMENUHIJO1') + "</em></a>" +
+    "<a class='submenu-item' id='smnHijoNum3'><img class='bulletMenu' src='./images/iconos/bullet-pasivo.png'></img><img class='linea'></img><em>" + CORE_TAG('NMENUHIJO3') + "</em></a>" +
+    "<a class='submenu-item' id='smnHijoNum2'><img class='bulletMenu' src='./images/iconos/bullet-pasivo.png'></img><em>" + CORE_TAG('NMENUHIJO2') + "</em></a>" +
+    "</div></div>"
+
 
 
 var menuCaptaciones = "<div class='has-submenu' style='display:none' id='mnCaptaciones'><a class='menu-item show-submenu'><img class='img-menu' src='./images/iconos/inversiones.png' /><em>" + CORE_TAG('Catchments') + "</em></a><div class='submenu'><a id='smnInversiones' class='submenu-item'><img class='bulletMenu' src='./images/iconos/bullet-pasivo.png'></img><em>" + CORE_TAG('Investments') + "</em></a></div></div>";
@@ -317,6 +324,13 @@ var htmlLeftSideMenu = '<div style="display:block; position:relative" class="sid
     + menuCaptaciones
     + menuTarjetas
     + menuAkisi
+
+
+
+    + nuevoMenuAntojado
+
+
+
     //+ menuTarjetasVisa
     //+ menuTransacciones
     //+ menuBilleteraMovil
@@ -368,6 +382,8 @@ function buildMenuClient() {
 
 
         $('#mnBilleteraMovil').show();
+
+        $('#mnMenuPaPa').show();
 
         for (var i = 0; i < SesionMovil.ProductosCliente.length; i++) {
             if (SesionMovil.ProductosCliente[i].CodigoProducto == 'CTA') {
@@ -1157,6 +1173,41 @@ function buildMenuClient() {
         })
 
 
+        $('#smnHijoNum1').click(function () {
+            ResetSelectedMenuBullet();
+            $('#smnHijoNum1').find("img.bulletMenu").attr('src', './images/iconos/bullet-activo.png');
+            MobileBanking_App.app.navigate('FormularioSimple', { root: true });
+            Vibrate(100);
+            $('.open-left-sidebar').click();
+        })
+
+
+
+
+        $('#smnHijoNum3').click(function () {
+            ResetSelectedMenuBullet();
+            $('#smnHijoNum3').find("img.bulletMenu").attr('src', './images/iconos/bullet-activo.png');
+            MobileBanking_App.app.navigate('FormComplejo', { root: true });
+            Vibrate(100);
+            $('.open-left-sidebar').click();
+        })
+
+
+        $('#smnHijoNum2').click(function () {
+            ResetSelectedMenuBullet();
+            $('#smnHijoNum2').find("img.bulletMenu").attr('src', './images/iconos/bullet-activo.png');
+            MobileBanking_App.app.navigate('FormularioSimple2', { root: true });
+            Vibrate(100);
+            $('.open-left-sidebar').click();
+        })
+
+
+
+
+
+
+
+
         $('#contBtnCtaDigMenu').click(function () {
             ResetSelectedMenuBullet();
             debugger;
@@ -1330,6 +1381,12 @@ function ResetSelectedMenuBullet() {
     $('#smnPayCreditDue').find("img.bulletMenu").attr('src', './images/iconos/bullet-pasivo.png');
     $('#smnPagoTarjetas').find("img.bulletMenu").attr('src', './images/iconos/bullet-pasivo.png');
     $('#smnCargarSaldo').find("img.bulletMenu").attr('src', './images/iconos/bullet-pasivo.png');
+
+
+
+    $('#smnHijoNum1').find("img.bulletMenu").attr('src', './images/iconos/bullet-pasivo.png');
+    $('#smnHijoNum3').find("img.bulletMenu").attr('src', './images/iconos/bullet-pasivo.png');
+    $('#smnHijoNum2').find("img.bulletMenu").attr('src', './images/iconos/bullet-pasivo.png');
 }
 
 Number.prototype.formatMoney = function (c, d, t) {

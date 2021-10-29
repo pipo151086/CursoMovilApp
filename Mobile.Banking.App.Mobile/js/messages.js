@@ -101,10 +101,13 @@ Globalize.loadMessages({
             InfoCreditCard: "Información de Tarjeta de Crédito",
             CreditcardBalance: "Consulta de Saldo",
             CreditCardMovements: "Movimientos Recientes",
-            CreditCardStatus: "Estado de Cuenta"
+            CreditCardStatus: "Estado de Cuenta",
 
 
-
+            NMENUPAPA: 'Nuevo Menu Papa',
+            NMENUHIJO1: 'Nuevo Menu Hijo 1',
+            NMENUHIJO2: 'Nuevo Menu Hijo 2',
+            NMENUHIJO3: 'Nuevo Menu Hijo 3'
 
         },
         messages: {

@@ -48,27 +48,17 @@
     </div>
     <div data-bind="dxScrollView: { }" style="margin-top:0px">
 
-
-      <!--<div class="botonesTitulo tituloWizardCrearUsuario" style="padding:10px; text-align:justify; margin-top: 0px;font-weight: normal;">-->
       <div style="padding:10px; text-align:justify;font-weight: normal; ">
         <p style="line-height: normal;">
           <b>Preguntas de seguridad:</b>
           <br/><br/>
           ¡Hola! Para tu seguridad y comodidad te solicitamos configurar tus preguntas de seguridad, la misma que tendrás que contestar en el futuro para asegurarnos que eres tú quien realiza la transacción.
         </p>
-        <!--<div id="tooltip" data-bind="dxTooltip:tooltip"></div>-->
-
-
 
         <p style="line-height: normal; font-family: 'Gotham-Book';">
           <b style="color:red">Recuerda: </b>Tu puedes agregar una pregunta personalizada solo escribiendo en el campo.
         </p>
       </div>
-
-      <!--<i style="color: white;font-size: 20px;padding: 7px 11px;background-color: #d52133;position: absolute;
-    border-radius: 20px;z-index: 1;right:5%;top: 3px;" class="dx-icon fa fa-question" id="quetionToolTip"></i>
-      </div>-->
-
 
       <div class="createUserForm" style="margin-bottom: 550px;">
         <div style="padding:10px" id="acordionPreguntas" data-bind="dxAccordion:acordionPreguntas"></div>

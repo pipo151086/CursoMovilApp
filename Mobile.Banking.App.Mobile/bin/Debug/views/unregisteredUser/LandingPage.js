@@ -202,6 +202,7 @@
                 var ServerCallResult = data;
                 if (ServerCallResult != null && ServerCallResult.contextoCliente) {
                     Parameters.JWT = data.JWT;
+                    debugger;
                     initSession(ServerCallResult);
                     SesionMovil = getObjectSession();
                     controlAccesoGlobal = ServerCallResult.dtoResultadoConsultaControlAcceso;

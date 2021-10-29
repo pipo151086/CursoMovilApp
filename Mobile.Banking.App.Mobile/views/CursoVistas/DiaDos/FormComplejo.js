@@ -63,17 +63,14 @@
         }
     }
 
+    viewModel.popUpFlotante.onShowing = function () {
+        $('#header-fixed').hide();
+    }
 
 
-
-
-
-
-
-
-
-
-
+    viewModel.popUpFlotante.onHiding = function () {
+        $('#header-fixed').show();
+    }
 
     //Accion al detonar el Btn
     function ActionValidarId(arg) {
