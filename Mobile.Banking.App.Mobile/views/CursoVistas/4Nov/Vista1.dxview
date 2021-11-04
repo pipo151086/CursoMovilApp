@@ -1,0 +1,19 @@
+<div data-options="dxView : { name: 'Vista1', title: 'Vista1' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+      <style>
+        #container {
+        margin: 20px;
+       /* width: 400px;*/
+        height: 8px;
+        position: relative;
+        }
+      </style>
+
+
+      <div id="dtFechaNacimiento" data-bind="dxDateBox:dtFechaNacimiento"></div>
+
+      <div id="container"></div>
+      
+    </div>
+</div>

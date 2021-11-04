@@ -448,6 +448,11 @@ window.MobileBanking_App = $.extend(true, window.MobileBanking_App, {
         "title": "FormComplejo",
         "onExecute": "#FormComplejo",
         "icon": "formcomplejo"
+      },
+      {
+        "title": "Vista1",
+        "onExecute": "#Vista1",
+        "icon": "vista1"
       }
     ]
   }

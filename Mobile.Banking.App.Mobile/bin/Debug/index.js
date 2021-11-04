@@ -1,5 +1,10 @@
 $(function () {
     var startupView = "LandingPage"//"LandingPage"//"FormularioSimple"//"SolCtaScanDoc1"//"SolCtaScanDoc1"//"FormUnreg1_Triage"//"SolCtaSuccess"//"LandingPage"
+
+    //ESTUDIAR RegUsrPass
+
+
+
     //"SolCtaTrjDebMsg"
 
 

@@ -1,6 +1,6 @@
 ﻿MobileBanking_App.PosicionConsolidada = function (params) {
     "use strict";
-
+    debugger;
    
 
     var arrayBilleteraMovil = [];

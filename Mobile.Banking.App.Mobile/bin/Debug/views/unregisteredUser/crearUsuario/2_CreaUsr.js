@@ -1,6 +1,8 @@
 ﻿MobileBanking_App._2_CreaUsr = function (params) {
     "use strict";
 
+   
+
     var registroDto = {};
 
     if (params.id)

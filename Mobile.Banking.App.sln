@@ -28,16 +28,4 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {223517AE-50C1-4963-8A23-DAA70B8C10E2}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://por-tfs2015:8080/tfs/net%20core
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Mobile.Banking.App.Shared\\Mobile.Banking.App.Shared.dxjsproj
-		SccProjectName1 = Mobile.Banking.App.Shared
-		SccLocalPath1 = Mobile.Banking.App.Shared
-		SccProjectUniqueName2 = Mobile.Banking.App.Mobile\\Mobile.Banking.App.Mobile.dxjsproj
-		SccProjectName2 = Mobile.Banking.App.Mobile
-		SccLocalPath2 = Mobile.Banking.App.Mobile
-	EndGlobalSection
 EndGlobal
